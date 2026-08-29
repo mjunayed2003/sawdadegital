@@ -52,7 +52,7 @@ const serviceCards = [
     titleKey: 'ecommerceTitle',
     descKey: 'ecommerceDesc',
     badge: 'E-commerce',
-    path: '/services/architecture'
+    path: '/services/ecommerce'
   },
   {
     key: 'app',
@@ -60,7 +60,7 @@ const serviceCards = [
     titleKey: 'appDevTitle',
     descKey: 'appDevDesc',
     badge: 'Mobile & Apps',
-    path: '/services/ai-services'
+    path: '/services/app-development'
   },
   {
     key: 'uiux',

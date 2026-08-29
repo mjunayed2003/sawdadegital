@@ -82,8 +82,8 @@ export default function Navbar() {
     { name: t('socialMarketing'), icon: <FaBullhorn />, path: "/services/marketing-sales" },
     { name: t('brandingGraphics'), icon: <FaPaintBrush />, path: "/services/graphics-design" },
     { name: t('seoGoogle'), icon: <FaSearch />, path: "/services/seo" },
-    { name: t('ecommerce'), icon: <FaShoppingCart />, path: "/services/architecture" },
-    { name: t('appDev'), icon: <FaMobileAlt />, path: "/services/ai-services" },
+    { name: t('ecommerce'), icon: <FaShoppingCart />, path: "/services/ecommerce" },
+    { name: t('appDev'), icon: <FaMobileAlt />, path: "/services/app-development" },
     { name: t('uiUx'), icon: <FaDesktop />, path: "/services/ui-ux" },
   ];
 

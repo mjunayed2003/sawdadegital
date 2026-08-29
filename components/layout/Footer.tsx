@@ -29,8 +29,8 @@ export default function Footer() {
     { name: t('socialMarketing'), path: '/services/marketing-sales' },
     { name: t('brandingGraphics'), path: '/services/graphics-design' },
     { name: t('seoGoogle'), path: '/services/seo' },
-    { name: t('ecommerce'), path: '/services/architecture' },
-    { name: t('appDev'), path: '/services/ai-services' },
+    { name: t('ecommerce'), path: '/services/ecommerce' },
+    { name: t('appDev'), path: '/services/app-development' },
     { name: t('uiUx'), path: '/services/ui-ux' },
   ];
 

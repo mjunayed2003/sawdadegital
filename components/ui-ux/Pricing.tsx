@@ -2,112 +2,127 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiCheckCircle } from 'react-icons/fi';
-
-const pricingPlans = [
-  {
-    name: "Audit",
-    desc: "Perfect for optimizing existing platforms.",
-    price: "$2,500+",
-    features: ["UX Audit Report", "Heuristic Evaluation", "Actionable Wireframes", "Competitor Review"],
-    color: "from-gray-100 to-gray-200",
-    textColor: "text-gray-800",
-    buttonBg: "bg-gray-800 text-white hover:bg-gray-700"
-  },
-  {
-    name: "Pro",
-    desc: "Ideal for new apps or websites.",
-    price: "$8,000+",
-    features: ["User Research", "Full Wireframing", "High-Fi Prototypes", "Developer Handoff"],
-    color: "from-[#001F3F] to-[#003366]",
-    textColor: "text-white",
-    buttonBg: "bg-[#FF7F11] text-white hover:bg-[#e66a00]"
-  },
-  {
-    name: "Enterprise",
-    desc: "Comprehensive design systems.",
-    price: "$20,000+",
-    features: ["Global Design System", "Extensive User Testing", "Accessibility (WCAG) Compliance", "Ongoing Support"],
-    color: "from-gray-800 to-black",
-    textColor: "text-white",
-    buttonBg: "bg-white text-black hover:bg-gray-200"
-  },
-  {
-    name: "Custom",
-    desc: "Tailored to complex software.",
-    price: "Let's Talk",
-    features: ["Bespoke Dashboards", "SaaS Platforms", "Hardware Interfaces", "Retainer Options"],
-    color: "from-[#2196F3] to-[#1976D2]",
-    textColor: "text-white",
-    buttonBg: "bg-white text-[#2196F3] hover:bg-gray-100"
-  }
-];
+import { useLanguage } from '@/components/LanguageContext';
+import { FaCheck, FaArrowRight } from 'react-icons/fa6';
+import Link from 'next/link';
 
 export default function Pricing() {
+  const { language } = useLanguage();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  const pricingPlans = [
+    {
+      name: language === 'bn' ? 'স্টার্টার ল্যান্ডিং পেজ UI' : 'Starter Landing Page',
+      description: language === 'bn' ? 'হাই-কনভার্শন ল্যান্ডিং পেজ বা প্রোডাক্ট শোকেসের জন্য।' : 'Perfect for modern high-converting product landing pages.',
+      price: language === 'bn' ? '৳ ১৫,০০০' : '$250',
+      features: language === 'bn' 
+        ? ["১টি কাস্টম ল্যান্ডিং পেজ ডিজাইন (Desktop & Mobile)", "ফিগমা কম্পোনেন্ট ও কালার টোকেন", "ক্লিকেবল ইন্টারঅ্যাক্টিভ প্রোটোটাইপ", "২টি ফ্রি রিভিশন", "ডেভেলপার হ্যান্ডঅফ এসেটস"]
+        : ["1 Custom Landing Page (Desktop & Mobile)", "Figma Component & Color Tokens", "Clickable Interactive Prototype", "2 Free Revision Rounds", "Clean Developer Handoff Assets"],
+      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#FF7F11] dark:hover:bg-[#FF7F11] dark:hover:text-white"
+    },
+    {
+      name: language === 'bn' ? 'মোবাইল বা ওয়েব অ্যাপ UI (জনপ্রিয়)' : 'Full Mobile/Web App (Popular)',
+      description: language === 'bn' ? 'সম্পূর্ণ মোবাইল অ্যাপ বা ওয়েব অ্যাপের ইন্টারফেস ডিজাইন।' : 'Ideal for modern mobile apps and SaaS web platforms.',
+      price: language === 'bn' ? '৳ ৪৫,০০০+' : '$750+',
+      isPopular: true,
+      features: language === 'bn'
+        ? ["১০-১৫টি স্ক্রিনের সম্পূর্ণ ইউআই/ইউএক্স", "সম্পূর্ণ ফিগমা ডিজাইন সিস্টেম (Design System)", "ডার্ক ও লাইট মোড ভ্যারিয়েন্টস", "ইউজার জার্নি ও ওয়্যারফ্রেম টেস্টিং", "আনলিমিটেড প্রোটোটাইপ রিভিশন"]
+        : ["10-15 Complete UI Screens", "Full Modular Figma Design System", "Dark & Light Mode Variants", "User Journey Flow & Usability Audit", "Unlimited Interactive Prototype Tweaks"],
+      buttonBg: "bg-[#FF7F11] text-white hover:bg-[#e66a00]"
+    },
+    {
+      name: language === 'bn' ? 'এন্টারপ্রাইজ SaaS ড্যাশবোর্ড' : 'Enterprise SaaS Portal',
+      description: language === 'bn' ? 'জটিল ডেটা প্ল্যাটফর্ম ও মাল্টি-রোল SaaS সিস্টেম।' : 'Heavy data dashboards and multi-tenant platforms.',
+      price: language === 'bn' ? '৳ ৮০,০০০+' : '$1,400+',
+      features: language === 'bn'
+        ? ["২৫+ জটিল ড্যাশবোর্ড স্ক্রিন ও টেবিল", "অটো-লেআউট ভ্যারিয়েবল ও টোকেন আর্কিটেকচার", "মাইক্রো-অ্যানিমেশন ও স্টেট ভেরিয়েশনস", "ইউজার ইন্টারভিউ ও হিউরিস্টিক অডিট", "ডেভেলপারদের সাথে ডিরেক্ট স্ল্যাক সাপোর্ট"]
+        : ["25+ Complex Dashboard & Table Screens", "Advanced Auto-Layout & Variables", "Fluid Micro-Interactions & States", "In-Depth Usability & Heuristic Audit", "Direct Engineering Slack Collaboration"],
+      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#FF7F11] dark:hover:bg-[#FF7F11] dark:hover:text-white"
+    },
+    {
+      name: language === 'bn' ? 'ইউএক্স অডিট ও রিডিজাইন' : 'UX Audit & Conversion CRO',
+      description: language === 'bn' ? 'চলমান অ্যাপ বা ওয়েবসাইটের ড্রপ-অফ কমানোর জন্য।' : 'Fixing drop-offs and redesigning outdated interfaces.',
+      price: language === 'bn' ? '৳ ২৫,০০০' : '$400',
+      features: language === 'bn'
+        ? ["সম্পূর্ণ হিটম্যাপ ও ড্রপ-অফ অডিট", "ফ্রিকশন দূর করার ওয়্যারফ্রেম রিডিজাইন", "কনভার্সন বৃদ্ধির অ্যাকশনেবল রিপোর্ট", "১-অন-১ স্ট্র্যাটেজি কল"]
+        : ["Full Funnel Friction & Drop-Off Audit", "Frictionless Checkout Redesign", "Actionable Heuristic Report PDF", "1-on-1 Executive Strategy Walkthrough"],
+      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#FF7F11] dark:hover:bg-[#FF7F11] dark:hover:text-white"
+    }
+  ];
+
   return (
-    <section id="pricing" className="py-24 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="pricing" className="py-24 bg-[#FAFAFA] dark:bg-[#111111] relative overflow-hidden transition-colors duration-300">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#E2E8CE] dark:bg-[#262626] border border-[#ACBFA4]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
+            {language === 'bn' ? 'স্বচ্ছ ডিজাইন প্যাকেজ' : 'TRANSPARENT PRICING'}
+          </div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-black text-[#001F3F] mb-6"
+            className="text-3xl md:text-5xl font-black text-[#111827] dark:text-white mb-6"
           >
-            Invest in experience
+            {language === 'bn' ? 'আপনার ইউআই/ইউএক্স প্যাকেজ নির্বাচন করুন' : 'Pick your UI/UX design package'}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl text-gray-500"
+            className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed"
           >
-            Transparent pricing for user-centric design.
+            {language === 'bn'
+              ? 'স্পষ্ট স্ক্রিন কাউন্ট, সম্পূর্ণ ফিগমা ডিজাইন ফাইল এবং কোডিং ফ্রেন্ডলি হ্যান্ডঅফ।'
+              : 'Clear scopes, fully organized Figma design systems, and seamless developer handoff.'}
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative perspective-1000">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {pricingPlans.map((plan, index) => (
             <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 50, rotateX: -20 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 100 }}
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
-              className={`relative rounded-3xl p-8 bg-gradient-to-br ${plan.color} ${plan.textColor} shadow-xl transition-all duration-500 transform-gpu overflow-hidden`}
-              style={{
-                transformStyle: "preserve-3d",
-                zIndex: hoveredIndex === index ? 20 : 10,
-                scale: hoveredIndex === index ? 1.05 : 1,
-              }}
+              className={`rounded-[2.5rem] p-8 flex flex-col justify-between transition-all duration-500 relative border ${
+                plan.isPopular 
+                  ? 'bg-white dark:bg-[#1a1a1a] border-[#FF7F11] shadow-2xl scale-[1.03] z-10' 
+                  : 'bg-white dark:bg-[#1a1a1a] border-[#E2E8CE] dark:border-white/10 shadow-md hover:shadow-xl'
+              }`}
             >
-              <div className="relative z-10 h-full flex flex-col">
-                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p className={`text-sm mb-6 ${plan.textColor === 'text-white' ? 'text-gray-300' : 'text-gray-600'} flex-grow`}>
-                  {plan.desc}
-                </p>
-                <div className="text-4xl font-black mb-8">{plan.price}</div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start text-sm">
-                      <FiCheckCircle className={`w-5 h-5 mr-2 shrink-0 ${plan.textColor === 'text-white' ? 'text-white/70' : 'text-gray-500'}`} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              {plan.isPopular && (
+                <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#FF7F11] text-white text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                  {language === 'bn' ? 'সবচেয়ে জনপ্রিয়' : 'Most Popular'}
+                </span>
+              )}
 
-                <button className={`w-full py-4 rounded-xl font-bold mt-auto transition-colors duration-300 ${plan.buttonBg}`}>
-                  Get Started
-                </button>
+              <div>
+                <h3 className="text-xl font-bold text-[#111827] dark:text-white mb-2">{plan.name}</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mb-6 min-h-[36px]">{plan.description}</p>
+                <div className="text-3xl sm:text-4xl font-black text-[#FF7F11] mb-6">{plan.price}</div>
+
+                <div className="space-y-3 pt-6 border-t border-gray-100 dark:border-white/10 mb-8">
+                  {plan.features.map((feature, fIndex) => (
+                    <div key={fIndex} className="flex items-start gap-2.5 text-xs text-gray-700 dark:text-gray-300">
+                      <FaCheck className="w-3.5 h-3.5 text-[#FF7F11] shrink-0 mt-0.5" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+              <Link
+                href="/contact"
+                className={`w-full py-3.5 rounded-full font-bold text-center text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-md ${plan.buttonBg}`}
+              >
+                <span>{language === 'bn' ? 'এই প্যাকেজটি নিন' : 'Choose Package'}</span>
+                <FaArrowRight className="w-3 h-3" />
+              </Link>
             </motion.div>
           ))}
         </div>
