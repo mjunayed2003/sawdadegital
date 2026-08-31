@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Topbar from "@/components/layout/Topbar";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -23,6 +24,7 @@ function ExpertiseContent() {
       name: language === 'bn' ? 'মোঃ খাইরুল বাশার' : 'Md Khairul Bashar', 
       role: language === 'bn' ? 'প্রতিষ্ঠাতা ও সিইও' : 'Founder & CEO', 
       initials: 'KB',
+      image: '/team-member/basar.PNG',
       tag: language === 'bn' ? 'এক্সিকিউটিভ লিড' : 'Executive Lead',
       accentColor: 'from-amber-500 to-orange-600',
       lightBg: 'bg-amber-500/10 dark:bg-amber-500/15',
@@ -38,6 +40,7 @@ function ExpertiseContent() {
       name: language === 'bn' ? 'মোঃ জুনায়েদ' : 'Md Junayed', 
       role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও সফটওয়্যার ইঞ্জিনিয়ার' : 'Co-Founder & Software Engineer', 
       initials: 'MJ',
+      image: '/team-member/junayed.jpeg',
       tag: language === 'bn' ? 'টেক ও আর্কিটেকচার' : 'Tech & Architecture',
       accentColor: 'from-blue-500 to-indigo-600',
       lightBg: 'bg-blue-500/10 dark:bg-blue-500/15',
@@ -53,6 +56,7 @@ function ExpertiseContent() {
       name: language === 'bn' ? 'মোঃ মহিবুল্লাহ ইসলাম রেজা' : 'Md Mohibullah Islam Reza', 
       role: language === 'bn' ? 'বিজনেস স্ট্র্যাটেজিস্ট' : 'Business Strategist', 
       initials: 'MR',
+      image: '/team-member/reza.PNG',
       tag: language === 'bn' ? 'মার্কেট ও স্ট্র্যাটেজি' : 'Market & Strategy',
       accentColor: 'from-emerald-500 to-teal-600',
       lightBg: 'bg-emerald-500/10 dark:bg-emerald-500/15',
@@ -68,6 +72,7 @@ function ExpertiseContent() {
       name: language === 'bn' ? 'মেজবাউল হক সরদার' : 'Mezbaul Haque Sarder', 
       role: language === 'bn' ? 'ব্র্যান্ড রিপ্রেজেন্টেটিভ ও প্রেজেন্টার' : 'Brand Rep. & Content Presenter', 
       initials: 'MS',
+      image: '/team-member/Mezbaul.PNG',
       tag: language === 'bn' ? 'মিডিয়া ও আউটরিচ' : 'Media & Outreach',
       accentColor: 'from-rose-500 to-pink-600',
       lightBg: 'bg-rose-500/10 dark:bg-rose-500/15',
@@ -146,9 +151,13 @@ function ExpertiseContent() {
                 <div className="relative mb-6">
                   <div className="relative p-1.5 rounded-[2rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
                     <div className={`w-28 h-28 rounded-[1.7rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
-                      <span className="text-3xl font-black text-white tracking-wider drop-shadow-md">
-                        {member.initials}
-                      </span>
+                      {member.image ? (
+                        <Image src={member.image} alt={member.name} fill className="object-cover" sizes="(max-width: 768px) 112px, 112px" />
+                      ) : (
+                        <span className="text-3xl font-black text-white tracking-wider drop-shadow-md">
+                          {member.initials}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
