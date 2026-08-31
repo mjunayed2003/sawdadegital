@@ -24,7 +24,7 @@ function AboutContent() {
       name: language === 'bn' ? 'মোঃ খাইরুল বাশার' : 'Md Khairul Bashar', 
       role: language === 'bn' ? 'প্রতিষ্ঠাতা ও সিইও' : 'Founder & CEO', 
       initials: 'KB',
-      image: '/team-member/basar.PNG',
+      image: '/team-member/MdKhairulBashar.PNG',
       tag: language === 'bn' ? 'এক্সিকিউটিভ লিড' : 'Executive Lead',
       accentColor: 'from-amber-500 to-orange-600',
       tagColor: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 border-amber-200 dark:border-amber-800/40',
@@ -37,7 +37,7 @@ function AboutContent() {
     },
     { 
       name: language === 'bn' ? 'মোঃ জুনায়েদ' : 'Md Junayed', 
-      role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও সফটওয়্যার ইঞ্জিনিয়ার' : 'Co-Founder & Software Engineer', 
+      role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও সিওও (চিফ অপারেটিং অফিসার)' : 'Co-Founder & COO (Chief Operating Officer)', 
       initials: 'MJ',
       image: '/team-member/junayed.jpeg',
       objectPosition: 'object-[center_15%] scale-[1.35]',
@@ -53,7 +53,7 @@ function AboutContent() {
     },
     { 
       name: language === 'bn' ? 'মোঃ মহিবুল্লাহ ইসলাম রেজা' : 'Md Mohibullah Islam Reza', 
-      role: language === 'bn' ? 'বিজনেস স্ট্র্যাটেজিস্ট' : 'Business Strategist', 
+      role: language === 'bn' ? 'চিফ স্ট্র্যাটেজিক অফিসার (সিএসও) / হেড অব স্ট্র্যাটেজি অ্যান্ড বিজনেস ডেভেলপমেন্ট' : 'Chief Strategic officer (CSO) / Head of Strategy & Business Development', 
       initials: 'MR',
       image: '/team-member/reza.PNG',
       tag: language === 'bn' ? 'মার্কেট ও স্ট্র্যাটেজি' : 'Market & Strategy',
@@ -68,7 +68,7 @@ function AboutContent() {
     },
     { 
       name: language === 'bn' ? 'মেজবাউল হক সরদার' : 'Mezbaul Haque Sarder', 
-      role: language === 'bn' ? 'ব্র্যান্ড রিপ্রেজেন্টেটিভ ও প্রেজেন্টার' : 'Brand Rep. & Content Presenter', 
+      role: language === 'bn' ? 'ব্র্যান্ড অ্যান্ড কনটেন্ট এক্সিকিউটিভ' : 'Brand & Content Executive', 
       initials: 'MS',
       image: '/team-member/Mezbaul.PNG',
       tag: language === 'bn' ? 'মিডিয়া ও আউটরিচ' : 'Media & Outreach',
@@ -133,11 +133,11 @@ function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`relative bg-white dark:bg-[#1a1a1a] rounded-[2.5rem] p-7 text-center border border-slate-200/80 dark:border-white/10 shadow-lg hover:shadow-2xl ${member.glowColor} transition-all duration-500 flex flex-col items-center justify-between group overflow-hidden`}
+                className={`relative bg-white dark:bg-[#1a1a1a] rounded-[2.5rem] px-6 py-5 text-center border border-slate-200/80 dark:border-white/10 shadow-lg hover:shadow-2xl ${member.glowColor} transition-all duration-500 flex flex-col items-center justify-between group overflow-hidden`}
               >
                 <div className={`absolute -top-16 -right-16 w-36 h-36 bg-gradient-to-br ${member.accentColor} rounded-full blur-3xl opacity-10 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none`} />
 
-                <div className="w-full flex items-center justify-between mb-6">
+                <div className="w-full flex items-center justify-between mb-4">
                   <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border ${member.tagColor}`}>
                     {member.badgeIcon}
                     {member.tag}
@@ -145,13 +145,13 @@ function AboutContent() {
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" title="Active" />
                 </div>
 
-                <div className="relative mb-6">
-                  <div className="relative p-1.5 rounded-[2rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
-                    <div className={`w-28 h-28 rounded-[1.7rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
+                <div className="relative mb-4">
+                  <div className="relative p-1.5 rounded-[2.2rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
+                    <div className={`w-36 h-36 lg:w-40 lg:h-40 rounded-[2rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
                       {member.image ? (
-                        <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || ''}`} sizes="(max-width: 768px) 112px, 112px" />
+                        <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || ''}`} sizes="(max-width: 768px) 144px, 160px" />
                       ) : (
-                        <span className="text-3xl font-black text-white tracking-wider drop-shadow-md">
+                        <span className="text-4xl font-black text-white tracking-wider drop-shadow-md">
                           {member.initials}
                         </span>
                       )}
@@ -164,15 +164,15 @@ function AboutContent() {
                     <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-1.5 group-hover:text-[#FF7F11] transition-colors duration-300 min-h-[56px] flex items-center justify-center text-center">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#FF7F11] mb-4 min-h-[32px] flex items-center justify-center text-center">
+                    <p className="text-xs font-semibold text-[#FF7F11] mb-2 min-h-[32px] flex items-center justify-center text-center">
                       {member.role}
                     </p>
-                    <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed mb-6 min-h-[72px] flex items-center justify-center text-center">
+                    <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed mb-4 min-h-[72px] flex items-center justify-center text-center">
                       {member.description}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-100 dark:border-white/10 flex items-center justify-center gap-3">
+                  <div className="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-center gap-3">
                     <Link href="https://linkedin.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#FF7F11] dark:hover:bg-[#FF7F11] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaLinkedinIn />
                     </Link>
