@@ -153,7 +153,7 @@ function ExpertiseContent() {
                   <div className="relative p-1.5 rounded-[2rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
                     <div className={`w-28 h-28 rounded-[1.7rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
                       {member.image ? (
-                        <Image src={member.image} alt={member.name} fill className="object-cover" sizes="(max-width: 768px) 112px, 112px" />
+                        <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || ''}`} sizes="(max-width: 768px) 112px, 112px" />
                       ) : (
                         <span className="text-3xl font-black text-white tracking-wider drop-shadow-md">
                           {member.initials}
@@ -165,13 +165,13 @@ function ExpertiseContent() {
 
                 <div className="flex-1 flex flex-col justify-between w-full">
                   <div>
-                    <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-1.5 group-hover:text-[#FF7F11] transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-1.5 group-hover:text-[#FF7F11] transition-colors duration-300 min-h-[56px] flex items-center justify-center text-center">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#FF7F11] mb-4">
+                    <p className="text-xs font-semibold text-[#FF7F11] mb-4 min-h-[32px] flex items-center justify-center text-center">
                       {member.role}
                     </p>
-                    <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed mb-6">
+                    <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed mb-6 min-h-[72px] flex items-center justify-center text-center">
                       {member.description}
                     </p>
                   </div>
