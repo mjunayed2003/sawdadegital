@@ -55,7 +55,7 @@ function ExpertiseContent() {
     },
     { 
       name: language === 'bn' ? 'মোঃ মহিবুল্লাহ ইসলাম রেজা' : 'Md Mohibullah Islam Reza', 
-      role: language === 'bn' ? 'চিফ স্ট্র্যাটেজিক অফিসার (সিএসও) / হেড অব স্ট্র্যাটেজি অ্যান্ড বিজনেস ডেভেলপমেন্ট' : 'Chief Strategic officer (CSO) / Head of Strategy & Business Development', 
+      role: language === 'bn' ? 'হেড অব স্ট্র্যাটেজি অ্যান্ড বিজনেস ডেভেলপমেন্ট' : 'Head of Strategy & Business Development', 
       initials: 'MR',
       image: '/team-member/reza.PNG',
       tag: language === 'bn' ? 'মার্কেট ও স্ট্র্যাটেজি' : 'Market & Strategy',

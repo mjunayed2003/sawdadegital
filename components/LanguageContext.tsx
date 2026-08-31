@@ -131,7 +131,7 @@ heroDesc: {
   meetFullTeam: { en: 'Connect with our team', bn: 'আমাদের দলের সাথে সংযুক্ত হোন' },
   roleFounder: { en: 'Founder & CEO', bn: 'প্রতিষ্ঠাতা ও সিইও' },
   roleCoFounder: { en: 'Co-Founder & COO (Chief Operating Officer)', bn: 'সহ-প্রতিষ্ঠাতা ও সিওও (চিফ অপারেটিং অফিসার)' },
-  roleStrategist: { en: 'Chief Strategic officer (CSO) / Head of Strategy & Business Development', bn: 'চিফ স্ট্র্যাটেজিক অফিসার (সিএসও) / হেড অব স্ট্র্যাটেজি অ্যান্ড বিজনেস ডেভেলপমেন্ট' },
+  roleStrategist: { en: 'Head of Strategy & Business Development', bn: 'হেড অব স্ট্র্যাটেজি অ্যান্ড বিজনেস ডেভেলপমেন্ট' },
   roleBrandRep: { en: 'Brand & Content Executive', bn: 'ব্র্যান্ড অ্যান্ড কনটেন্ট এক্সিকিউটিভ' },
 
   // Testimonials Section
