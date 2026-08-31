@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import { LanguageProvider, useLanguage } from "@/components/LanguageContext";
 import { FiArrowRight } from 'react-icons/fi';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function ProjectsContent() {
   const { language } = useLanguage();
@@ -108,7 +109,7 @@ function ProjectsContent() {
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                 </div>
                 <div className="flex-1 relative overflow-hidden bg-slate-100 dark:bg-[#262626]">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                  <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <span className="text-[#FF7F11] text-xs font-bold uppercase tracking-wider mb-1">{project.category}</span>
                     <h3 className="text-white text-lg font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-300">{project.title}</h3>
@@ -128,7 +129,7 @@ function ProjectsContent() {
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                 </div>
                 <div className="flex-1 relative overflow-hidden bg-slate-100 dark:bg-[#262626]">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out object-top" />
+                  <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out object-top" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                     <span className="text-[#FF7F11] text-xs font-bold uppercase tracking-wider mb-1">{project.category}</span>
                     <h3 className="text-white text-2xl font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-300">{project.title}</h3>

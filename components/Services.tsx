@@ -4,11 +4,12 @@ import { motion, Variants } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import { useLanguage } from '@/components/LanguageContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const serviceCards = [
   {
     key: 'web',
-    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80',
     titleKey: 'webDevTitle',
     descKey: 'webDevDesc',
     badge: 'Web & CMS',
@@ -16,7 +17,7 @@ const serviceCards = [
   },
   {
     key: 'media',
-    image: 'https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80',
     titleKey: 'mediaTitle',
     descKey: 'mediaDesc',
     badge: 'Media & Video',
@@ -24,7 +25,7 @@ const serviceCards = [
   },
   {
     key: 'social',
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80',
     titleKey: 'socialTitle',
     descKey: 'socialDesc',
     badge: 'Social & Ads',
@@ -32,7 +33,7 @@ const serviceCards = [
   },
   {
     key: 'brand',
-    image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=800&q=80',
     titleKey: 'brandingTitle',
     descKey: 'brandingDesc',
     badge: 'Brand & Identity',
@@ -40,7 +41,7 @@ const serviceCards = [
   },
   {
     key: 'seo',
-    image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
     titleKey: 'seoTitle',
     descKey: 'seoDesc',
     badge: 'SEO & Search',
@@ -48,7 +49,7 @@ const serviceCards = [
   },
   {
     key: 'ecommerce',
-    image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80',
     titleKey: 'ecommerceTitle',
     descKey: 'ecommerceDesc',
     badge: 'E-commerce',
@@ -56,7 +57,7 @@ const serviceCards = [
   },
   {
     key: 'app',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80',
     titleKey: 'appDevTitle',
     descKey: 'appDevDesc',
     badge: 'Mobile & Apps',
@@ -64,7 +65,7 @@ const serviceCards = [
   },
   {
     key: 'uiux',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&q=80',
     titleKey: 'uiuxTitle',
     descKey: 'uiuxDesc',
     badge: 'UI/UX Design',
@@ -131,10 +132,12 @@ export default function Services() {
               {/* Image Container */}
               <Link href={service.path || "/contact"} className="block relative h-48 w-full rounded-[1.5rem] overflow-hidden mb-5 cursor-pointer">
                 <div className="absolute inset-0 bg-[#262626]/10 dark:bg-black/40 group-hover:bg-transparent transition-colors z-10"></div>
-                <img 
+                <Image 
                   src={service.image} 
                   alt={t(service.titleKey)} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
                 />
               </Link>
 

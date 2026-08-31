@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageContext';
 import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
+import Image from 'next/image';
 
 export default function Testimonials() {
   const { t } = useLanguage();
@@ -109,10 +110,12 @@ export default function Testimonials() {
                 {/* User Info */}
                 <div className="flex items-center gap-4 pt-4 border-t border-gray-100 dark:border-white/10">
                   <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#FF7F11] shadow-md flex-shrink-0">
-                    <img 
+                    <Image 
                       src={current.image} 
                       alt={t(current.nameKey)} 
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="56px"
+                      className="object-cover"
                     />
                   </div>
                   <div>

@@ -4,6 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageContext';
 import { FiArrowRight } from 'react-icons/fi';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -86,10 +87,12 @@ export default function SelectedWork() {
                 {/* Overlay for hover */}
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10"></div>
                 
-                <img 
+                <Image 
                   src={project.image} 
                   alt={t(project.titleKey)} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
                 />
                 
                 {/* Floating Action Button */}

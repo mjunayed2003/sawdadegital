@@ -167,15 +167,12 @@ export default function Leadership() {
               </div>
 
               {/* Bottom Actions & Socials */}
-              <div className="w-full pt-2 border-t border-slate-100 dark:border-white/5 flex items-center justify-center gap-2.5">
+              <div className="w-full pt-1.5 border-t border-slate-100 dark:border-white/5 flex items-center justify-center gap-2">
                 <a href="#" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#FF7F11] flex items-center justify-center transition-all duration-300 hover:scale-110">
                   <FaLinkedinIn className="w-3.5 h-3.5" />
                 </a>
                 <a href="#" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#FF7F11] flex items-center justify-center transition-all duration-300 hover:scale-110">
                   <FaXTwitter className="w-3.5 h-3.5" />
-                </a>
-                <a href="#" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#FF7F11] flex items-center justify-center transition-all duration-300 hover:scale-110">
-                  <FaGithub className="w-3.5 h-3.5" />
                 </a>
               </div>
             </motion.div>
