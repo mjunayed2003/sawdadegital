@@ -24,7 +24,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="relative flex items-center justify-between w-[104px] h-11 px-1 bg-[#DBEAFE] dark:bg-[#1a1a1a] border border-[#1E3A8A]/30 dark:border-white/10 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+      className="relative flex items-center justify-between w-[104px] h-11 px-1 bg-[#FCE7F3] dark:bg-[#1a1a1a] border border-[#334155]/30 dark:border-white/10 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#9D224D]"
       aria-label="Toggle Dark Mode"
     >
       <span className="sr-only">Toggle theme</span>
@@ -38,7 +38,7 @@ export function ThemeToggle() {
         {isDark ? (
           <FaMoon className="w-4 h-4 text-white" />
         ) : (
-          <FaSun className="w-4 h-4 text-[#D4AF37]" />
+          <FaSun className="w-4 h-4 text-[#9D224D]" />
         )}
       </div>
 

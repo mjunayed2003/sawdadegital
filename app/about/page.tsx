@@ -85,13 +85,13 @@ function AboutContent() {
 
   const services = [
     { icon: <FaCode />, title: language === 'bn' ? 'ওয়েব ডিজাইন ও ডেভেলপমেন্ট' : 'Web Design & Development', desc: language === 'bn' ? 'কাস্টম ওয়েবসাইট, SaaS প্ল্যাটফর্ম এবং উচ্চগতির ওয়েব অ্যাপ্লিকেশন।' : 'Custom high-performance websites, SaaS platforms, and scalable web apps.', color: 'bg-[#1a1a1a]', path: '/services/web-development' },
-    { icon: <FaVideo />, title: language === 'bn' ? 'মিডিয়া ও কনটেন্ট প্রোডাকশন' : 'Media & Content Production', desc: language === 'bn' ? 'বাণিজ্যিক ভিডিও, ব্র্যান্ড ফিল্ম ও সিনেমাটিক প্রমোশনাল কনটেন্ট।' : 'Cinematic commercials, brand films, animation, and multimedia assets.', color: 'bg-[#D4AF37]', path: '/services/video-production' },
+    { icon: <FaVideo />, title: language === 'bn' ? 'মিডিয়া ও কনটেন্ট প্রোডাকশন' : 'Media & Content Production', desc: language === 'bn' ? 'বাণিজ্যিক ভিডিও, ব্র্যান্ড ফিল্ম ও সিনেমাটিক প্রমোশনাল কনটেন্ট।' : 'Cinematic commercials, brand films, animation, and multimedia assets.', color: 'bg-[#9D224D]', path: '/services/video-production' },
     { icon: <FaBullhorn />, title: language === 'bn' ? 'সোশ্যাল মিডিয়া ম্যানেজমেন্ট ও মার্কেটিং' : 'Social Media Management & Marketing', desc: language === 'bn' ? 'কৌশলগত সোশ্যাল ক্যাম্পেইন, টার্গেটেড বিজ্ঞাপন ও অডিয়েন্স গ্রোথ।' : 'Strategic social campaigns, paid acquisition, and compound growth.', color: 'bg-[#1a1a1a]', path: '/services/marketing-sales' },
-    { icon: <FaPenNib />, title: language === 'bn' ? 'ব্র্যান্ডিং ও গ্রাফিক্স ডিজাইন' : 'Branding & Graphics Design', desc: language === 'bn' ? 'লোগো, ভিজ্যুয়াল আইডেন্টিটি এবং প্রিমিয়াম ডিজাইন সিস্টেম।' : 'Visual identity systems, logos, packaging, and advertising creatives.', color: 'bg-[#D4AF37]', path: '/services/graphics-design' },
+    { icon: <FaPenNib />, title: language === 'bn' ? 'ব্র্যান্ডিং ও গ্রাফিক্স ডিজাইন' : 'Branding & Graphics Design', desc: language === 'bn' ? 'লোগো, ভিজ্যুয়াল আইডেন্টিটি এবং প্রিমিয়াম ডিজাইন সিস্টেম।' : 'Visual identity systems, logos, packaging, and advertising creatives.', color: 'bg-[#9D224D]', path: '/services/graphics-design' },
     { icon: <FaMagnifyingGlass />, title: language === 'bn' ? 'এসইও ও গুগল মার্কেটিং' : 'SEO & Google Marketing', desc: language === 'bn' ? 'টেকনিক্যাল এসইও ও গুগল সার্চ অ্যাডস দিয়ে ১ নম্বর র‍্যাঙ্কিং।' : 'Data-driven search engine optimization and targeted Google Ads.', color: 'bg-[#1a1a1a]', path: '/services/seo' },
-    { icon: <FaBriefcase />, title: language === 'bn' ? 'ই-কমার্স সলিউশনস' : 'E-commerce Solutions', desc: language === 'bn' ? 'বিকাশ/নগদ পেমেন্ট গেটওয়েসহ হাই-কনভার্শন অনলাইন স্টোর।' : 'Full-featured online stores, payment integrations, and sales funnels.', color: 'bg-[#D4AF37]', path: '/services/architecture' },
+    { icon: <FaBriefcase />, title: language === 'bn' ? 'ই-কমার্স সলিউশনস' : 'E-commerce Solutions', desc: language === 'bn' ? 'বিকাশ/নগদ পেমেন্ট গেটওয়েসহ হাই-কনভার্শন অনলাইন স্টোর।' : 'Full-featured online stores, payment integrations, and sales funnels.', color: 'bg-[#9D224D]', path: '/services/architecture' },
     { icon: <FaRobot />, title: language === 'bn' ? 'অ্যাপ ডেভেলপমেন্ট' : 'App Development', desc: language === 'bn' ? 'iOS ও অ্যান্ড্রয়েড ক্রস-প্ল্যাটফর্ম হাই-পারফরম্যান্স মোবাইল অ্যাপ।' : 'Custom iOS, Android, and cross-platform mobile applications.', color: 'bg-[#1a1a1a]', path: '/services/ai-services' },
-    { icon: <FaDesktop />, title: language === 'bn' ? 'ইউআই/ইউএক্স ডিজাইন' : 'UI/UX Design', desc: language === 'bn' ? 'ইউজার রিসার্চ, ফিগমা প্রোটোটাইপিং ও পিক্সেল-পারফেক্ট ইন্টারফেস।' : 'Research-led product design, intuitive wireframing, and Figma UI.', color: 'bg-[#D4AF37]', path: '/services/ui-ux' },
+    { icon: <FaDesktop />, title: language === 'bn' ? 'ইউআই/ইউএক্স ডিজাইন' : 'UI/UX Design', desc: language === 'bn' ? 'ইউজার রিসার্চ, ফিগমা প্রোটোটাইপিং ও পিক্সেল-পারফেক্ট ইন্টারফেস।' : 'Research-led product design, intuitive wireframing, and Figma UI.', color: 'bg-[#9D224D]', path: '/services/ui-ux' },
   ];
 
   const features = [
@@ -112,7 +112,7 @@ function AboutContent() {
         {/* Leadership Section */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 mb-32 max-w-7xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
+            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
               {language === 'bn' ? 'আমাদের দক্ষ নেতৃত্ব' : 'LEADERSHIP'}
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-[#0f172a] dark:text-white">
@@ -161,10 +161,10 @@ function AboutContent() {
 
                 <div className="flex-1 flex flex-col justify-between w-full">
                   <div>
-                    <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-1.5 group-hover:text-[#D4AF37] transition-colors duration-300 min-h-[56px] flex items-center justify-center text-center">
+                    <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-1.5 group-hover:text-[#9D224D] transition-colors duration-300 min-h-[56px] flex items-center justify-center text-center">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#D4AF37] mb-1 min-h-[32px] flex items-center justify-center text-center">
+                    <p className="text-xs font-semibold text-[#9D224D] mb-1 min-h-[32px] flex items-center justify-center text-center">
                       {member.role}
                     </p>
                     <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed mb-3 min-h-[64px] flex items-center justify-center text-center">
@@ -173,13 +173,13 @@ function AboutContent() {
                   </div>
 
                   <div className="pt-2 border-t border-slate-100 dark:border-white/10 flex items-center justify-center gap-3">
-                    <Link href="https://linkedin.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#D4AF37] dark:hover:bg-[#D4AF37] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
+                    <Link href="https://linkedin.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaLinkedinIn />
                     </Link>
-                    <Link href="https://facebook.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#D4AF37] dark:hover:bg-[#D4AF37] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
+                    <Link href="https://facebook.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaFacebookF />
                     </Link>
-                    <Link href="https://twitter.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#D4AF37] dark:hover:bg-[#D4AF37] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
+                    <Link href="https://twitter.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaXTwitter />
                     </Link>
                   </div>
@@ -192,7 +192,7 @@ function AboutContent() {
         {/* 8 Core Services Grid */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-32 max-w-7xl">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
+            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
               {language === 'bn' ? 'আমাদের বিশেষায়িত সেবা' : 'SERVICES'}
             </div>
             <h2 className="text-3xl md:text-5xl font-black text-[#0f172a] dark:text-white">
@@ -208,17 +208,17 @@ function AboutContent() {
                 className="bg-white dark:bg-[#1a1a1a] rounded-3xl p-8 border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
               >
                 <div>
-                  <div className="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-white/5 text-[#D4AF37] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#D4AF37] group-hover:text-white transition-all duration-300">
+                  <div className="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-white/5 text-[#9D224D] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#9D224D] group-hover:text-white transition-all duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-[#0f172a] dark:text-white mb-3 group-hover:text-[#D4AF37] transition-colors">
+                  <h3 className="text-lg font-bold text-[#0f172a] dark:text-white mb-3 group-hover:text-[#9D224D] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed">
                     {service.desc}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-100 dark:border-white/10 flex items-center gap-1.5 text-xs font-bold text-[#D4AF37]">
+                <div className="mt-6 pt-4 border-t border-slate-100 dark:border-white/10 flex items-center gap-1.5 text-xs font-bold text-[#9D224D]">
                   <span>{language === 'bn' ? 'বিস্তারিত দেখুন' : 'Explore service'}</span>
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -242,7 +242,7 @@ function AboutContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feat, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-white/5 text-[#D4AF37] flex items-center justify-center text-2xl mb-5 shadow-inner">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-white/5 text-[#9D224D] flex items-center justify-center text-2xl mb-5 shadow-inner">
                     {feat.icon}
                   </div>
                   <h4 className="text-base font-bold text-[#0f172a] dark:text-white mb-2">{feat.title}</h4>

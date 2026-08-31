@@ -25,7 +25,7 @@ export default function Capabilities() {
       description: language === 'bn' 
         ? 'বিকাশ, নগদ, ভিসা, মাস্টারকার্ড ও স্ট্রাইপ পেমেন্ট গেটওয়ে, ১-ক্লিক ফাস্ট চেকআউট এবং রিয়েল-টাইম ইনভেন্টরি ম্যানেজমেন্ট সম্বলিত সম্পূর্ণ স্টোর।'
         : 'Next.js & Shopify headless storefronts with instant bKash, Nagad, Stripe payment gateways, 1-click checkouts, and seamless inventory sync.',
-      icon: <FaShoppingCart className="w-6 h-6 text-[#D4AF37]" />,
+      icon: <FaShoppingCart className="w-6 h-6 text-[#9D224D]" />,
       colSpan: "lg:col-span-2",
       rowSpan: "lg:row-span-2",
       isHero: true,
@@ -51,7 +51,7 @@ export default function Capabilities() {
       description: language === 'bn'
         ? 'দোকান ও অনলাইন স্টোরের স্টক একসাথে রিয়েল-টাইমে ম্যানেজ করার স্মার্ট অটোমেশন।'
         : 'Unified multichannel stock synchronization between physical retail POS and online storefronts to prevent stockouts.',
-      icon: <FaBoxesStacked className="w-6 h-6 text-[#D4AF37]" />,
+      icon: <FaBoxesStacked className="w-6 h-6 text-[#9D224D]" />,
       colSpan: "lg:col-span-1",
       rowSpan: "lg:row-span-1",
       tags: ['Multichannel Stock Sync', 'Low Stock Auto Alerts', 'Barcode Scanner Ready'],
@@ -63,7 +63,7 @@ export default function Capabilities() {
       description: language === 'bn'
         ? 'মোবাইলে দ্রুত অর্ডার প্লেস করার উপযোগী ফর্ম—যা কার্ট ড্রপ-অফ কমিয়ে বিক্রি বাড়ায়।'
         : 'Minimalist 2-step checkout flows engineered specifically for mobile shoppers to slash cart abandonment.',
-      icon: <FaBolt className="w-6 h-6 text-[#D4AF37]" />,
+      icon: <FaBolt className="w-6 h-6 text-[#9D224D]" />,
       colSpan: "lg:col-span-1",
       rowSpan: "lg:row-span-1",
       tags: ['2-Step Mobile Checkout', 'OTP Auto Verification', 'Guest Checkout Enabled'],
@@ -75,7 +75,7 @@ export default function Capabilities() {
       description: language === 'bn'
         ? 'Steadfast, Pathao, RedX ও eCourier এর সাথে স্বয়ংক্রিয় অর্ডার ট্র্যাকিং ও পার্সেল বুকিং।'
         : 'Direct automated courier parcel booking with Steadfast, Pathao, and RedX with real-time customer SMS tracking.',
-      icon: <FaTruckFast className="w-6 h-6 text-[#D4AF37]" />,
+      icon: <FaTruckFast className="w-6 h-6 text-[#9D224D]" />,
       colSpan: "lg:col-span-1",
       rowSpan: "lg:row-span-1",
       tags: ['Steadfast & Pathao API', 'Auto Consignment Booking', 'Customer Live Tracking'],
@@ -87,7 +87,7 @@ export default function Capabilities() {
       description: language === 'bn'
         ? 'হোয়াটসঅ্যাপ ও এসএমএস এর মাধ্যমে পরিত্যক্ত কার্ট রিকভারি এবং কাস্টমার লয়ালটি বৃদ্ধি।'
         : 'Automated WhatsApp and SMS cart recovery notifications that reclaim up to 25% of lost checkouts.',
-      icon: <FaShoppingCart className="w-6 h-6 text-[#D4AF37]" />,
+      icon: <FaShoppingCart className="w-6 h-6 text-[#9D224D]" />,
       colSpan: "lg:col-span-1",
       rowSpan: "lg:row-span-1",
       tags: ['WhatsApp Cart Recovery', 'SMS Order Confirmation', 'Customer Loyalty System'],
@@ -97,8 +97,8 @@ export default function Capabilities() {
 
   return (
     <section className="py-24 bg-[#FAFAFA] dark:bg-[#111111] relative overflow-hidden transition-colors duration-300">
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#1E3A8A]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#9D224D]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#334155]/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
@@ -111,8 +111,8 @@ export default function Capabilities() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest uppercase mb-4 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest uppercase mb-4 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#9D224D]"></span>
               {language === 'bn' ? 'ই-কমার্স সমাধান' : 'E-COMMERCE CAPABILITIES'}
             </div>
             
@@ -135,7 +135,7 @@ export default function Capabilities() {
           >
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#D4AF37] hover:bg-[#B5952F] text-white text-sm font-bold shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#9D224D] hover:bg-[#7A173A] text-white text-sm font-bold shadow-lg shadow-[#9D224D]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
             >
               <span>{language === 'bn' ? 'ই-কমার্স স্টোর তৈরি করুন' : 'Launch E-Commerce Store'}</span>
               <FaArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -156,16 +156,16 @@ export default function Capabilities() {
                   transition={{ duration: 0.6, delay: idx * 0.08 }}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
-                  className={`${cap.colSpan} ${cap.rowSpan} relative bg-gradient-to-br from-[#001F3F] via-[#091E3A] to-[#040D1A] rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl border border-white/10 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-500 hover:border-[#D4AF37]/50`}
+                  className={`${cap.colSpan} ${cap.rowSpan} relative bg-gradient-to-br from-[#001F3F] via-[#091E3A] to-[#040D1A] rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl border border-white/10 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-500 hover:border-[#9D224D]/50`}
                 >
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37]/15 rounded-full blur-[90px] pointer-events-none group-hover:bg-[#D4AF37]/25 transition-all duration-700"></div>
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-[#9D224D]/15 rounded-full blur-[90px] pointer-events-none group-hover:bg-[#9D224D]/25 transition-all duration-700"></div>
 
                   <div className="relative z-10">
                     <div className="flex items-center justify-between gap-4 mb-8">
                       <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300">
                         {cap.icon}
                       </div>
-                      <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-white/10 backdrop-blur-md text-[#D4AF37] border border-white/15">
+                      <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-white/10 backdrop-blur-md text-[#9D224D] border border-white/15">
                         {cap.metric}
                       </span>
                     </div>
@@ -205,7 +205,7 @@ export default function Capabilities() {
                   transition={{ duration: 0.6, delay: idx * 0.08 }}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
-                  className={`${cap.colSpan} ${cap.rowSpan} relative bg-gradient-to-br from-[#D4AF37] to-[#D96B00] rounded-[2rem] p-8 text-white shadow-xl border border-white/20 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-[#D4AF37]/20`}
+                  className={`${cap.colSpan} ${cap.rowSpan} relative bg-gradient-to-br from-[#9D224D] to-[#D96B00] rounded-[2rem] p-8 text-white shadow-xl border border-white/20 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-[#9D224D]/20`}
                 >
                   <div className="relative z-10">
                     <div className="flex items-center justify-between gap-4 mb-6">
@@ -246,11 +246,11 @@ export default function Capabilities() {
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
-                className={`${cap.colSpan} ${cap.rowSpan} relative bg-white dark:bg-[#1a1a1a] rounded-[2rem] p-8 shadow-md hover:shadow-xl border border-[#DBEAFE] dark:border-white/10 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:border-[#D4AF37]/40`}
+                className={`${cap.colSpan} ${cap.rowSpan} relative bg-white dark:bg-[#1a1a1a] rounded-[2rem] p-8 shadow-md hover:shadow-xl border border-[#FCE7F3] dark:border-white/10 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:border-[#9D224D]/40`}
               >
                 <div className="relative z-10">
                   <div className="flex items-center justify-between gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-[#FAFAFA] dark:bg-[#262626] border border-[#DBEAFE] dark:border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 rounded-2xl bg-[#FAFAFA] dark:bg-[#262626] border border-[#FCE7F3] dark:border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       {cap.icon}
                     </div>
                     <span className="text-[11px] font-mono font-bold bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10">
@@ -258,7 +258,7 @@ export default function Capabilities() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#111827] dark:text-white mb-3 group-hover:text-[#D4AF37] transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-[#111827] dark:text-white mb-3 group-hover:text-[#9D224D] transition-colors duration-300">
                     {cap.title}
                   </h3>
 

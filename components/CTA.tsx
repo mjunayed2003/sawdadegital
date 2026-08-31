@@ -21,8 +21,8 @@ export default function CTA() {
           transition={{ duration: 0.7 }}
         >
           {/* Dynamic Background Glows */}
-          <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#1E3A8A] rounded-full blur-[120px] opacity-20 mix-blend-screen group-hover:scale-110 transition-transform duration-1000 ease-out"></div>
-          <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#D4AF37] rounded-full blur-[120px] opacity-20 mix-blend-screen group-hover:scale-110 transition-transform duration-1000 ease-out"></div>
+          <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#334155] rounded-full blur-[120px] opacity-20 mix-blend-screen group-hover:scale-110 transition-transform duration-1000 ease-out"></div>
+          <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#9D224D] rounded-full blur-[120px] opacity-20 mix-blend-screen group-hover:scale-110 transition-transform duration-1000 ease-out"></div>
           
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
             
@@ -46,7 +46,7 @@ export default function CTA() {
             
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-[#D4AF37] text-white font-black text-sm uppercase tracking-wider hover:bg-[#B5952F] hover:scale-105 hover:shadow-[0_0_40px_rgba(255,127,17,0.4)] transition-all duration-300 group/btn"
+              className="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-[#9D224D] text-white font-black text-sm uppercase tracking-wider hover:bg-[#7A173A] hover:scale-105 hover:shadow-[0_0_40px_rgba(255,127,17,0.4)] transition-all duration-300 group/btn"
             >
               {t('ctaButton')}
               <FiArrowRight className="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform" />

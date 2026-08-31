@@ -11,7 +11,7 @@ export default function Hero3D() {
       <motion.div 
         animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute w-56 sm:w-72 h-56 sm:h-72 rounded-full bg-gradient-to-tr from-[#D4AF37]/20 to-[#1E3A8A]/30 blur-3xl pointer-events-none"
+        className="absolute w-56 sm:w-72 h-56 sm:h-72 rounded-full bg-gradient-to-tr from-[#9D224D]/20 to-[#334155]/30 blur-3xl pointer-events-none"
       />
 
       {/* Main Code Window Card */}
@@ -29,14 +29,14 @@ export default function Hero3D() {
             <span className="w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full bg-green-500/80"></span>
           </div>
           <span className="text-[10px] sm:text-xs font-mono text-gray-400 flex items-center gap-1.5">
-            <FaCode className="text-[#D4AF37]" /> App.tsx
+            <FaCode className="text-[#9D224D]" /> App.tsx
           </span>
           <div className="w-6 sm:w-8"></div>
         </div>
 
         {/* Code Snippet */}
         <div className="font-mono text-[10px] sm:text-xs space-y-2 text-gray-300">
-          <div className="text-[#D4AF37]">import <span className="text-white">{"{ createScalableApp }"}</span> from <span className="text-emerald-400">'@sawda/core'</span>;</div>
+          <div className="text-[#9D224D]">import <span className="text-white">{"{ createScalableApp }"}</span> from <span className="text-emerald-400">'@sawda/core'</span>;</div>
           <div className="text-purple-400">const <span className="text-blue-300">platform</span> = <span className="text-yellow-300">createScalableApp</span>({`{`}</div>
           <div className="pl-3 sm:pl-4 text-gray-400">stack: [<span className="text-emerald-300">'Next.js'</span>, <span className="text-emerald-300">'TS'</span>],</div>
           <div className="pl-3 sm:pl-4 text-gray-400">performance: <span className="text-amber-400">'100/100'</span>,</div>
@@ -74,7 +74,7 @@ export default function Hero3D() {
         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute -bottom-3 left-1 sm:-bottom-6 sm:-left-4 bg-white dark:bg-[#1f2937] px-3 sm:px-4 py-2 sm:py-3 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10 flex items-center gap-2 sm:gap-3 z-20"
       >
-        <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xs sm:text-lg">
+        <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-[#9D224D]/10 text-[#9D224D] flex items-center justify-center text-xs sm:text-lg">
           <FaLaptopCode />
         </div>
         <div className="flex items-center gap-1.5 sm:gap-2 text-gray-700 dark:text-gray-200 text-xs sm:text-sm">

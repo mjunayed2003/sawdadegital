@@ -93,35 +93,35 @@ export default function Navbar() {
         isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
       } ${
         isScrolled 
-          ? 'top-0 border-b border-[#DBEAFE] dark:border-white/10 bg-white/95 dark:bg-[#1a1a1a]/95 backdrop-blur-md shadow-md' 
-          : 'top-9 border-b border-[#DBEAFE] dark:border-white/10 bg-white dark:bg-[#1a1a1a]'
+          ? 'top-0 border-b border-[#FCE7F3] dark:border-white/10 bg-white/95 dark:bg-[#1a1a1a]/95 backdrop-blur-md shadow-md' 
+          : 'top-9 border-b border-[#FCE7F3] dark:border-white/10 bg-white dark:bg-[#1a1a1a]'
       }`}>
         <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-1">
-              <span className="text-2xl font-bold tracking-tight text-[#D4AF37]">Sawda</span>
+              <span className="text-2xl font-bold tracking-tight text-[#9D224D]">Sawda</span>
               <span className="text-2xl font-bold tracking-tight text-[#262626] dark:text-white transition-colors duration-300">Digital</span>
-              <span className="h-2 w-2 rounded-full bg-[#D4AF37] self-end mb-2"></span>
+              <span className="h-2 w-2 rounded-full bg-[#9D224D] self-end mb-2"></span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2">
-            <Link href="/" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/" ? "bg-[#DBEAFE] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#1E3A8A] hover:text-white" : "text-[#262626] hover:bg-[#DBEAFE] dark:text-gray-200 dark:hover:bg-white/10"}`}>
+            <Link href="/" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/" ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
               {t('home')}
             </Link>
             
             <div className="relative group">
-              <button className={`flex items-center gap-2 text-sm font-bold px-5 py-2.5 rounded-full cursor-pointer transition-colors ${pathname.startsWith("/services") ? "bg-[#DBEAFE] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#1E3A8A] hover:text-white" : "text-[#262626] hover:bg-[#DBEAFE] dark:text-gray-200 dark:hover:bg-white/10"}`}>
+              <button className={`flex items-center gap-2 text-sm font-bold px-5 py-2.5 rounded-full cursor-pointer transition-colors ${pathname.startsWith("/services") ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
                 {t('services')}
                 <FaChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full left-0 pt-4 w-[340px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="bg-white dark:bg-[#262626] rounded-2xl shadow-lg border border-[#DBEAFE] dark:border-white/10 p-3 flex flex-col gap-1 max-h-[70vh] overflow-y-auto">
+                <div className="bg-white dark:bg-[#262626] rounded-2xl shadow-lg border border-[#FCE7F3] dark:border-white/10 p-3 flex flex-col gap-1 max-h-[70vh] overflow-y-auto">
                   {services.map((service, idx) => (
-                    <Link key={idx} href={service.path || "#"} className="flex items-center gap-4 px-4 py-3 text-[15px] font-medium text-[#262626] dark:text-gray-200 hover:text-white hover:bg-[#1E3A8A] rounded-xl transition-colors group/item">
-                      <span className="text-lg w-5 flex justify-center text-[#1E3A8A] group-hover/item:text-white">{service.icon}</span>
+                    <Link key={idx} href={service.path || "#"} className="flex items-center gap-4 px-4 py-3 text-[15px] font-medium text-[#262626] dark:text-gray-200 hover:text-white hover:bg-[#334155] rounded-xl transition-colors group/item">
+                      <span className="text-lg w-5 flex justify-center text-[#334155] group-hover/item:text-white">{service.icon}</span>
                       {service.name}
                     </Link>
                   ))}
@@ -129,13 +129,13 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/projects" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/projects" ? "bg-[#DBEAFE] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#1E3A8A] hover:text-white" : "text-[#262626] hover:bg-[#DBEAFE] dark:text-gray-200 dark:hover:bg-white/10"}`}>
+            <Link href="/projects" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/projects" ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
               {t('projects')}
             </Link>
-            <Link href="/expertise" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/expertise" ? "bg-[#DBEAFE] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#1E3A8A] hover:text-white" : "text-[#262626] hover:bg-[#DBEAFE] dark:text-gray-200 dark:hover:bg-white/10"}`}>
+            <Link href="/expertise" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/expertise" ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
               {t('ourTeam')}
             </Link>
-            <Link href="/contact" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/contact" ? "bg-[#DBEAFE] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#1E3A8A] hover:text-white" : "text-[#262626] hover:bg-[#DBEAFE] dark:text-gray-200 dark:hover:bg-white/10"}`}>
+            <Link href="/contact" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/contact" ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
               {t('contact')}
             </Link>
           </nav>
@@ -156,7 +156,7 @@ export default function Navbar() {
                 {language === 'en' && (
                   <motion.div 
                     layoutId="activeLangDesktop"
-                    className="absolute inset-0 bg-[#D4AF37] rounded-full shadow-md shadow-[#D4AF37]/30 z-[-1]"
+                    className="absolute inset-0 bg-[#9D224D] rounded-full shadow-md shadow-[#9D224D]/30 z-[-1]"
                     transition={{ type: "spring", stiffness: 450, damping: 32 }}
                   />
                 )}
@@ -171,7 +171,7 @@ export default function Navbar() {
                 {language === 'bn' && (
                   <motion.div 
                     layoutId="activeLangDesktop"
-                    className="absolute inset-0 bg-[#D4AF37] rounded-full shadow-md shadow-[#D4AF37]/30 z-[-1]"
+                    className="absolute inset-0 bg-[#9D224D] rounded-full shadow-md shadow-[#9D224D]/30 z-[-1]"
                     transition={{ type: "spring", stiffness: 450, damping: 32 }}
                   />
                 )}
@@ -195,16 +195,16 @@ export default function Navbar() {
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-16 left-0 right-0 bg-white dark:bg-[#1a1a1a] border-b border-[#DBEAFE] dark:border-white/10 shadow-xl overflow-y-auto max-h-[calc(100vh-4rem)] z-50">
+          <div className="lg:hidden absolute top-16 left-0 right-0 bg-white dark:bg-[#1a1a1a] border-b border-[#FCE7F3] dark:border-white/10 shadow-xl overflow-y-auto max-h-[calc(100vh-4rem)] z-50">
             <div className="flex flex-col p-4 gap-2">
-              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/" ? "bg-[#1E3A8A] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#DBEAFE] dark:hover:bg-white/10"}`}>
+              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/" ? "bg-[#334155] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}>
                 {t('home')}
               </Link>
               
               <div className="flex flex-col">
                 <button 
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)} 
-                  className={`flex items-center justify-between text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname.startsWith("/services") ? "text-[#1E3A8A]" : "text-[#262626] dark:text-gray-200 hover:bg-[#DBEAFE] dark:hover:bg-white/10"}`}
+                  className={`flex items-center justify-between text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname.startsWith("/services") ? "text-[#334155]" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}
                 >
                   {t('services')}
                   <FaChevronDown className={`w-3 h-3 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -217,9 +217,9 @@ export default function Navbar() {
                         key={idx} 
                         href={service.path || "#"} 
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className={`flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${pathname === service.path ? "bg-[#1E3A8A]/20 text-[#1E3A8A]" : "text-gray-600 dark:text-gray-300 hover:bg-[#DBEAFE] dark:hover:bg-white/10"}`}
+                        className={`flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${pathname === service.path ? "bg-[#334155]/20 text-[#334155]" : "text-gray-600 dark:text-gray-300 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}
                       >
-                        <span className="text-lg w-5 flex justify-center text-[#1E3A8A]">{service.icon}</span>
+                        <span className="text-lg w-5 flex justify-center text-[#334155]">{service.icon}</span>
                         {service.name}
                       </Link>
                     ))}
@@ -227,17 +227,17 @@ export default function Navbar() {
                 )}
               </div>
 
-              <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/projects" ? "bg-[#1E3A8A] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#DBEAFE] dark:hover:bg-white/10"}`}>
+              <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/projects" ? "bg-[#334155] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}>
                 {t('projects')}
               </Link>
-              <Link href="/expertise" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/expertise" ? "bg-[#1E3A8A] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#DBEAFE] dark:hover:bg-white/10"}`}>
+              <Link href="/expertise" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/expertise" ? "bg-[#334155] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}>
                 {t('ourTeam')}
               </Link>
-              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/contact" ? "bg-[#1E3A8A] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#DBEAFE] dark:hover:bg-white/10"}`}>
+              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/contact" ? "bg-[#334155] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}>
                 {t('contact')}
               </Link>
 
-              <div className="h-px bg-[#DBEAFE] dark:bg-white/10 my-2"></div>
+              <div className="h-px bg-[#FCE7F3] dark:bg-white/10 my-2"></div>
               
               <div className="flex items-center justify-between px-4 py-2">
                 <div className="flex items-center bg-slate-100 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 rounded-full p-1 shadow-inner backdrop-blur-md">
@@ -253,7 +253,7 @@ export default function Navbar() {
                     {language === 'en' && (
                       <motion.div 
                         layoutId="activeLangMobile"
-                        className="absolute inset-0 bg-[#D4AF37] rounded-full shadow-md shadow-[#D4AF37]/30 z-[-1]"
+                        className="absolute inset-0 bg-[#9D224D] rounded-full shadow-md shadow-[#9D224D]/30 z-[-1]"
                         transition={{ type: "spring", stiffness: 450, damping: 32 }}
                       />
                     )}
@@ -268,7 +268,7 @@ export default function Navbar() {
                     {language === 'bn' && (
                       <motion.div 
                         layoutId="activeLangMobile"
-                        className="absolute inset-0 bg-[#D4AF37] rounded-full shadow-md shadow-[#D4AF37]/30 z-[-1]"
+                        className="absolute inset-0 bg-[#9D224D] rounded-full shadow-md shadow-[#9D224D]/30 z-[-1]"
                         transition={{ type: "spring", stiffness: 450, damping: 32 }}
                       />
                     )}

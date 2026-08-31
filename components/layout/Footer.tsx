@@ -44,8 +44,8 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#111111] text-gray-300 pt-20 pb-10 border-t border-white/10 overflow-hidden font-sans">
       {/* Ambient background glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#1E3A8A]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#9D224D]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#334155]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Grid */}
@@ -54,9 +54,9 @@ export default function Footer() {
           {/* Brand Col (5 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="inline-flex items-center gap-1.5 group">
-              <span className="text-2xl font-black tracking-tight text-[#D4AF37]">Sawda</span>
+              <span className="text-2xl font-black tracking-tight text-[#9D224D]">Sawda</span>
               <span className="text-2xl font-black tracking-tight text-white transition-colors duration-300">Digital</span>
-              <span className="h-2 w-2 rounded-full bg-[#D4AF37] self-end mb-2 group-hover:scale-125 transition-transform"></span>
+              <span className="h-2 w-2 rounded-full bg-[#9D224D] self-end mb-2 group-hover:scale-125 transition-transform"></span>
             </Link>
             
             <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
@@ -68,13 +68,13 @@ export default function Footer() {
             {/* Contact Pills */}
             <div className="space-y-3 pt-2 text-xs">
               <div className="flex items-center gap-3 text-gray-300">
-                <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#D4AF37] flex-shrink-0">
+                <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#9D224D] flex-shrink-0">
                   <FaEnvelope className="w-3.5 h-3.5" />
                 </span>
-                <a href="mailto:hello@sawdadigital.com" className="hover:text-[#D4AF37] transition-colors">hello@sawdadigital.com</a>
+                <a href="mailto:hello@sawdadigital.com" className="hover:text-[#9D224D] transition-colors">hello@sawdadigital.com</a>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#D4AF37] flex-shrink-0">
+                <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#9D224D] flex-shrink-0">
                   <FaLocationDot className="w-3.5 h-3.5" />
                 </span>
                 <span>Dhaka, Bangladesh</span>
@@ -83,19 +83,19 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-2.5 pt-2">
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D4AF37] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaFacebookF className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D4AF37] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaLinkedinIn className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D4AF37] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaXTwitter className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D4AF37] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaInstagram className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#D4AF37] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaGithub className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -103,14 +103,14 @@ export default function Footer() {
 
           {/* Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#D4AF37] pl-3">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#9D224D] pl-3">
               {language === 'bn' ? 'নেভিগেশন' : 'Company'}
             </h4>
             <ul className="space-y-2.5 text-sm">
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
-                  <Link href={link.path} className="text-gray-400 hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 group">
-                    <span className="text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">›</span>
+                  <Link href={link.path} className="text-gray-400 hover:text-[#9D224D] transition-colors flex items-center gap-1.5 group">
+                    <span className="text-[#9D224D] opacity-0 group-hover:opacity-100 transition-opacity">›</span>
                     {link.name}
                   </Link>
                 </li>
@@ -120,14 +120,14 @@ export default function Footer() {
 
           {/* Services (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#D4AF37] pl-3">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#9D224D] pl-3">
               {language === 'bn' ? 'সেবাসমূহ' : 'Services'}
             </h4>
             <ul className="space-y-2.5 text-sm">
               {services.map((service, idx) => (
                 <li key={idx}>
-                  <Link href={service.path} className="text-gray-400 hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 group">
-                    <span className="text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">›</span>
+                  <Link href={service.path} className="text-gray-400 hover:text-[#9D224D] transition-colors flex items-center gap-1.5 group">
+                    <span className="text-[#9D224D] opacity-0 group-hover:opacity-100 transition-opacity">›</span>
                     {service.name}
                   </Link>
                 </li>
@@ -137,7 +137,7 @@ export default function Footer() {
 
           {/* Newsletter / Call to Action (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#D4AF37] pl-3">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white border-l-2 border-[#9D224D] pl-3">
               {language === 'bn' ? 'যুক্ত থাকুন' : 'Stay Connected'}
             </h4>
             <p className="text-xs text-gray-400 leading-relaxed">
@@ -150,11 +150,11 @@ export default function Footer() {
                 <input 
                   type="email" 
                   placeholder={language === 'bn' ? 'আপনার ইমেইল...' : 'Enter your email...'} 
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-xs focus:outline-none focus:border-[#D4AF37] transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-xs focus:outline-none focus:border-[#9D224D] transition-colors"
                 />
                 <button 
                   type="submit"
-                  className="absolute right-1.5 top-1.5 bottom-1.5 px-3 bg-[#D4AF37] hover:bg-[#B5952F] text-white rounded-lg text-xs font-bold transition-all flex items-center justify-center"
+                  className="absolute right-1.5 top-1.5 bottom-1.5 px-3 bg-[#9D224D] hover:bg-[#7A173A] text-white rounded-lg text-xs font-bold transition-all flex items-center justify-center"
                 >
                   <FaPaperPlane className="w-3 h-3" />
                 </button>
@@ -188,7 +188,7 @@ export default function Footer() {
             </Link>
             <button 
               onClick={scrollToTop}
-              className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#D4AF37] text-gray-400 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110 ml-2"
+              className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#9D224D] text-gray-400 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110 ml-2"
               title="Scroll to top"
             >
               <FaArrowUp className="w-3 h-3" />

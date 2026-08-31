@@ -31,7 +31,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-[#262626] border border-gray-200 dark:border-white/10 text-[#D4AF37] text-xs font-black mb-8 shadow-sm tracking-wide uppercase">
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white dark:bg-[#262626] border border-gray-200 dark:border-white/10 text-[#9D224D] text-xs font-black mb-8 shadow-sm tracking-wide uppercase">
               <span className="w-4 h-4 flex items-center justify-center">🎨</span>
               {language === 'bn' ? 'ব্র্যান্ডিং ও গ্রাফিক্স ডিজাইন' : 'BRANDING & DESIGN SUITE'}
             </motion.div>
@@ -49,7 +49,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={itemVariants} className="mt-10 flex flex-col sm:flex-row gap-5">
-              <Link href="#pricing" className="bg-[#D4AF37] hover:bg-[#B5952F] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,127,17,0.5)] hover:-translate-y-1 flex items-center justify-center gap-2">
+              <Link href="#pricing" className="bg-[#9D224D] hover:bg-[#7A173A] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(255,127,17,0.5)] hover:-translate-y-1 flex items-center justify-center gap-2">
                 <FaPaintBrush className="w-3.5 h-3.5" />
                 {language === 'bn' ? 'ডিজাইন প্যাকেজ দেখুন' : 'View Packages'}
               </Link>

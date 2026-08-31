@@ -18,7 +18,7 @@ export default function Pricing() {
       features: language === 'bn' 
         ? ["কাস্টম নলেজ বেস যুক্ত AI চ্যাটবট", "ওয়েবসাইট ও হোয়াটসঅ্যাপে ইন্টিগ্রেশন", "স্বয়ংক্রিয় লিড ক্যাপচারিং", "সহজ অ্যাডমিন ড্যাশবোর্ড", "৩ মাস ফ্রি মডেল সাপোর্ট"]
         : ["Custom RAG Knowledge AI Bot", "Website & WhatsApp Integration", "Automated Lead Capture & Routing", "Admin Conversation Analytics", "3-Month Free Model Maintenance"],
-      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#D4AF37] dark:hover:bg-[#D4AF37] dark:hover:text-white"
+      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     },
     {
       name: language === 'bn' ? 'কমপ্লিট মোবাইল অ্যাপ (জনপ্রিয়)' : 'Full Mobile App (Popular)',
@@ -28,7 +28,7 @@ export default function Pricing() {
       features: language === 'bn'
         ? ["React Native / Flutter ডুয়েল প্ল্যাটফর্ম অ্যাপ", "অ্যাপল অ্যাপ স্টোর ও প্লে স্টোর সাবমিশন", "পুশ নোটিফিকেশন ও অফলাইন ক্যাশিং", "পেমেন্ট গেটওয়ে ও ওঅথ লগইন", "সম্পূর্ণ সোর্স কোড ও ১ বছর সাপোর্ট"]
         : ["React Native / Flutter Dual OS App", "100% App Store & Play Store Approval", "Instant Push Notifications & Cache", "bKash / Stripe / Social Login", "Full Source Code & 1-Yr Support"],
-      buttonBg: "bg-[#D4AF37] text-white hover:bg-[#B5952F]"
+      buttonBg: "bg-[#9D224D] text-white hover:bg-[#7A173A]"
     },
     {
       name: language === 'bn' ? 'এন্টারপ্রাইজ অ্যাপ + AI ইঞ্জিন' : 'Enterprise App + AI Engine',
@@ -37,7 +37,7 @@ export default function Pricing() {
       features: language === 'bn'
         ? ["কাস্টম AI রিকমেন্ডেশন ও অটোমেশন ইঞ্জিন", "স্কেলেবল ক্লাউড মাইক্রোসার্ভিস ব্যাকএন্ড", "রিয়েল-টাইম চ্যাট ও লাইভ ট্র্যাকিং", "CI/CD অটোমেটেড OTA আপডেট পাইপলাইন", "ডেডিকেটেড সিনিয়র মোবাইল আর্কিটেক্ট"]
         : ["Custom AI Agent Integration", "High-Concurrency Cloud Microservices", "Real-Time WebSocket Streaming", "CI/CD Pipeline with OTA Live Updates", "Dedicated Senior Mobile Architect"],
-      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#D4AF37] dark:hover:bg-[#D4AF37] dark:hover:text-white"
+      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     },
     {
       name: language === 'bn' ? 'কাস্টম এন্টারপ্রাইজ সফটওয়্যার' : 'Custom SaaS / Core System',
@@ -46,7 +46,7 @@ export default function Pricing() {
       features: language === 'bn'
         ? ["প্রোপাইটরি এআই মডেল ফাইন-টিউনিং", "মাল্টি-টেন্যান্ট SaaS আর্কিটেকচার", "অন-প্রিমিস বা প্রাইভেট ক্লাউড ডেপ্লয়", "২৪/৭ এন্টারপ্রাইজ হাই-লোড SLA"]
         : ["Proprietary LLM Model Fine-Tuning", "Multi-Tenant Enterprise Architecture", "Private VPC On-Premise Deploy", "24/7 Dedicated High-Load SLA"],
-      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#D4AF37] dark:hover:bg-[#D4AF37] dark:hover:text-white"
+      buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     }
   ];
 
@@ -54,7 +54,7 @@ export default function Pricing() {
     <section id="pricing" className="py-24 bg-[#FAFAFA] dark:bg-[#111111] relative overflow-hidden transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
             {language === 'bn' ? 'স্বচ্ছ অ্যাপ প্যাকেজ' : 'TRANSPARENT PRICING'}
           </div>
           <motion.h2 
@@ -91,12 +91,12 @@ export default function Pricing() {
               onHoverEnd={() => setHoveredIndex(null)}
               className={`rounded-[2.5rem] p-8 flex flex-col justify-between transition-all duration-500 relative border ${
                 plan.isPopular 
-                  ? 'bg-white dark:bg-[#1a1a1a] border-[#D4AF37] shadow-2xl scale-[1.03] z-10' 
-                  : 'bg-white dark:bg-[#1a1a1a] border-[#DBEAFE] dark:border-white/10 shadow-md hover:shadow-xl'
+                  ? 'bg-white dark:bg-[#1a1a1a] border-[#9D224D] shadow-2xl scale-[1.03] z-10' 
+                  : 'bg-white dark:bg-[#1a1a1a] border-[#FCE7F3] dark:border-white/10 shadow-md hover:shadow-xl'
               }`}
             >
               {plan.isPopular && (
-                <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#D4AF37] text-white text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#9D224D] text-white text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
                   {language === 'bn' ? 'সবচেয়ে জনপ্রিয়' : 'Most Popular'}
                 </span>
               )}
@@ -104,12 +104,12 @@ export default function Pricing() {
               <div>
                 <h3 className="text-xl font-bold text-[#111827] dark:text-white mb-2">{plan.name}</h3>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mb-6 min-h-[36px]">{plan.description}</p>
-                <div className="text-3xl sm:text-4xl font-black text-[#D4AF37] mb-6">{plan.price}</div>
+                <div className="text-3xl sm:text-4xl font-black text-[#9D224D] mb-6">{plan.price}</div>
 
                 <div className="space-y-3 pt-6 border-t border-gray-100 dark:border-white/10 mb-8">
                   {plan.features.map((feature, fIndex) => (
                     <div key={fIndex} className="flex items-start gap-2.5 text-xs text-gray-700 dark:text-gray-300">
-                      <FaCheck className="w-3.5 h-3.5 text-[#D4AF37] shrink-0 mt-0.5" />
+                      <FaCheck className="w-3.5 h-3.5 text-[#9D224D] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </div>
                   ))}

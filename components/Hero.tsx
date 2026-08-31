@@ -51,7 +51,7 @@ export default function Hero() {
         transition={{ duration: 1.5 }}
         className="absolute inset-0 z-0" 
         style={{ 
-          backgroundImage: 'radial-gradient(#1E3A8A 1.5px, transparent 1.5px)', 
+          backgroundImage: 'radial-gradient(#334155 1.5px, transparent 1.5px)', 
           backgroundSize: '30px 30px' 
         }}
       ></motion.div>
@@ -66,14 +66,14 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/40 dark:border-white/10 text-[#262626] dark:text-white text-sm font-bold mb-8 shadow-sm transition-colors duration-300">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#D4AF37] animate-pulse"></span>
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/40 dark:border-white/10 text-[#262626] dark:text-white text-sm font-bold mb-8 shadow-sm transition-colors duration-300">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#9D224D] animate-pulse"></span>
               {t('discoverTop')}
             </motion.div>
             
             <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-[70px] font-black text-[#262626] dark:text-white tracking-tight leading-[1.1] transition-colors duration-300">
               {t('unlockYour')} <br />
-              {t('brands')} <span className="relative inline-block text-white px-4 py-1 mt-2 bg-[#D4AF37] rounded-2xl -rotate-2 transform shadow-md">{t('potential')}</span>
+              {t('brands')} <span className="relative inline-block text-white px-4 py-1 mt-2 bg-[#9D224D] rounded-2xl -rotate-2 transform shadow-md">{t('potential')}</span>
             </motion.h1>
             
             <motion.p variants={itemVariants} className="mt-8 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed font-medium transition-colors duration-300">
@@ -82,13 +82,13 @@ export default function Hero() {
 
             {/* Action Area */}
             <motion.div variants={itemVariants} className="mt-10 flex flex-col sm:flex-row gap-5">
-              <button className="flex-1 bg-[#262626] dark:bg-[#111111] hover:bg-[#D4AF37] dark:hover:bg-[#D4AF37] text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(38,38,38,0.5)] dark:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_20px_-6px_rgba(255,127,17,0.5)] hover:-translate-y-1 flex items-center justify-center gap-2">
+              <button className="flex-1 bg-[#262626] dark:bg-[#111111] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(38,38,38,0.5)] dark:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_20px_-6px_rgba(255,127,17,0.5)] hover:-translate-y-1 flex items-center justify-center gap-2">
                 <FiSearch className="w-5 h-5" />
                 {t('findAgency')}
               </button>
-              <button className="flex-1 bg-white dark:bg-[#1a1a1a] hover:bg-[#DBEAFE] dark:hover:bg-[#262626] border-2 border-[#DBEAFE] dark:border-white/10 text-[#262626] dark:text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 group">
+              <button className="flex-1 bg-white dark:bg-[#1a1a1a] hover:bg-[#FCE7F3] dark:hover:bg-[#262626] border-2 border-[#FCE7F3] dark:border-white/10 text-[#262626] dark:text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 group">
                 {t('contactUs')}
-                <FiArrowRight className="w-5 h-5 text-[#1E3A8A] group-hover:translate-x-1 transition-transform" />
+                <FiArrowRight className="w-5 h-5 text-[#334155] group-hover:translate-x-1 transition-transform" />
               </button>
             </motion.div>
 
@@ -110,7 +110,7 @@ export default function Hero() {
                   >
                     <Link
                       href="/expertise"
-                      className="text-xs font-bold text-[#262626] dark:text-white bg-white dark:bg-[#1a1a1a] border border-[#DBEAFE] dark:border-white/10 hover:border-[#1E3A8A] dark:hover:border-white/30 hover:bg-[#262626] dark:hover:bg-[#262626] hover:text-white px-4 py-2 rounded-xl transition-colors shadow-sm block duration-300"
+                      className="text-xs font-bold text-[#262626] dark:text-white bg-white dark:bg-[#1a1a1a] border border-[#FCE7F3] dark:border-white/10 hover:border-[#334155] dark:hover:border-white/30 hover:bg-[#262626] dark:hover:bg-[#262626] hover:text-white px-4 py-2 rounded-xl transition-colors shadow-sm block duration-300"
                     >
                       {category.label}
                     </Link>
@@ -128,11 +128,11 @@ export default function Hero() {
             className="relative hidden lg:block h-[600px] w-full"
           >
             {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-[#DBEAFE] dark:bg-[#262626] rounded-full blur-3xl opacity-60 transition-colors duration-300"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-[#FCE7F3] dark:bg-[#262626] rounded-full blur-3xl opacity-60 transition-colors duration-300"></div>
             
             {/* Main Image Container */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[480px] z-20">
-              <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-[#DBEAFE]">
+              <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-[#FCE7F3]">
                 <AnimatePresence mode="popLayout">
                   <motion.img 
                     key={imgIndex}
@@ -152,10 +152,10 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.5 }}
-                className="absolute -bottom-6 -left-6 bg-white dark:bg-[#262626] p-4 rounded-2xl shadow-xl border border-[#DBEAFE] dark:border-white/10 flex items-center gap-4 z-30 transition-colors duration-300"
+                className="absolute -bottom-6 -left-6 bg-white dark:bg-[#262626] p-4 rounded-2xl shadow-xl border border-[#FCE7F3] dark:border-white/10 flex items-center gap-4 z-30 transition-colors duration-300"
               >
-                <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-full flex items-center justify-center">
-                  <div className="w-6 h-6 bg-[#D4AF37] rounded-full animate-ping" style={{ animationDuration: '2s' }}></div>
+                <div className="w-12 h-12 bg-[#9D224D]/10 rounded-full flex items-center justify-center">
+                  <div className="w-6 h-6 bg-[#9D224D] rounded-full animate-ping" style={{ animationDuration: '2s' }}></div>
                 </div>
                 <div>
                   <div className="text-[#262626] dark:text-white font-bold text-sm transition-colors duration-300">{t('topRated')}</div>
@@ -171,12 +171,12 @@ export default function Hero() {
                 scale: [1, 1.1, 1] 
               }}
               transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute top-12 right-12 w-24 h-24 bg-[#D4AF37] rounded-3xl -rotate-12 shadow-lg opacity-80 z-10"
+              className="absolute top-12 right-12 w-24 h-24 bg-[#9D224D] rounded-3xl -rotate-12 shadow-lg opacity-80 z-10"
             ></motion.div>
             <motion.div 
               animate={{ y: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute bottom-24 right-4 w-12 h-12 bg-[#1E3A8A] rounded-full shadow-lg opacity-90 z-10"
+              className="absolute bottom-24 right-4 w-12 h-12 bg-[#334155] rounded-full shadow-lg opacity-90 z-10"
             ></motion.div>
           </motion.div>
           
