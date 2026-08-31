@@ -137,11 +137,11 @@ function ExpertiseContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`relative bg-white dark:bg-[#1a1a1a] rounded-[2.5rem] px-6 py-5 text-center border border-slate-200/80 dark:border-white/10 shadow-lg hover:shadow-2xl ${member.glowColor} transition-all duration-500 flex flex-col items-center justify-between group overflow-hidden`}
+                className={`relative bg-white dark:bg-[#1a1a1a] rounded-[2.5rem] p-5 text-center border border-slate-200/80 dark:border-white/10 shadow-lg hover:shadow-2xl ${member.glowColor} transition-all duration-500 flex flex-col items-center justify-between group overflow-hidden`}
               >
                 <div className={`absolute -top-16 -right-16 w-36 h-36 bg-gradient-to-br ${member.accentColor} rounded-full blur-3xl opacity-10 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none`} />
 
-                <div className="w-full flex items-center justify-between mb-4">
+                <div className="w-full flex items-center justify-between mb-3">
                   <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border ${member.tagColor}`}>
                     {member.badgeIcon}
                     {member.tag}
@@ -149,11 +149,11 @@ function ExpertiseContent() {
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" title="Active" />
                 </div>
 
-                <div className="relative mb-4">
-                  <div className="relative p-1.5 rounded-[2.2rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
-                    <div className={`w-36 h-36 lg:w-40 lg:h-40 rounded-[2rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
+                <div className="relative mb-3">
+                  <div className="relative p-1.5 rounded-[2.7rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
+                    <div className={`w-44 h-44 lg:w-48 lg:h-48 rounded-[2.5rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
                       {member.image ? (
-                        <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || ''}`} sizes="(max-width: 768px) 144px, 160px" />
+                        <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || ''}`} sizes="(max-width: 768px) 176px, 192px" />
                       ) : (
                         <span className="text-4xl font-black text-white tracking-wider drop-shadow-md">
                           {member.initials}
@@ -168,15 +168,15 @@ function ExpertiseContent() {
                     <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-1.5 group-hover:text-[#FF7F11] transition-colors duration-300 min-h-[56px] flex items-center justify-center text-center">
                       {member.name}
                     </h3>
-                    <p className="text-xs font-semibold text-[#FF7F11] mb-2 min-h-[32px] flex items-center justify-center text-center">
+                    <p className="text-xs font-semibold text-[#FF7F11] mb-1 min-h-[32px] flex items-center justify-center text-center">
                       {member.role}
                     </p>
-                    <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed mb-4 min-h-[72px] flex items-center justify-center text-center">
+                    <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed mb-3 min-h-[64px] flex items-center justify-center text-center">
                       {member.description}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-center gap-3">
+                  <div className="pt-2 border-t border-slate-100 dark:border-white/10 flex items-center justify-center gap-3">
                     <Link href="https://linkedin.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#FF7F11] dark:hover:bg-[#FF7F11] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaLinkedinIn />
                     </Link>

@@ -123,13 +123,13 @@ export default function Leadership() {
               key={member.id} 
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              className={`relative bg-white/90 dark:bg-[#202020]/90 backdrop-blur-xl rounded-[2.25rem] px-6 py-5 text-center border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-2xl ${member.glowColor} transition-all duration-500 flex flex-col items-center justify-between group overflow-hidden`}
+              className={`relative bg-white/90 dark:bg-[#202020]/90 backdrop-blur-xl rounded-[2.25rem] p-5 text-center border border-slate-200/80 dark:border-white/10 shadow-sm hover:shadow-2xl ${member.glowColor} transition-all duration-500 flex flex-col items-center justify-between group overflow-hidden`}
             >
               {/* Ambient Glow in Card Background */}
               <div className={`absolute -top-16 -right-16 w-36 h-36 bg-gradient-to-br ${member.accentColor} rounded-full blur-3xl opacity-10 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none`} />
 
               {/* Top Tag */}
-              <div className="w-full flex items-center justify-between mb-4">
+              <div className="w-full flex items-center justify-between mb-3">
                 <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase border ${member.tagColor}`}>
                   {member.badgeIcon}
                   {member.tag}
@@ -138,11 +138,11 @@ export default function Leadership() {
               </div>
 
               {/* Dynamic Gradient Monogram Avatar */}
-              <div className="relative mb-4">
-                <div className="relative p-2 rounded-[2.2rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
-                  <div className={`w-36 h-36 lg:w-40 lg:h-40 rounded-[2rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
+              <div className="relative mb-3">
+                <div className="relative p-1.5 rounded-[2.7rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
+                  <div className={`w-44 h-44 lg:w-48 lg:h-48 rounded-[2.5rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
                     {member.image ? (
-                      <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || 'object-center'}`} sizes="(max-width: 768px) 144px, 160px" />
+                      <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || 'object-center'}`} sizes="(max-width: 768px) 176px, 192px" />
                     ) : (
                       <>
                         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px]" />
@@ -161,13 +161,13 @@ export default function Leadership() {
                 <h3 className="text-lg font-extrabold text-[#262626] dark:text-white tracking-tight mb-1.5 group-hover:text-[#FF7F11] transition-colors duration-300">
                   {member.name}
                 </h3>
-                <p className="text-xs font-bold text-[#FF7F11] dark:text-[#FF9433] tracking-wide mb-2 min-h-[32px] flex items-center justify-center text-center">
+                <p className="text-xs font-bold text-[#FF7F11] dark:text-[#FF9433] tracking-wide mb-1 min-h-[32px] flex items-center justify-center text-center">
                   {t(member.roleKey)}
                 </p>
               </div>
 
               {/* Bottom Actions & Socials */}
-              <div className="w-full pt-3 border-t border-slate-100 dark:border-white/5 flex items-center justify-center gap-2.5">
+              <div className="w-full pt-2 border-t border-slate-100 dark:border-white/5 flex items-center justify-center gap-2.5">
                 <a href="#" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#FF7F11] flex items-center justify-center transition-all duration-300 hover:scale-110">
                   <FaLinkedinIn className="w-3.5 h-3.5" />
                 </a>
