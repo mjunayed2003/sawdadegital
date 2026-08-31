@@ -12,14 +12,14 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
     titleKey: 'project3Title',
     descKey: 'project3Desc',
-    color: '#FF7F11'
+    color: '#D4AF37'
   },
   {
     id: 2,
     image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
     titleKey: 'project1Title',
     descKey: 'project1Desc',
-    color: '#ACBFA4'
+    color: '#1E3A8A'
   },
   {
     id: 3,
@@ -51,8 +51,8 @@ export default function SelectedWork() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Decorative Background Glows */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FF7F11] rounded-full blur-[150px] opacity-10 pointer-events-none -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#ACBFA4] rounded-full blur-[120px] opacity-15 pointer-events-none -z-10"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4AF37] rounded-full blur-[150px] opacity-10 pointer-events-none -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#1E3A8A] rounded-full blur-[120px] opacity-15 pointer-events-none -z-10"></div>
 
         {/* Header */}
         <motion.div 
@@ -61,7 +61,7 @@ export default function SelectedWork() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#E2E8CE] dark:bg-[#262626] border border-[#ACBFA4]/30 dark:border-white/10 text-[#262626] dark:text-white text-[10px] font-black tracking-[0.25em] mb-4 uppercase shadow-sm transition-colors duration-300">
+          <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-[10px] font-black tracking-[0.25em] mb-4 uppercase shadow-sm transition-colors duration-300">
             {t('selectedWork')}
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#262626] dark:text-white tracking-tight transition-colors duration-300">
@@ -104,7 +104,7 @@ export default function SelectedWork() {
               <div className="px-4">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-6 h-[2px]" style={{ backgroundColor: project.color }}></div>
-                  <h3 className="text-xl font-black text-[#262626] dark:text-white group-hover:text-[#FF7F11] dark:group-hover:text-[#FF7F11] transition-colors duration-300">
+                  <h3 className="text-xl font-black text-[#262626] dark:text-white group-hover:text-[#D4AF37] dark:group-hover:text-[#D4AF37] transition-colors duration-300">
                     {t(project.titleKey)}
                   </h3>
                 </div>
@@ -126,10 +126,10 @@ export default function SelectedWork() {
         >
           <Link 
             href="/projects" 
-            className="inline-flex items-center gap-3 px-10 py-5 rounded-full border-2 border-[#E2E8CE] dark:border-white/10 text-[#262626] dark:text-white font-black text-sm uppercase tracking-wider hover:border-[#262626] dark:hover:border-white hover:bg-[#262626] dark:hover:bg-white hover:text-white dark:hover:text-[#262626] transition-all duration-500 group shadow-md hover:shadow-xl"
+            className="inline-flex items-center gap-3 px-10 py-5 rounded-full border-2 border-[#DBEAFE] dark:border-white/10 text-[#262626] dark:text-white font-black text-sm uppercase tracking-wider hover:border-[#262626] dark:hover:border-white hover:bg-[#262626] dark:hover:bg-white hover:text-white dark:hover:text-[#262626] transition-all duration-500 group shadow-md hover:shadow-xl"
           >
             {t('viewAllProjects')}
-            <span className="w-8 h-8 rounded-full bg-[#E2E8CE] dark:bg-[#262626] flex items-center justify-center group-hover:bg-[#FF7F11] dark:group-hover:bg-[#FF7F11] transition-colors duration-500">
+            <span className="w-8 h-8 rounded-full bg-[#DBEAFE] dark:bg-[#262626] flex items-center justify-center group-hover:bg-[#D4AF37] dark:group-hover:bg-[#D4AF37] transition-colors duration-500">
               <FiArrowRight className="w-4 h-4 text-[#262626] dark:text-white group-hover:text-white dark:group-hover:text-white transform group-hover:rotate-45 transition-all duration-500" />
             </span>
           </Link>

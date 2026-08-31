@@ -47,7 +47,7 @@ export default function Process() {
     <section className="py-24 bg-white dark:bg-[#161616] relative overflow-hidden transition-colors duration-300" ref={containerRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <div className="text-center mb-24">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#E2E8CE] dark:bg-[#262626] border border-[#ACBFA4]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
             {language === 'bn' ? 'গ্রোথ ফ্রেমওয়ার্ক' : 'GROWTH FRAMEWORK'}
           </div>
           <motion.h2 
@@ -86,14 +86,14 @@ export default function Process() {
                     transition={{ duration: 0.6 }}
                     className={`w-full md:w-1/2 ${isEven ? 'md:text-right' : 'md:text-left'}`}
                   >
-                    <div className="bg-[#FAFAFA] dark:bg-[#1a1a1a] p-8 md:p-10 rounded-[2rem] border border-[#E2E8CE] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300">
-                      <span className="text-3xl font-black text-[#FF7F11] font-mono block mb-2">{step.num}</span>
+                    <div className="bg-[#FAFAFA] dark:bg-[#1a1a1a] p-8 md:p-10 rounded-[2rem] border border-[#DBEAFE] dark:border-white/10 shadow-sm hover:shadow-xl transition-all duration-300">
+                      <span className="text-3xl font-black text-[#D4AF37] font-mono block mb-2">{step.num}</span>
                       <h3 className="text-xl md:text-2xl font-bold text-[#111827] dark:text-white mb-3">{step.title}</h3>
                       <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed">{step.description}</p>
                     </div>
                   </motion.div>
 
-                  <div className="relative z-10 w-12 h-12 rounded-full bg-[#FF7F11] text-white font-bold flex items-center justify-center shadow-lg shadow-[#FF7F11]/30 hidden md:flex shrink-0">
+                  <div className="relative z-10 w-12 h-12 rounded-full bg-[#D4AF37] text-white font-bold flex items-center justify-center shadow-lg shadow-[#D4AF37]/30 hidden md:flex shrink-0">
                     <span className="w-4 h-4 rounded-full bg-white animate-ping absolute opacity-50"></span>
                     <span className="text-sm">{step.num}</span>
                   </div>

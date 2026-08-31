@@ -92,8 +92,8 @@ export default function Leadership() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <div className="max-w-2xl">
-            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white dark:bg-[#262626] border border-[#E2E8CE] dark:border-white/10 text-[#FF7F11] text-[10px] font-black tracking-[0.2em] mb-4 uppercase shadow-sm transition-colors duration-300">
-              <span className="w-2 h-2 rounded-full bg-[#FF7F11] mr-2"></span>
+            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-white dark:bg-[#262626] border border-[#DBEAFE] dark:border-white/10 text-[#D4AF37] text-[10px] font-black tracking-[0.2em] mb-4 uppercase shadow-sm transition-colors duration-300">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37] mr-2"></span>
               {t('leadership')}
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#262626] dark:text-white tracking-tight leading-[1.1] transition-colors duration-300">
@@ -103,7 +103,7 @@ export default function Leadership() {
           
           <Link 
             href="/expertise" 
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white dark:bg-[#1a1a1a] border border-[#E2E8CE] dark:border-white/10 text-[#262626] dark:text-white font-bold text-sm hover:border-[#262626] dark:hover:border-white hover:bg-[#262626] dark:hover:bg-white hover:text-white dark:hover:text-[#262626] transition-all duration-300 group shadow-sm flex-shrink-0"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white dark:bg-[#1a1a1a] border border-[#DBEAFE] dark:border-white/10 text-[#262626] dark:text-white font-bold text-sm hover:border-[#262626] dark:hover:border-white hover:bg-[#262626] dark:hover:bg-white hover:text-white dark:hover:text-[#262626] transition-all duration-300 group shadow-sm flex-shrink-0"
           >
             {t('meetFullTeam')}
             <FiArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -158,20 +158,20 @@ export default function Leadership() {
 
               {/* Member Info */}
               <div className="w-full flex-1 flex flex-col items-center">
-                <h3 className="text-lg font-extrabold text-[#262626] dark:text-white tracking-tight mb-1.5 group-hover:text-[#FF7F11] transition-colors duration-300">
+                <h3 className="text-lg font-extrabold text-[#262626] dark:text-white tracking-tight mb-1.5 group-hover:text-[#D4AF37] transition-colors duration-300">
                   {member.name}
                 </h3>
-                <p className="text-xs font-bold text-[#FF7F11] dark:text-[#FF9433] tracking-wide mb-1 min-h-[32px] flex items-center justify-center text-center">
+                <p className="text-xs font-bold text-[#D4AF37] dark:text-[#E5C765] tracking-wide mb-1 min-h-[32px] flex items-center justify-center text-center">
                   {t(member.roleKey)}
                 </p>
               </div>
 
               {/* Bottom Actions & Socials */}
               <div className="w-full pt-1.5 border-t border-slate-100 dark:border-white/5 flex items-center justify-center gap-2">
-                <a href="#" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#FF7F11] flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <a href="#" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#D4AF37] flex items-center justify-center transition-all duration-300 hover:scale-110">
                   <FaLinkedinIn className="w-3.5 h-3.5" />
                 </a>
-                <a href="#" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#FF7F11] flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <a href="#" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:text-white hover:bg-[#D4AF37] flex items-center justify-center transition-all duration-300 hover:scale-110">
                   <FaXTwitter className="w-3.5 h-3.5" />
                 </a>
               </div>

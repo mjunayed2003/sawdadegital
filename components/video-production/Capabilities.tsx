@@ -25,7 +25,7 @@ export default function Capabilities() {
       description: language === 'bn' 
         ? 'সিনেমাটিক কোয়ালিটি ৪K/৮K বিজ্ঞাপন যা দর্শকদের দৃষ্টি আকর্ষণ করে এবং ব্র্যান্ডের বিক্রি বৃদ্ধি করে। কনসেপ্ট স্ক্রিপ্ট থেকে ফাইনাল কালার গ্রেডিং পর্যন্ত সম্পূর্ণ সলিউশন।'
         : 'Cinematic commercial advertisements engineered to capture attention instantly and drive measurable brand growth. Full end-to-end studio production from concept to delivery.',
-      icon: <FaVideo className="w-6 h-6 text-[#FF7F11]" />,
+      icon: <FaVideo className="w-6 h-6 text-[#D4AF37]" />,
       colSpan: "lg:col-span-2",
       rowSpan: "lg:row-span-2",
       isHero: true,
@@ -51,7 +51,7 @@ export default function Capabilities() {
       description: language === 'bn'
         ? 'TikTok, Instagram Reels, YouTube Shorts ও ফেসবুকের জন্য হাই-রিটেনশন শর্ট-ফর্ম ভিডিও কনটেন্ট।'
         : 'Bite-sized, high-retention vertical video creatives optimized for TikTok, Instagram Reels, and YouTube algorithms.',
-      icon: <FaMobileScreen className="w-6 h-6 text-[#FF7F11]" />,
+      icon: <FaMobileScreen className="w-6 h-6 text-[#D4AF37]" />,
       colSpan: "lg:col-span-1",
       rowSpan: "lg:row-span-1",
       tags: ['Vertical 9:16', 'UGC Style Content', 'Viral Hooks'],
@@ -63,7 +63,7 @@ export default function Capabilities() {
       description: language === 'bn'
         ? 'এক্সিকিউটিভ ইন্টারভিউ, কোম্পানির ডকুমেন্টারি এবং বি২বি ক্লায়েন্ট আকৃষ্ট করার মতো অথেনটিক স্টোরি।'
         : 'Executive leadership interviews, company documentaries, and authentic brand storytelling crafted for enterprise authority.',
-      icon: <FaTv className="w-6 h-6 text-[#FF7F11]" />,
+      icon: <FaTv className="w-6 h-6 text-[#D4AF37]" />,
       colSpan: "lg:col-span-1",
       rowSpan: "lg:row-span-1",
       tags: ['Documentary Style', 'Executive Interviews', 'Internal Training'],
@@ -75,7 +75,7 @@ export default function Capabilities() {
       description: language === 'bn'
         ? 'DaVinci Resolve সিনেমাটিক কালার গ্রেডিং, সাউন্ড ডিজাইন এবং স্পেশাল ভিজ্যুয়াল এফেক্টস (VFX)।'
         : 'Hollywood-grade DaVinci Resolve color grading, audio mastering, and advanced VFX compositing.',
-      icon: <FaSliders className="w-6 h-6 text-[#FF7F11]" />,
+      icon: <FaSliders className="w-6 h-6 text-[#D4AF37]" />,
       colSpan: "lg:col-span-1",
       rowSpan: "lg:row-span-1",
       tags: ['DaVinci Resolve', 'Spatial Audio Mix', 'VFX Compositing'],
@@ -87,7 +87,7 @@ export default function Capabilities() {
       description: language === 'bn'
         ? 'হাই-প্রোফাইল কনফারেন্স, কনসার্ট ও প্রোডাক্ট লঞ্চের মাল্টি-ক্যামেরা লাইভ স্ট্রিমিং ও আফটারমুভি।'
         : 'Multi-camera cinematic live streaming, corporate event highlights, and fast-turnaround recap films.',
-      icon: <FaVideo className="w-6 h-6 text-[#FF7F11]" />,
+      icon: <FaVideo className="w-6 h-6 text-[#D4AF37]" />,
       colSpan: "lg:col-span-1",
       rowSpan: "lg:row-span-1",
       tags: ['Multi-Cam Setup', 'Live 4K Stream', 'Same-Day Highlights'],
@@ -97,8 +97,8 @@ export default function Capabilities() {
 
   return (
     <section className="py-24 bg-[#FAFAFA] dark:bg-[#111111] relative overflow-hidden transition-colors duration-300">
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#FF7F11]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#ACBFA4]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-[#1E3A8A]/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         
@@ -111,8 +111,8 @@ export default function Capabilities() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E2E8CE] dark:bg-[#262626] border border-[#ACBFA4]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest uppercase mb-4 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#FF7F11]"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest uppercase mb-4 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
               {language === 'bn' ? 'ভিডিও প্রোডাকশন সেবাসমূহ' : 'PRODUCTION CAPABILITIES'}
             </div>
             
@@ -135,7 +135,7 @@ export default function Capabilities() {
           >
             <Link 
               href="/contact" 
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#FF7F11] hover:bg-[#e66a00] text-white text-sm font-bold shadow-lg shadow-[#FF7F11]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[#D4AF37] hover:bg-[#B5952F] text-white text-sm font-bold shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
             >
               <span>{language === 'bn' ? 'ভিডিও প্রোডাকশন শুরু করুন' : 'Book Video Production'}</span>
               <FaArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -156,16 +156,16 @@ export default function Capabilities() {
                   transition={{ duration: 0.6, delay: idx * 0.08 }}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
-                  className={`${cap.colSpan} ${cap.rowSpan} relative bg-gradient-to-br from-[#001F3F] via-[#091E3A] to-[#040D1A] rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl border border-white/10 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-500 hover:border-[#FF7F11]/50`}
+                  className={`${cap.colSpan} ${cap.rowSpan} relative bg-gradient-to-br from-[#001F3F] via-[#091E3A] to-[#040D1A] rounded-[2.5rem] p-8 md:p-12 text-white shadow-2xl border border-white/10 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-500 hover:border-[#D4AF37]/50`}
                 >
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF7F11]/15 rounded-full blur-[90px] pointer-events-none group-hover:bg-[#FF7F11]/25 transition-all duration-700"></div>
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37]/15 rounded-full blur-[90px] pointer-events-none group-hover:bg-[#D4AF37]/25 transition-all duration-700"></div>
 
                   <div className="relative z-10">
                     <div className="flex items-center justify-between gap-4 mb-8">
                       <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300">
                         {cap.icon}
                       </div>
-                      <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-white/10 backdrop-blur-md text-[#FF7F11] border border-white/15">
+                      <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-white/10 backdrop-blur-md text-[#D4AF37] border border-white/15">
                         {cap.metric}
                       </span>
                     </div>
@@ -205,7 +205,7 @@ export default function Capabilities() {
                   transition={{ duration: 0.6, delay: idx * 0.08 }}
                   onMouseEnter={() => setHoveredIdx(idx)}
                   onMouseLeave={() => setHoveredIdx(null)}
-                  className={`${cap.colSpan} ${cap.rowSpan} relative bg-gradient-to-br from-[#FF7F11] to-[#D96B00] rounded-[2rem] p-8 text-white shadow-xl border border-white/20 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-[#FF7F11]/20`}
+                  className={`${cap.colSpan} ${cap.rowSpan} relative bg-gradient-to-br from-[#D4AF37] to-[#D96B00] rounded-[2rem] p-8 text-white shadow-xl border border-white/20 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-[#D4AF37]/20`}
                 >
                   <div className="relative z-10">
                     <div className="flex items-center justify-between gap-4 mb-6">
@@ -246,11 +246,11 @@ export default function Capabilities() {
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
-                className={`${cap.colSpan} ${cap.rowSpan} relative bg-white dark:bg-[#1a1a1a] rounded-[2rem] p-8 shadow-md hover:shadow-xl border border-[#E2E8CE] dark:border-white/10 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:border-[#FF7F11]/40`}
+                className={`${cap.colSpan} ${cap.rowSpan} relative bg-white dark:bg-[#1a1a1a] rounded-[2rem] p-8 shadow-md hover:shadow-xl border border-[#DBEAFE] dark:border-white/10 overflow-hidden flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:border-[#D4AF37]/40`}
               >
                 <div className="relative z-10">
                   <div className="flex items-center justify-between gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-[#FAFAFA] dark:bg-[#262626] border border-[#E2E8CE] dark:border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 rounded-2xl bg-[#FAFAFA] dark:bg-[#262626] border border-[#DBEAFE] dark:border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       {cap.icon}
                     </div>
                     <span className="text-[11px] font-mono font-bold bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full border border-gray-200 dark:border-white/10">
@@ -258,7 +258,7 @@ export default function Capabilities() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#111827] dark:text-white mb-3 group-hover:text-[#FF7F11] transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-[#111827] dark:text-white mb-3 group-hover:text-[#D4AF37] transition-colors duration-300">
                     {cap.title}
                   </h3>
 

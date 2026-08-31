@@ -94,8 +94,8 @@ export default function Services() {
   return (
     <section className="py-24 bg-white dark:bg-[#1a1a1a] relative overflow-hidden transition-colors duration-300">
       {/* Decorative background blurs */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#E2E8CE] dark:bg-[#262626] rounded-full blur-[100px] opacity-30 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-colors duration-300"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#ACBFA4] dark:bg-[#111111] rounded-full blur-[100px] opacity-20 translate-x-1/3 translate-y-1/3 pointer-events-none transition-colors duration-300"></div>
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#DBEAFE] dark:bg-[#262626] rounded-full blur-[100px] opacity-30 -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-colors duration-300"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#1E3A8A] dark:bg-[#111111] rounded-full blur-[100px] opacity-20 translate-x-1/3 translate-y-1/3 pointer-events-none transition-colors duration-300"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
@@ -105,7 +105,7 @@ export default function Services() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#E2E8CE] dark:bg-[#262626] border border-[#ACBFA4]/30 dark:border-white/10 text-[#262626] dark:text-white text-[10px] font-black tracking-[0.2em] mb-4 uppercase shadow-sm transition-colors duration-300">
+          <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-[10px] font-black tracking-[0.2em] mb-4 uppercase shadow-sm transition-colors duration-300">
             {t('ourExpertise')}
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#262626] dark:text-white mb-4 leading-[1.15] tracking-tight transition-colors duration-300">
@@ -143,13 +143,13 @@ export default function Services() {
 
               {/* Content Container */}
               <div className="px-4 pb-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FAFAFA] dark:bg-[#1a1a1a] border border-[#E2E8CE] dark:border-white/10 text-[10px] font-bold text-gray-500 dark:text-gray-300 mb-3 transition-colors duration-300">
-                  <span className="w-1.5 h-1.5 bg-[#FF7F11] rounded-full"></span>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FAFAFA] dark:bg-[#1a1a1a] border border-[#DBEAFE] dark:border-white/10 text-[10px] font-bold text-gray-500 dark:text-gray-300 mb-3 transition-colors duration-300">
+                  <span className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full"></span>
                   {service.badge}
                 </div>
                 
                 <Link href={service.path || "/contact"} className="block">
-                  <h3 className="text-xl font-black text-[#262626] dark:text-white mb-2 group-hover:text-[#FF7F11] dark:group-hover:text-[#FF7F11] transition-colors duration-300 cursor-pointer">
+                  <h3 className="text-xl font-black text-[#262626] dark:text-white mb-2 group-hover:text-[#D4AF37] dark:group-hover:text-[#D4AF37] transition-colors duration-300 cursor-pointer">
                     {t(service.titleKey)}
                   </h3>
                 </Link>
@@ -160,7 +160,7 @@ export default function Services() {
                 
                 <Link 
                   href={service.path || "/contact"} 
-                  className="inline-flex items-center gap-2 text-[#FF7F11] font-bold text-sm group/btn hover:text-[#e66a00] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 text-[#D4AF37] font-bold text-sm group/btn hover:text-[#B5952F] transition-colors cursor-pointer"
                 >
                   {t('learnMore')} 
                   <FiArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />

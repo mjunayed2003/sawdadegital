@@ -34,7 +34,7 @@ export default function FAQ() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#E2E8CE] dark:bg-[#262626] border border-[#ACBFA4]/30 dark:border-white/10 text-[#262626] dark:text-white text-[10px] font-black tracking-[0.2em] mb-4 uppercase shadow-sm transition-colors duration-300">
+              <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-[10px] font-black tracking-[0.2em] mb-4 uppercase shadow-sm transition-colors duration-300">
                 {t('faqBadge')}
               </div>
               <h2 className="text-3xl md:text-4xl font-black text-[#262626] dark:text-white tracking-tight mb-4 leading-tight transition-colors duration-300">
@@ -59,16 +59,16 @@ export default function FAQ() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
-                    className={`bg-[#FAFAFA] dark:bg-[#1a1a1a] rounded-2xl border transition-colors duration-300 ${isOpen ? 'border-[#FF7F11] shadow-md bg-white dark:bg-[#262626]' : 'border-[#E2E8CE] dark:border-white/10 hover:border-[#ACBFA4] dark:hover:border-white/30'}`}
+                    className={`bg-[#FAFAFA] dark:bg-[#1a1a1a] rounded-2xl border transition-colors duration-300 ${isOpen ? 'border-[#D4AF37] shadow-md bg-white dark:bg-[#262626]' : 'border-[#DBEAFE] dark:border-white/10 hover:border-[#1E3A8A] dark:hover:border-white/30'}`}
                   >
                     <button 
                       onClick={() => toggleFaq(index)}
                       className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none"
                     >
-                      <h3 className={`text-base md:text-lg font-bold pr-8 transition-colors duration-300 ${isOpen ? 'text-[#FF7F11]' : 'text-[#262626] dark:text-white'}`}>
+                      <h3 className={`text-base md:text-lg font-bold pr-8 transition-colors duration-300 ${isOpen ? 'text-[#D4AF37]' : 'text-[#262626] dark:text-white'}`}>
                         {t(faq.q)}
                       </h3>
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[#FF7F11] text-white' : 'bg-[#E2E8CE] dark:bg-[#333] text-[#262626] dark:text-white'}`}>
+                      <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[#D4AF37] text-white' : 'bg-[#DBEAFE] dark:bg-[#333] text-[#262626] dark:text-white'}`}>
                         {isOpen ? <FiMinus className="w-4 h-4" /> : <FiPlus className="w-4 h-4" />}
                       </div>
                     </button>
@@ -82,7 +82,7 @@ export default function FAQ() {
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <div className="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 dark:text-gray-400 leading-relaxed border-t border-[#E2E8CE]/50 dark:border-white/10 mt-2 pt-6 transition-colors duration-300">
+                          <div className="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 dark:text-gray-400 leading-relaxed border-t border-[#DBEAFE]/50 dark:border-white/10 mt-2 pt-6 transition-colors duration-300">
                             {t(faq.a)}
                           </div>
                         </motion.div>

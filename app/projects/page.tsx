@@ -67,8 +67,8 @@ function ProjectsContent() {
         {/* Header Section */}
         <div className="relative z-10 pt-20 pb-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
-            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#E2E8CE] dark:bg-[#262626] border border-[#ACBFA4]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-6 uppercase shadow-sm">
-              <span className="mr-2 text-[#FF7F11]">🛠</span> {language === 'bn' ? 'নির্বাচিত প্রজেক্টস' : 'SELECTED WORK'}
+            <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#DBEAFE] dark:bg-[#262626] border border-[#1E3A8A]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-6 uppercase shadow-sm">
+              <span className="mr-2 text-[#D4AF37]">🛠</span> {language === 'bn' ? 'নির্বাচিত প্রজেক্টস' : 'SELECTED WORK'}
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0f172a] dark:text-white tracking-tight mb-6">
               {language === 'bn' ? 'আমাদের সফল প্রজেক্ট ও পোর্টফোলিও' : "Recent projects we're proud of."}
@@ -87,7 +87,7 @@ function ProjectsContent() {
                   onClick={() => setActiveFilter(filter.id)}
                   className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
                     activeFilter === filter.id 
-                    ? 'bg-[#FF7F11] text-white shadow-md transform scale-105' 
+                    ? 'bg-[#D4AF37] text-white shadow-md transform scale-105' 
                     : 'bg-transparent text-slate-600 dark:text-gray-300 hover:bg-white dark:hover:bg-white/10 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
@@ -111,7 +111,7 @@ function ProjectsContent() {
                 <div className="flex-1 relative overflow-hidden bg-slate-100 dark:bg-[#262626]">
                   <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <span className="text-[#FF7F11] text-xs font-bold uppercase tracking-wider mb-1">{project.category}</span>
+                    <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider mb-1">{project.category}</span>
                     <h3 className="text-white text-lg font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-300">{project.title}</h3>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ function ProjectsContent() {
                 <div className="flex-1 relative overflow-hidden bg-slate-100 dark:bg-[#262626]">
                   <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out object-top" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span className="text-[#FF7F11] text-xs font-bold uppercase tracking-wider mb-1">{project.category}</span>
+                    <span className="text-[#D4AF37] text-xs font-bold uppercase tracking-wider mb-1">{project.category}</span>
                     <h3 className="text-white text-2xl font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-300">{project.title}</h3>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ function ProjectsContent() {
 
           {/* Case Study Section */}
           <div className="max-w-5xl mx-auto bg-white dark:bg-[#1a1a1a] rounded-[2.5rem] p-10 md:p-16 shadow-2xl border border-slate-100 dark:border-white/10">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#FF7F11]/10 text-[#FF7F11] text-xs font-bold tracking-widest mb-8 uppercase">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-bold tracking-widest mb-8 uppercase">
               {language === 'bn' ? 'কেস স্টাডি বিশ্লেষণ' : 'FEATURED CASE STUDY'}
             </div>
             
@@ -159,26 +159,26 @@ function ProjectsContent() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
               <div>
-                <div className="text-4xl font-black text-[#FF7F11] mb-2">+২১৮%</div>
+                <div className="text-4xl font-black text-[#D4AF37] mb-2">+২১৮%</div>
                 <div className="text-slate-500 dark:text-gray-400 font-medium text-sm">
                   {language === 'bn' ? 'অর্গানিক সার্চ ট্রাফিক' : 'Organic Traffic'}
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-black text-[#FF7F11] mb-2">৩.২x</div>
+                <div className="text-4xl font-black text-[#D4AF37] mb-2">৩.২x</div>
                 <div className="text-slate-500 dark:text-gray-400 font-medium text-sm">
                   {language === 'bn' ? 'কোয়ালিফাইড কাস্টমার লিডস' : 'Qualified Pipeline'}
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-black text-[#FF7F11] mb-2">৪২%</div>
+                <div className="text-4xl font-black text-[#D4AF37] mb-2">৪২%</div>
                 <div className="text-slate-500 dark:text-gray-400 font-medium text-sm">
                   {language === 'bn' ? 'কম বিজ্ঞাপন খরচ (CAC)' : 'Lower CAC'}
                 </div>
               </div>
             </div>
 
-            <Link href="/contact" className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#FF7F11] hover:bg-[#e66a00] text-white rounded-full font-bold shadow-lg shadow-[#FF7F11]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+            <Link href="/contact" className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#D4AF37] hover:bg-[#B5952F] text-white rounded-full font-bold shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
               {language === 'bn' ? 'আপনার প্রজেক্ট আলোচনা করুন' : 'Start Similar Project'}
               <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
