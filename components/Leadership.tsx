@@ -6,6 +6,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { FaXTwitter, FaCrown, FaLaptopCode, FaChartPie, FaBullseye } from 'react-icons/fa6';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const teamMembers = [
   {
@@ -13,6 +14,7 @@ const teamMembers = [
     name: 'Md Khairul Bashar',
     roleKey: 'roleFounder',
     initials: 'KB',
+    image: '/team-member/basar.PNG',
     tag: 'Executive Lead',
     accentColor: 'from-amber-500 to-orange-600',
     tagColor: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 border-amber-200 dark:border-amber-800/40',
@@ -25,6 +27,8 @@ const teamMembers = [
     name: 'Md Junayed',
     roleKey: 'roleCoFounder',
     initials: 'MJ',
+    image: '/team-member/junayed.jpeg',
+    objectPosition: 'object-[center_15%] scale-[1.35]',
     tag: 'Tech & Architecture',
     accentColor: 'from-blue-500 to-indigo-600',
     tagColor: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border-blue-200 dark:border-blue-800/40',
@@ -37,6 +41,7 @@ const teamMembers = [
     name: 'Md Mohibullah Islam Reza',
     roleKey: 'roleStrategist',
     initials: 'MR',
+    image: '/team-member/reza.PNG',
     tag: 'Market & Strategy',
     accentColor: 'from-emerald-500 to-teal-600',
     tagColor: 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 border-emerald-200 dark:border-emerald-800/40',
@@ -49,6 +54,7 @@ const teamMembers = [
     name: 'Mezbaul Haque Sarder',
     roleKey: 'roleBrandRep',
     initials: 'MS',
+    image: '/team-member/Mezbaul.PNG',
     tag: 'Media & Outreach',
     accentColor: 'from-rose-500 to-pink-600',
     tagColor: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/50 border-rose-200 dark:border-rose-800/40',
@@ -133,14 +139,19 @@ export default function Leadership() {
 
               {/* Dynamic Gradient Monogram Avatar */}
               <div className="relative mb-6">
-                <div className="relative p-1.5 rounded-[2rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
-                  <div className={`w-28 h-28 rounded-[1.7rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
-                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px]" />
-                    <div className="absolute -top-6 -left-6 w-16 h-16 bg-white/30 rounded-full blur-md" />
-                    
-                    <span className="text-3xl font-black text-white tracking-wider drop-shadow-md">
-                      {member.initials}
-                    </span>
+                <div className="relative p-2 rounded-[2.2rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
+                  <div className={`w-36 h-36 rounded-[2rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
+                    {member.image ? (
+                      <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || 'object-center'}`} sizes="(max-width: 768px) 144px, 144px" />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px]" />
+                        <div className="absolute -top-6 -left-6 w-16 h-16 bg-white/30 rounded-full blur-md" />
+                        <span className="text-4xl font-black text-white tracking-wider drop-shadow-md">
+                          {member.initials}
+                        </span>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

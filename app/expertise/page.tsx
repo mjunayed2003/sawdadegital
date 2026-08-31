@@ -41,6 +41,7 @@ function ExpertiseContent() {
       role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও সফটওয়্যার ইঞ্জিনিয়ার' : 'Co-Founder & Software Engineer', 
       initials: 'MJ',
       image: '/team-member/junayed.jpeg',
+      objectPosition: 'object-[center_15%] scale-[1.35]',
       tag: language === 'bn' ? 'টেক ও আর্কিটেকচার' : 'Tech & Architecture',
       accentColor: 'from-blue-500 to-indigo-600',
       lightBg: 'bg-blue-500/10 dark:bg-blue-500/15',
