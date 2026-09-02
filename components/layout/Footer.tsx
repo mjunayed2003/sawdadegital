@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   FaFacebookF, 
   FaLinkedinIn, 
@@ -54,9 +55,7 @@ export default function Footer() {
           {/* Brand Col (5 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="inline-flex items-center gap-1.5 group">
-              <span className="text-2xl font-black tracking-tight text-[#9D224D]">Sawda</span>
-              <span className="text-2xl font-black tracking-tight text-white transition-colors duration-300">Digital</span>
-              <span className="h-2 w-2 rounded-full bg-[#9D224D] self-end mb-2 group-hover:scale-125 transition-transform"></span>
+              <Image src="/sawdaDigitalLogo.png" alt="Sawda Digital Logo" width={180} height={45} className="h-8 sm:h-10 w-auto" />
             </Link>
             
             <p className="text-sm text-gray-400 leading-relaxed max-w-sm">

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { 
   FaCode, 
@@ -100,9 +101,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-1">
-              <span className="text-2xl font-bold tracking-tight text-[#9D224D]">Sawda</span>
-              <span className="text-2xl font-bold tracking-tight text-[#262626] dark:text-white transition-colors duration-300">Digital</span>
-              <span className="h-2 w-2 rounded-full bg-[#9D224D] self-end mb-2"></span>
+              <Image src="/sawdaDigitalLogo.png" alt="Sawda Digital Logo" width={180} height={45} className="h-8 sm:h-10 w-auto" priority />
             </Link>
           </div>
 
