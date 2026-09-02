@@ -71,7 +71,7 @@ function ExpertiseContent() {
     },
     { 
       name: language === 'bn' ? 'মেজবাউল হক সরদার' : 'Mezbaul Haque Sarder', 
-      role: language === 'bn' ? 'ব্র্যান্ড অ্যান্ড কনটেন্ট এক্সিকিউটিভ' : 'Brand & Content Executive', 
+      role: language === 'bn' ? 'ব্র্যান্ড অ্যান্ড কনটেন্ট প্রতিনিধি' : 'Brand & Content Representative', 
       initials: 'MS',
       image: '/team-member/Mezbaul.PNG',
       tag: language === 'bn' ? 'মিডিয়া ও আউটরিচ' : 'Media & Outreach',
@@ -84,6 +84,39 @@ function ExpertiseContent() {
       description: language === 'bn'
         ? 'আকর্ষণীয় স্টোরিটেলিং এবং কার্যকর মিডিয়া কমিউনিকেশনের মাধ্যমে ব্র্যান্ডের পরিচিতি বৃদ্ধি।'
         : 'Amplifying brand voice through engaging storytelling and audience outreach.'
+    },
+    { 
+      name: language === 'bn' ? 'আশিক মোস্তফা তন্ময়' : 'Ashik Mostofa Tonmoy', 
+      role: language === 'bn' ? 'চিফ মার্কেটিং অ্যান্ড ব্র্যান্ডিং অফিসার' : 'Chief Marketing & Branding Officer', 
+      initials: 'AM',
+      image: '/team-member/AshikMostofaTonmoy.jpeg',
+      objectPosition: 'object-[center_5%] scale-[1.3]',
+      tag: language === 'bn' ? 'মার্কেটিং ও ব্র্যান্ডিং' : 'Marketing & Branding',
+      accentColor: 'from-violet-500 to-purple-600',
+      lightBg: 'bg-violet-500/10 dark:bg-violet-500/15',
+      tagColor: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50 border-violet-200 dark:border-violet-800/40',
+      glowColor: 'group-hover:border-violet-500/40 group-hover:shadow-violet-500/10',
+      badgeIcon: <FaBullhorn className="w-3.5 h-3.5 text-violet-500" />,
+      avatarGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
+      description: language === 'bn'
+        ? 'উদ্ভাবনী ব্র্যান্ডিংয়ের মাধ্যমে ব্র্যান্ড কৌশল, বিপণন প্রচারাভিযান এবং ব্যবসায়িক প্রবৃদ্ধি পরিচালনা।'
+        : 'Driving brand strategy, marketing campaigns, and business growth through innovative branding.'
+    },
+    { 
+      name: language === 'bn' ? 'আবু হুরায়রা' : 'Abu Hurayrah', 
+      role: language === 'bn' ? 'এক্সিকিউটিভ অ্যাডভাইজর' : 'Executive Advisor', 
+      initials: 'AH',
+      image: '/team-member/AbuHurayrah.jpeg',
+      tag: language === 'bn' ? 'পরামর্শদাতা' : 'Advisory',
+      accentColor: 'from-cyan-500 to-blue-600',
+      lightBg: 'bg-cyan-500/10 dark:bg-cyan-500/15',
+      tagColor: 'text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/50 border-cyan-200 dark:border-cyan-800/40',
+      glowColor: 'group-hover:border-cyan-500/40 group-hover:shadow-cyan-500/10',
+      badgeIcon: <FaHandshake className="w-3.5 h-3.5 text-cyan-500" />,
+      avatarGradient: 'from-cyan-400 via-blue-500 to-cyan-600',
+      description: language === 'bn'
+        ? 'কোম্পানির দীর্ঘমেয়াদী রূপকল্প গঠনে কৌশলগত দিকনির্দেশনা ও বিশেষজ্ঞ পরামর্শ প্রদান।'
+        : 'Providing strategic guidance and expert advice to shape the company\'s long-term vision.'
     },
   ];
 
