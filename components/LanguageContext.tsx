@@ -130,9 +130,11 @@ heroDesc: {
   meetExperts: { en: 'The Minds Driving Your Success', bn: 'আপনার সাফল্যের পেছনের কারিগর' },
   meetFullTeam: { en: 'Connect with our team', bn: 'আমাদের দলের সাথে সংযুক্ত হোন' },
   roleFounder: { en: 'Founder & CEO', bn: 'প্রতিষ্ঠাতা ও সিইও' },
-  roleCoFounder: { en: 'Co-Founder & COO (Chief Operating Officer)', bn: 'সহ-প্রতিষ্ঠাতা ও সিওও (চিফ অপারেটিং অফিসার)' },
+  roleCoFounder: { en: 'Co-Founder & COO', bn: 'সহ-প্রতিষ্ঠাতা ও সিওও' },
   roleStrategist: { en: 'Head of Strategy & Business Development', bn: 'হেড অব স্ট্র্যাটেজি অ্যান্ড বিজনেস ডেভেলপমেন্ট' },
-  roleBrandRep: { en: 'Brand & Content Executive', bn: 'ব্র্যান্ড অ্যান্ড কনটেন্ট এক্সিকিউটিভ' },
+  roleBrandRep: { en: 'Wix, WordPress & Shopify Specialist', bn: 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই বিশেষজ্ঞ' },
+  roleWebShopify: { en: 'Wix, WordPress & Shopify Specialist', bn: 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই বিশেষজ্ঞ' },
+  roleMarketingExecutive: { en: 'Marketing & Branding Executive', bn: 'মার্কেটিং অ্যান্ড ব্র্যান্ডিং এক্সিকিউটিভ' },
 
   // Testimonials Section
   testimonialsBadge: { en: 'CLIENT SUCCESS STORIES', bn: 'গ্রাহক সাফল্যের গল্প' },

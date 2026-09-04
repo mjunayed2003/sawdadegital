@@ -4,7 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageContext';
 import { FiArrowRight } from 'react-icons/fi';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { FaXTwitter, FaCrown, FaLaptopCode, FaChartPie, FaBullseye } from 'react-icons/fa6';
+import { FaXTwitter, FaCrown, FaLaptopCode, FaChartPie, FaBullseye, FaShopify } from 'react-icons/fa6';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -51,15 +51,16 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: 'Mezbaul Haque Sarder',
-    roleKey: 'roleBrandRep',
-    initials: 'MS',
-    image: '/team-member/Mezbaul.PNG',
-    tag: 'Media & Outreach',
+    name: 'Md Asfier Rahman Marjan',
+    roleKey: 'roleWebShopify',
+    initials: 'AM',
+    image: '/team-member/MdAsfierRahmanMarjan.jpeg',
+    objectPosition: 'object-[center_15%] scale-[1.1]',
+    tag: 'Wix, WordPress & Shopify',
     accentColor: 'from-rose-500 to-pink-600',
     tagColor: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/50 border-rose-200 dark:border-rose-800/40',
     glowColor: 'group-hover:border-rose-500/40 group-hover:shadow-rose-500/10',
-    badgeIcon: <FaBullseye className="w-3.5 h-3.5 text-rose-500" />,
+    badgeIcon: <FaShopify className="w-3.5 h-3.5 text-rose-500" />,
     avatarGradient: 'from-rose-400 via-pink-500 to-purple-600',
   }
 ];

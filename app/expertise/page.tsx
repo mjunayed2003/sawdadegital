@@ -10,7 +10,7 @@ import {
   FaCode, FaVideo, FaRobot, FaBullhorn, 
   FaPenNib, FaDesktop, FaMagnifyingGlass, 
   FaBriefcase, FaUsers, FaLayerGroup, FaClock, FaHandshake,
-  FaCrown, FaLaptopCode, FaChartPie, FaBullseye
+  FaCrown, FaLaptopCode, FaChartPie, FaBullseye, FaShopify
 } from 'react-icons/fa6';
 import { FaLinkedinIn, FaXTwitter, FaFacebookF, FaGithub } from 'react-icons/fa6';
 import { FiArrowRight } from 'react-icons/fi';
@@ -38,7 +38,7 @@ function ExpertiseContent() {
     },
     { 
       name: language === 'bn' ? 'মোঃ জুনায়েদ' : 'Md Junayed', 
-      role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও সিওও (চিফ অপারেটিং অফিসার)' : 'Co-Founder & COO (Chief Operating Officer)', 
+      role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও সিওও' : 'Co-Founder & COO', 
       initials: 'MJ',
       image: '/team-member/junayed.jpeg',
       objectPosition: 'object-[center_15%] scale-[1.35]',
@@ -70,25 +70,26 @@ function ExpertiseContent() {
         : 'Developing data-driven market strategies and business optimization models.'
     },
     { 
-      name: language === 'bn' ? 'মেজবাউল হক সরদার' : 'Mezbaul Haque Sarder', 
-      role: language === 'bn' ? 'ব্র্যান্ড অ্যান্ড কনটেন্ট প্রতিনিধি' : 'Brand & Content Representative', 
-      initials: 'MS',
-      image: '/team-member/Mezbaul.PNG',
-      tag: language === 'bn' ? 'মিডিয়া ও আউটরিচ' : 'Media & Outreach',
+      name: language === 'bn' ? 'মোঃ আসফিয়ার রহমান মারজান' : 'Md Asfier Rahman Marjan', 
+      role: language === 'bn' ? 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই বিশেষজ্ঞ' : 'Wix, WordPress & Shopify Specialist', 
+      initials: 'AM',
+      image: '/team-member/MdAsfierRahmanMarjan.jpeg',
+      objectPosition: 'object-[center_15%] scale-[1.1]',
+      tag: language === 'bn' ? 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই' : 'Wix, WordPress & Shopify',
       accentColor: 'from-rose-500 to-pink-600',
       lightBg: 'bg-rose-500/10 dark:bg-rose-500/15',
       tagColor: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/50 border-rose-200 dark:border-rose-800/40',
       glowColor: 'group-hover:border-rose-500/40 group-hover:shadow-rose-500/10',
-      badgeIcon: <FaBullseye className="w-3.5 h-3.5 text-rose-500" />,
+      badgeIcon: <FaShopify className="w-3.5 h-3.5 text-rose-500" />,
       avatarGradient: 'from-rose-400 via-pink-500 to-purple-600',
       description: language === 'bn'
-        ? 'আকর্ষণীয় স্টোরিটেলিং এবং কার্যকর মিডিয়া কমিউনিকেশনের মাধ্যমে ব্র্যান্ডের পরিচিতি বৃদ্ধি।'
-        : 'Amplifying brand voice through engaging storytelling and audience outreach.'
+        ? 'শপিফাই স্টোরফ্রন্ট, কাস্টম ওয়ার্ডপ্রেস এবং উইক্স প্ল্যাটফর্মে হাই-পারফর্মিং ওয়েবসাইট তৈরি।'
+        : 'Specializing in high-converting Shopify stores, custom WordPress websites, and modern Wix solutions.'
     },
     { 
       name: language === 'bn' ? 'আশিক মোস্তফা তন্ময়' : 'Ashik Mostofa Tonmoy', 
-      role: language === 'bn' ? 'চিফ মার্কেটিং অ্যান্ড ব্র্যান্ডিং অফিসার' : 'Chief Marketing & Branding Officer', 
-      initials: 'AM',
+      role: language === 'bn' ? 'মার্কেটিং অ্যান্ড ব্র্যান্ডিং এক্সিকিউটিভ' : 'Marketing & Branding Executive', 
+      initials: 'AT',
       image: '/team-member/AshikMostofaTonmoy.jpeg',
       objectPosition: 'object-[center_5%] scale-[1.3]',
       tag: language === 'bn' ? 'মার্কেটিং ও ব্র্যান্ডিং' : 'Marketing & Branding',
@@ -117,6 +118,22 @@ function ExpertiseContent() {
       description: language === 'bn'
         ? 'কোম্পানির দীর্ঘমেয়াদী রূপকল্প গঠনে কৌশলগত দিকনির্দেশনা ও বিশেষজ্ঞ পরামর্শ প্রদান।'
         : 'Providing strategic guidance and expert advice to shape the company\'s long-term vision.'
+    },
+    { 
+      name: language === 'bn' ? 'মেজবাউল হক সরদার' : 'Mezbaul Haque Sarder', 
+      role: language === 'bn' ? 'ব্র্যান্ড অ্যান্ড কনটেন্ট এক্সিকিউটিভ' : 'Brand & Content Executive', 
+      initials: 'MS',
+      image: '/team-member/Mezbaul.PNG',
+      tag: language === 'bn' ? 'মিডিয়া ও আউটরিচ' : 'Media & Outreach',
+      accentColor: 'from-amber-500 to-rose-600',
+      lightBg: 'bg-rose-500/10 dark:bg-rose-500/15',
+      tagColor: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/50 border-rose-200 dark:border-rose-800/40',
+      glowColor: 'group-hover:border-rose-500/40 group-hover:shadow-rose-500/10',
+      badgeIcon: <FaBullseye className="w-3.5 h-3.5 text-rose-500" />,
+      avatarGradient: 'from-rose-400 via-pink-500 to-purple-600',
+      description: language === 'bn'
+        ? 'আকর্ষণীয় স্টোরিটেলিং এবং কার্যকর মিডিয়া কমিউনিকেশনের মাধ্যমে ব্র্যান্ডের পরিচিতি বৃদ্ধি।'
+        : 'Amplifying brand voice through engaging storytelling and audience outreach.'
     },
   ];
 
