@@ -37,7 +37,7 @@ function AboutContent() {
     },
     { 
       name: language === 'bn' ? 'মোঃ জুনায়েদ' : 'Md Junayed', 
-      role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও সিওও' : 'Co-Founder & COO', 
+      role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও লিড সফটওয়্যার ইঞ্জিনিয়ার' : 'Co-Founder & Lead Software Engineer', 
       initials: 'MJ',
       image: '/team-member/junayed.jpeg',
       objectPosition: 'object-[center_15%] scale-[1.35]',
