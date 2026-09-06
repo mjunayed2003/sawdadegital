@@ -13,6 +13,7 @@ const translations: Record<string, Record<Language, string>> = {
   // Navbar
   home: { en: 'Home', bn: 'হোম' },
   services: { en: 'Services', bn: 'সেবাসমূহ' },
+  pricing: { en: 'Pricing', bn: 'প্রাইসিং' },
   projects: { en: 'Projects', bn: 'প্রজেক্টস' },
   expertise: { en: 'Expertise', bn: 'দক্ষতা' },
   ourTeam: { en: 'Our Team', bn: 'আমাদের টিম' },

@@ -14,16 +14,16 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'স্টার্টার অনলাইন শপ' : 'Starter Storefront',
       description: language === 'bn' ? 'নতুন পণ্য বা বুটিক বিজনেসের জন্য দ্রুত চেকআউট স্টোর।' : 'Perfect for small retailers launching direct-to-consumer sales.',
-      price: language === 'bn' ? '৳ ২৫,০০০' : '$400',
+      price: language === 'bn' ? '৳ ৩০,০০০' : '৳ 30,000',
       features: language === 'bn' 
-        ? ["১০০টি পর্যন্ত প্রোডাক্ট ক্যাটালগ", "বিকাশ ও নগদ ম্যানুয়াল/অটো পেমেন্ট", "১-ক্লিক ফাস্ট মোবাইল চেকআউট", "অর্ডার ম্যানেজমেন্ট ড্যাশবোর্ড", "১ বছর ফ্রি টেকনিক্যাল সাপোর্ট"]
-        : ["Up to 100 Products Catalog", "bKash & Nagad Payment Setup", "1-Click Mobile Fast Checkout", "Simple Order Admin Dashboard", "1-Year Maintenance & Hosting Support"],
+        ? ["৫০টি পর্যন্ত প্রোডাক্ট ক্যাটালগ", "বিকাশ ও নগদ ম্যানুয়াল/অটো পেমেন্ট", "১-ক্লিক ফাস্ট মোবাইল চেকআউট", "অর্ডার ম্যানেজমেন্ট ড্যাশবোর্ড", "১ মাস ফ্রি টেকনিক্যাল সাপোর্ট"]
+        : ["Up to 50 Products Catalog", "bKash & Nagad Payment Setup", "1-Click Mobile Fast Checkout", "Simple Order Admin Dashboard", "1-Month Free Support & Maintenance"],
       buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     },
     {
       name: language === 'bn' ? 'প্রো কাস্টম ই-কমার্স (জনপ্রিয়)' : 'Pro Scale Store (Popular)',
       description: language === 'bn' ? 'গ্রোথ ব্র্যান্ড ও প্রতিষ্ঠিত ব্যবসার জন্য পূর্ণাঙ্গ স্টোর।' : 'Ideal for growing brands scaling high daily order volumes.',
-      price: language === 'bn' ? '৳ ৬০,০০০' : '$950',
+      price: language === 'bn' ? '৳ ৬০,০০০' : '৳ 60,000',
       isPopular: true,
       features: language === 'bn'
         ? ["আনলিমিটেড প্রোডাক্ট ও ক্যাটাগরি", "অটোমেটেড bKash/Nagad/Visa পেমেন্ট (IPN)", "Steadfast/Pathao কুরিয়ার API অটো সিঙ্ক", "এসএমএস ও হোয়াটসঅ্যাপ অর্ডার নোটিফিকেশন", "ডিসকাউন্ট কুপন ও ফ্ল্যাশ সেল সিস্টেম"]
@@ -33,7 +33,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'এন্টারপ্রাইজ মাল্টি-ভেন্ডর / POS' : 'Enterprise / Headless Store',
       description: language === 'bn' ? 'বড় ই-কমার্স, মাল্টি-ভেন্ডর মার্কেটপ্লেস বা POS ইন্টিগ্রেশন।' : 'Headless Next.js architecture with physical POS sync.',
-      price: language === 'bn' ? '৳ ১,২০,০০০+' : '$2,000+',
+      price: language === 'bn' ? '৳ ১,২০,০০০+' : '৳ 120,000+',
       features: language === 'bn'
         ? ["হেডলেস Next.js আল্ট্রাফাস্ট আর্কিটেকচার (০.২s লোড)", "রিটেইল শপ POS ইনভেন্টরি রিয়েল-টাইম সিঙ্ক", "মাল্টি-কারেন্সি ও গ্লোবাল শিপিং", "আন্তর্জাতিক Stripe ও PayPal গেটওয়ে", "ডেডিকেটেড ফুলস্ট্যাক আর্কিটেক্ট"]
         : ["Headless Next.js (0.2s Instant Loads)", "Physical Retail POS Inventory Live Sync", "Multi-Currency & Global Logistics", "Stripe, PayPal & Local Automated Routing", "Dedicated Senior Fullstack Architect"],

@@ -14,7 +14,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'স্টার্টার সোশ্যাল গ্রোথ' : 'Starter Growth',
       description: language === 'bn' ? 'সোশ্যাল মিডিয়া উপস্থিতি ও ব্র্যান্ডিং শুরুর জন্য।' : 'Perfect for small businesses starting with paid ads & social.',
-      price: language === 'bn' ? '৳ ২০,০০০/মাস' : '$400/mo',
+      price: language === 'bn' ? '৳ ৭,০০০/মাস' : '৳ 7,000/mo',
       features: language === 'bn' 
         ? ["১২টি কাস্টম সোশ্যাল পোস্ট ও রিলস", "মেটা অ্যাডস সেটআপ ও মনিটরিং", "বেসিক অডিয়েন্স টার্গেটিং", "কমিউনিটি ম্যানেজমেন্ট", "মাসিক পারফরম্যান্স রিপোর্ট"]
         : ["12 Custom Social Posts & Reels", "Meta Ads Setup & Daily Monitoring", "Targeted Audience Research", "Basic Community Moderation", "Monthly ROI & Growth Report"],
@@ -23,7 +23,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'প্রো স্কেলিং প্যাকেজ (জনপ্রিয়)' : 'Pro Growth (Popular)',
       description: language === 'bn' ? 'দ্রুত বিক্রি ও লিড বৃদ্ধির জন্য কমপ্লিট প্যাকেজ।' : 'Ideal for growing brands scaling paid customer acquisition.',
-      price: language === 'bn' ? '৳ ৫০,০০০/মাস' : '$950/mo',
+      price: language === 'bn' ? '৳ ১৪,০০০/মাস' : '৳ 14,000/mo',
       isPopular: true,
       features: language === 'bn'
         ? ["Google ও Meta মাল্টি-চ্যানেল অ্যাডস", "২০টি ক্রিয়েটিভ ডিজাইন ও কপিরাইটিং", "A/B ক্রিয়েটিভ টেস্টিং ও ফানেল অডিট", "সার্ভার-সাইড ট্র্যাকিং ও রি-টার্গেটিং", "সাপ্তাহিক লাইভ মিটিং ও ড্যাশবোর্ড"]
@@ -33,7 +33,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'এন্টারপ্রাইজ সেলস ইঞ্জিন' : 'Enterprise Revenue',
       description: language === 'bn' ? 'বড় ব্র্যান্ড ও উচ্চ বাজেটের ক্যাম্পেইন স্কেলিং।' : 'Comprehensive acquisition & lifecycle marketing engine.',
-      price: language === 'bn' ? '৳ ১,০০,০০০+/মাস' : '$1,800+/mo',
+      price: language === 'bn' ? '৳ ২৪,০০০/মাস' : '৳ 24,000/mo',
       features: language === 'bn'
         ? ["সীমাহীন অ্যাড ক্যাম্পেইন স্কেলিং", "ফুল-ফানেল ল্যান্ডিং পেজ CRO", "ইমেইল ও SMS ড্রিপ অটোমেশন", "ইনফ্লুয়েন্সার ও UGC কোলাবোরেশন", "ডেডিকেটেড চিফ গ্রোথ অফিসার"]
         : ["Unlimited Ad Spend Management", "Custom High-Converting Landing Page", "Full Klaviyo/Email Automation", "Influencer & UGC Outreach", "Dedicated Senior Growth Director"],

@@ -12,28 +12,28 @@ export default function Pricing() {
 
   const pricingPlans = [
     {
-      name: language === 'bn' ? 'স্টার্টার এআই অটোমেশন' : 'Starter AI Workflow',
-      description: language === 'bn' ? 'স্মার্ট কাস্টমার সাপোর্ট চ্যাটবট বা লিড কোয়ালিফিকেশন।' : 'Perfect for 24/7 customer service automation & lead capture.',
-      price: language === 'bn' ? '৳ ৩০,০০০' : '$450',
+      name: language === 'bn' ? 'স্টার্টার MVP অ্যাপ' : 'Starter MVP App',
+      description: language === 'bn' ? '৪-৫ স্ক্রিনের দ্রুত মোবাইল অ্যাপ বা প্রোটোটাইপ।' : 'Perfect for startups needing a fast, high-quality MVP mobile app.',
+      price: language === 'bn' ? '৳ ৫০,০০০' : '৳ 50,000',
       features: language === 'bn' 
-        ? ["কাস্টম নলেজ বেস যুক্ত AI চ্যাটবট", "ওয়েবসাইট ও হোয়াটসঅ্যাপে ইন্টিগ্রেশন", "স্বয়ংক্রিয় লিড ক্যাপচারিং", "সহজ অ্যাডমিন ড্যাশবোর্ড", "৩ মাস ফ্রি মডেল সাপোর্ট"]
-        : ["Custom RAG Knowledge AI Bot", "Website & WhatsApp Integration", "Automated Lead Capture & Routing", "Admin Conversation Analytics", "3-Month Free Model Maintenance"],
+        ? ["৪-৫টি কাস্টম স্ক্রিন ও মডার্ন ইউআই", "React Native / Flutter ক্রস-প্ল্যাটফর্ম", "ফায়ারবেস অথেনটিকেশন ও ক্লাউড ডেটাবেজ", "পুশ নোটিফিকেশন ও অফলাইন ক্যাশিং", "১ মাস ফ্রি টেকনিক্যাল সাপোর্ট"]
+        : ["4-5 Screen Custom MVP Workflow", "React Native / Flutter Cross-Platform", "Firebase Authentication & Database", "Push Notifications & Offline Cache", "1-Month Free Bug Support"],
       buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     },
     {
-      name: language === 'bn' ? 'কমপ্লিট মোবাইল অ্যাপ (জনপ্রিয়)' : 'Full Mobile App (Popular)',
-      description: language === 'bn' ? 'iOS ও Android উভয় প্ল্যাটফর্মের জন্য নেটিভ অ্যাপ।' : 'Ideal for startups launching a high-performance cross-platform app.',
-      price: language === 'bn' ? '৳ ৮০,০০০+' : '$1,400+',
+      name: language === 'bn' ? 'কমপ্লিট ডুয়েল ওএস অ্যাপ (জনপ্রিয়)' : 'Full Dual OS App (Popular)',
+      description: language === 'bn' ? 'iOS ও Android উভয় প্ল্যাটফর্মের জন্য প্লে স্টোর ও অ্যাপ স্টোর সাবমিশনসহ অ্যাপ।' : 'Ideal for startups launching a high-performance cross-platform app.',
+      price: language === 'bn' ? '৳ ১,২০,০০০' : '৳ 1,20,000',
       isPopular: true,
       features: language === 'bn'
-        ? ["React Native / Flutter ডুয়েল প্ল্যাটফর্ম অ্যাপ", "অ্যাপল অ্যাপ স্টোর ও প্লে স্টোর সাবমিশন", "পুশ নোটিফিকেশন ও অফলাইন ক্যাশিং", "পেমেন্ট গেটওয়ে ও ওঅথ লগইন", "সম্পূর্ণ সোর্স কোড ও ১ বছর সাপোর্ট"]
-        : ["React Native / Flutter Dual OS App", "100% App Store & Play Store Approval", "Instant Push Notifications & Cache", "bKash / Stripe / Social Login", "Full Source Code & 1-Yr Support"],
+        ? ["React Native / Flutter ডুয়েল প্ল্যাটফর্ম অ্যাপ", "অ্যাপল অ্যাপ স্টোর ও প্লে স্টোর সাবমিশন", "বিকাশ/নগদ ও কার্ড পেমেন্ট গেটওয়ে", "পুশ নোটিফিকেশন ও অফলাইন ক্যাশিং", "সম্পূর্ণ সোর্স কোড ও ৩ মাস সাপোর্ট"]
+        : ["React Native / Flutter Dual OS App", "100% App Store & Play Store Approval", "bKash / Cards Payment Gateway", "Instant Push Notifications & Cache", "Full Source Code & 3-Month Support"],
       buttonBg: "bg-[#9D224D] text-white hover:bg-[#7A173A]"
     },
     {
-      name: language === 'bn' ? 'এন্টারপ্রাইজ অ্যাপ + AI ইঞ্জিন' : 'Enterprise App + AI Engine',
-      description: language === 'bn' ? 'স্মার্ট এআই অটোমেশন ও জটিল ব্যাকএন্ড সম্বলিত অ্যাপ।' : 'Complex enterprise mobile apps with bespoke LLM agents.',
-      price: language === 'bn' ? '৳ ১,৫০,০০০+' : '$2,500+',
+      name: language === 'bn' ? 'এন্টারপ্রাইজ অ্যাপ + ক্লাউড ইঞ্জিন' : 'Enterprise App + Cloud Engine',
+      description: language === 'bn' ? 'রিয়েল-টাইম ট্র্যাকিং, চ্যাট এবং জটিল ব্যাকএন্ড সম্বলিত হাই-এন্ড অ্যাপ।' : 'Complex enterprise mobile apps with bespoke cloud backend.',
+      price: language === 'bn' ? '৳ ২,৫০,০০০+' : '৳ 2,50,000+',
       features: language === 'bn'
         ? ["কাস্টম AI রিকমেন্ডেশন ও অটোমেশন ইঞ্জিন", "স্কেলেবল ক্লাউড মাইক্রোসার্ভিস ব্যাকএন্ড", "রিয়েল-টাইম চ্যাট ও লাইভ ট্র্যাকিং", "CI/CD অটোমেটেড OTA আপডেট পাইপলাইন", "ডেডিকেটেড সিনিয়র মোবাইল আর্কিটেক্ট"]
         : ["Custom AI Agent Integration", "High-Concurrency Cloud Microservices", "Real-Time WebSocket Streaming", "CI/CD Pipeline with OTA Live Updates", "Dedicated Senior Mobile Architect"],

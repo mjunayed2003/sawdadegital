@@ -12,40 +12,40 @@ export default function Pricing() {
 
   const pricingPlans = [
     {
-      name: language === 'bn' ? 'স্টার্টার' : 'Starter',
-      description: language === 'bn' ? 'নতুন ব্যবসার জন্য আধুনিক ওয়েবসাইট ও অনলাইন উপস্থিতি।' : 'Perfect for new businesses needing a solid web presence.',
-      price: language === 'bn' ? '৳ ২৫,০০০+' : '$450+',
+      name: language === 'bn' ? 'ওয়ার্ডপ্রেস ও উইক্স স্টার্টার' : 'WordPress & Wix Starter',
+      description: language === 'bn' ? 'নতুন ব্যবসা বা পার্সোনাল ব্র্যান্ডের জন্য ১-৩ পেজের দ্রুত ওয়েবসাইট।' : 'Perfect for small businesses wanting a fast, clean WordPress or Wix site.',
+      price: language === 'bn' ? '৳ ২০,০০০' : '৳ 20,000',
       features: language === 'bn' 
-        ? ["কাস্টম ল্যান্ডিং পেজ ডিজাইন", "মোবাইল রেসপনসিভ ও ফাস্ট", "অন-পেজ বেসিক এসইও", "কনট্যাক্ট ফর্ম ও হোয়াটসঅ্যাপ ইন্টিগ্রেশন", "ফ্রি ডোমেইন/হোস্টিং সেটআপ"]
-        : ["Custom Landing Page", "Mobile Responsive & Fast", "Basic On-Page SEO", "Contact Form & WhatsApp Integration", "Free Setup Support"],
+        ? ["১-৩টি কাস্টম পেজ ও ক্লিন ডিজাইন", "মোবাইল ও ট্যাবলেট ১০০% রেসপনসিভ", "কন্ট্যাক্ট ফর্ম ও হোয়াটসঅ্যাপ চ্যাট বাটন", "অন-পেজ বেসিক এসইও সেটআপ", "২টি রিভিশন ও ফুল সেটআপ সাপোর্ট"]
+        : ["1-3 Custom Pages & Clean Design", "100% Mobile & Tablet Responsive", "Contact Form & WhatsApp Integration", "Basic On-Page SEO Architecture", "2 Revisions & Full Setup Support"],
       buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     },
     {
-      name: language === 'bn' ? 'স্ট্যান্ডার্ড (জনপ্রিয়)' : 'Standard (Popular)',
-      description: language === 'bn' ? 'উন্নতিশীল ব্যবসার জন্য মাল্টি-পেজ ও সিএমএস সুবিধা।' : 'Ideal for growing companies requiring more pages and CMS features.',
-      price: language === 'bn' ? '৳ ৫০,০০০+' : '$850+',
+      name: language === 'bn' ? 'শপিফাই ও CMS স্টোর (জনপ্রিয়)' : 'Shopify & CMS Store (Popular)',
+      description: language === 'bn' ? 'শপিফাই ই-কমার্স বা মাল্টি-পেজ ওয়ার্ডপ্রেস ওয়েবসাইট বিকাশ পেমেন্টসহ।' : 'Ideal for growing businesses launching a full Shopify or WooCommerce store.',
+      price: language === 'bn' ? '৳ ৩৫,০০০' : '৳ 35,000',
       isPopular: true,
       features: language === 'bn'
-        ? ["সর্বোচ্চ ৫-৭টি কাস্টম পেজ", "সহজ হেডলেস CMS প্যানেল", "এডভান্সড টেকনিক্যাল এসইও", "গুগল অ্যানালিটিক্স ও ট্র্যাকিং", "১০০/১০০ স্পিড অপ্টিমাইজেশন", "১ মাস ফ্রি মেইনটেন্যান্স"]
-        : ["Up to 7 Custom Pages", "Easy Headless CMS", "Advanced Technical SEO", "Analytics & Conversion Tracking", "100/100 Speed Optimization", "1 Month Free Support"],
+        ? ["সর্বোচ্চ ৮টি পেজ / প্রোডাক্ট ক্যাটালগ", "বিকাশ ও নগদ পেমেন্ট গেটওয়ে সেটআপ", "অ্যাডভান্সড স্পিড ও সিকিউরিটি প্লাগইন", "ইনভেন্টরি ও অর্ডার ট্র্যাকিং ড্যাশবোর্ড", "১ মাস ফ্রি মেইনটেন্যান্স ও টেকনিক্যাল সাপোর্ট"]
+        : ["Up to 8 Custom Pages / Catalog", "bKash & Nagad Payment Gateway Setup", "Speed & Security Optimization", "Inventory & Order Tracking Dashboard", "1 Month Free Technical Maintenance"],
       buttonBg: "bg-[#9D224D] text-white hover:bg-[#7A173A]"
     },
     {
-      name: language === 'bn' ? 'ই-কমার্স / প্রিমিয়াম' : 'E-Commerce / Premium',
-      description: language === 'bn' ? 'সম্পূর্ণ ই-কমার্স স্টোর বা কাস্টম ওয়েব প্ল্যাটফর্ম।' : 'Comprehensive solution for established brands and commerce.',
-      price: language === 'bn' ? '৳ ৯০,০০০+' : '$1,500+',
+      name: language === 'bn' ? 'কাস্টম Next.js ফুলস্ট্যাক ওয়েব' : 'Custom Next.js Fullstack Web',
+      description: language === 'bn' ? 'হেডলেস CMS অ্যাডমিন প্যানেলসহ আল্ট্রাফাস্ট কাস্টম ওয়েব অ্যাপ্লিকেশন।' : 'Ultrafast custom React / Next.js web application with headless CMS.',
+      price: language === 'bn' ? '৳ ৭৫,০০০' : '৳ 75,000',
       features: language === 'bn'
-        ? ["কাস্টম ই-কমার্স বা SaaS অ্যাপ", "বিকাশ/নগদ/কার্ড অটো পেমেন্ট", "ইনভেন্টরি ও অর্ডার ড্যাশবোর্ড", "ইউজার একাউন্ট ও সিকিউরিটি", "ইনস্ট্যান্ট ১-ক্লিক চেকআউট", "৩ মাস ফ্রি টেকনিক্যাল সাপোর্ট"]
-        : ["Full E-commerce or SaaS App", "Automated Payment Gateways", "Inventory & Order Management", "User Authentication & Dashboard", "Instant 1-Click Checkout", "3 Months Dedicated Support"],
+        ? ["Next.js App Router ফুলস্ট্যাক আর্কিটেকচার", "সহজ হেডলেস CMS (অ্যাডমিন প্যানেল)", "ডাইনামিক ব্লগ, পোর্টফোলিও ও সার্ভিসেস", "১০০/১০০ গুগল পেজস্পিড ও কোর ভাইটালস", "CI/CD ক্লাউড ডেপ্লয় ও ৩ মাস সাপোর্ট"]
+        : ["Next.js App Router Fullstack Architecture", "Headless CMS (Custom Admin Panel)", "Dynamic Blog, Portfolio & Services", "100/100 Core Web Vitals & Speed", "Automated CI/CD Deploy & 3 Months SLA"],
       buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     },
     {
-      name: language === 'bn' ? 'কাস্টম এন্টারপ্রাইজ' : 'Custom Enterprise',
-      description: language === 'bn' ? 'বড় প্রতিষ্ঠানের জন্য নিজস্ব ক্লাউড আর্কিটেকচার।' : 'Tailored enterprise architectures and bespoke platforms.',
-      price: language === 'bn' ? 'আলোচনা সাপেক্ষে' : "Let's Talk",
+      name: language === 'bn' ? 'এন্টারপ্রাইজ কাস্টম SaaS / প্ল্যাটফর্ম' : 'Enterprise SaaS / Cloud Platform',
+      description: language === 'bn' ? 'জটিল বিজনেস লজিক, রোল-বেসড পোর্টাল ও স্কেলেবল ক্লাউড ব্যাকএন্ড।' : 'Complex enterprise web platforms, custom dashboards & cloud scale.',
+      price: language === 'bn' ? '৳ ১,৫০,০০০+' : '৳ 150,000+',
       features: language === 'bn'
-        ? ["ডেডিকেটেড ইঞ্জিনিয়ার টিম", "কাস্টম মাইক্রোসার্ভিস ক্লাউড", "হাই-সিকিউরিটি ও SLA সাপোর্ট", "দীর্ঘমেয়াদী মেইনটেন্যান্স ও আপগ্রেড"]
-        : ["Dedicated Senior Engineers", "Custom Cloud Architecture", "Enterprise Security & SLA", "Ongoing Maintenance & Scale"],
+        ? ["স্কেলেবল ক্লাউড মাইক্রোসার্ভিস ব্যাকএন্ড", "রোল-বেসড অথেনটিকেশন ও সিকিউর ড্যাশবোর্ড", "থার্ড-পার্টি API, পেমেন্ট ও ওয়েবহুক", "ডেডিকেটেড ফুলস্ট্যাক লিড আর্কিটেক্ট", "৬ মাস এন্টারপ্রাইজ মেইনটেন্যান্স ও সাপোর্ট"]
+        : ["Scalable Cloud Microservices Backend", "Role-Based Auth & Secure Portal", "Third-Party APIs & Automated Webhooks", "Dedicated Senior Fullstack Lead", "6 Months Enterprise Maintenance SLA"],
       buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     }
   ];

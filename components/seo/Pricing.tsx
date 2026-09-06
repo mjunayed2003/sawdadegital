@@ -14,7 +14,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'স্টার্টার লোকাল এসইও' : 'Starter Local SEO',
       description: language === 'bn' ? 'লোকাল ব্যবসা ও গুগল ম্যাপসে শীর্ষস্থানের জন্য।' : 'Perfect for local service businesses aiming for Google Maps Top 3.',
-      price: language === 'bn' ? '৳ ১৫,০০০/মাস' : '$300/mo',
+      price: language === 'bn' ? '৳ ৮,০০০/মাস' : '৳ 8,000/mo',
       features: language === 'bn' 
         ? ["গুগল বিজনেস প্রোফাইল (GMB) অপ্টিমাইজ", "১০টি টার্গেটেড লোকাল কিওয়ার্ড", "অন-পেজ মেটা ট্যাগ ফিক্সিং", "লোকাল সাইটেশন বিল্ডিং", "মাসিক র‍্যাঙ্ক ট্র্যাকিং রিপোর্ট"]
         : ["Google Business Profile Setup", "10 Targeted Local Keywords", "On-Page Metadata Optimization", "Local Directory Citations", "Monthly Keyword Rank Report"],
@@ -23,7 +23,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'প্রো গ্রোথ এসইও (জনপ্রিয়)' : 'Pro Organic (Popular)',
       description: language === 'bn' ? 'গুগল সার্চে অর্গানিক ট্রাফিক বহুগুণ বৃদ্ধির জন্য।' : 'Ideal for growing brands looking to dominate Google organic search.',
-      price: language === 'bn' ? '৳ ৩৫,০০০/মাস' : '$650/mo',
+      price: language === 'bn' ? '৳ ১৪,০০০/মাস' : '৳ 14,000/mo',
       isPopular: true,
       features: language === 'bn'
         ? ["২৫টি হাই-ইনটেন্ট কমার্শিয়াল কিওয়ার্ড", "ফুল টেকনিক্যাল এসইও ও স্পিড ফিক্স", "হাই DA/DR কোয়ালিটি ব্যাকলিংকস", "কনটেন্ট অপ্টিমাইজেশন ও স্কিমা", "গুগল সার্চ কনসোল অডিট ও ড্যাশবোর্ড"]
@@ -33,7 +33,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'গুগল অ্যাডস (PPC) + এসইও' : 'Google Ads + SEO Suite',
       description: language === 'bn' ? 'তাৎক্ষণিক পেইড ট্রাফিক ও দীর্ঘমেয়াদী অর্গানিক র‍্যাঙ্ক।' : 'Combined aggressive search ads + organic SEO dominance.',
-      price: language === 'bn' ? '৳ ৬০,০০০/মাস' : '$1,100/mo',
+      price: language === 'bn' ? '৳ ২৯,০০০/মাস' : '৳ 29,000/mo',
       features: language === 'bn'
         ? ["গুগল সার্চ ও শপিং অ্যাডস ক্যাম্পেইন", "নেগেটিভ কিওয়ার্ড ও কোয়ালিটি স্কোর ৯/১০", "৫০+ কিওয়ার্ড র‍্যাঙ্কিং স্ট্র্যাটেজি", "কনভার্সন ট্র্যাকিং ও ল্যান্ডিং পেজ অডিট", "সাপ্তাহিক লাইভ মিটিং ও আরওআই রিপোর্ট"]
         : ["Google Search & Shopping Ads Setup", "Quality Score 9/10 Ad Management", "50+ Keyword Ranking Strategy", "Conversion Tracking & CRO Audit", "Weekly Strategy Call & Live Reporting"],

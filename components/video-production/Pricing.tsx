@@ -14,7 +14,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'সোশ্যাল মিডিয়া রিলস ও শর্টস' : 'Social Ads & Reels',
       description: language === 'bn' ? 'সোশ্যাল মিডিয়ার জন্য হাই-এনগেজিং শর্ট-ফর্ম ভিডিও।' : 'Perfect for fast-turnaround vertical social campaigns.',
-      price: language === 'bn' ? '৳ ১৫,০০০+' : '$300+',
+      price: language === 'bn' ? '৳ ৩,০০০+' : '৳ 3,000+',
       features: language === 'bn' 
         ? ["৬০-৯০ সেকেন্ডের শর্ট-ফর্ম ভিডিও", "ফাস্ট-পেসড এডিটিং ও ক্যাপশন", "ট্রেন্ডিং ব্যাকগ্রাউন্ড মিউজিক", "১টি ফ্রি রিভিশন", "১০৮০p ও ৪K অপ্টিমাইজড"]
         : ["60-90 Sec Vertical Video", "Fast-Paced Editing & Subtitles", "Licensed Background Music", "1 Round of Revisions", "1080p & 4K Social Exports"],
@@ -23,7 +23,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'প্রো কমার্শিয়াল (জনপ্রিয়)' : 'Pro Commercial (Popular)',
       description: language === 'bn' ? 'ব্র্যান্ড প্রমোশন ও বাণিজ্যিক বিজ্ঞাপনের জন্য আদর্শ।' : 'Ideal for corporate presentations & brand storytelling.',
-      price: language === 'bn' ? '৳ ৪৫,০০০+' : '$750+',
+      price: language === 'bn' ? '৳ ৫,৫০০+' : '৳ 5,500+',
       isPopular: true,
       features: language === 'bn'
         ? ["২-৩ মিনিটের সিনেমাটিক ভিডিও", "DaVinci Resolve কালার গ্রেডিং", "২D মোশন গ্রাফিক্স ও টাইটেলস", "ভয়েসওভার ও স্টুডিও অডিও মিক্স", "২টি রিভিশন ও প্রফেশনাল লাইটিং"]
@@ -33,7 +33,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'ব্র্যান্ড ফিল্ম ও সিনেমাটিক অ্যাড' : 'Brand Film & TV Commercial',
       description: language === 'bn' ? 'বড় প্রতিষ্ঠান ও হাই-এন্ড ব্র্যান্ডের জন্য পূর্ণাঙ্গ প্যাকেজ।' : 'Comprehensive commercial campaigns and films.',
-      price: language === 'bn' ? '৳ ৯০,০০০+' : '$1,500+',
+      price: language === 'bn' ? '৳ ৯,৫০০+' : '৳ 9,500+',
       features: language === 'bn'
         ? ["ফুল সিনেমা ক্যামেরা (RED / Sony FX)", "প্রফেশনাল কাস্টিং ও লোকেশন", "৩D ভিজ্যুয়াল এফেক্টস (VFX)", "সিনেমাটিক সাউন্ড ডিজাইন ও স্কোর", "মাল্টি-প্ল্যাটফর্ম হাই-বিটরেট মাস্টার্স"]
         : ["Cinema Rig (RED / Sony FX)", "Professional Casting & Scout", "3D Motion & VFX Compositing", "Bespoke Orchestral Sound Design", "Unlimited Revisions & TV Exports"],

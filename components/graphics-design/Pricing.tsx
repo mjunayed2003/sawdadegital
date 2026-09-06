@@ -14,7 +14,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'স্টার্টার লোগো প্যাকেজ' : 'Starter Identity',
       description: language === 'bn' ? 'নতুন স্টার্টআপ বা ছোট ব্যবসার জন্য নিখুঁত লোগো।' : 'Perfect for new startups needing a clean vector logo.',
-      price: language === 'bn' ? '৳ ৮,০০০' : '$150',
+      price: language === 'bn' ? '৳ ৭,০০০' : '৳ 7,000',
       features: language === 'bn' 
         ? ["২টি প্রাথমিক লোগো কনসেপ্ট", "হাই-রেজুলেশন ভেক্টর ফাইল (AI, PNG, SVG)", "রঙ ও ফন্ট প্যালেট গাইড", "২টি ফ্রি রিভিশন", "সম্পূর্ণ কপিরাইট ওনারশিপ"]
         : ["2 Custom Logo Concepts", "High-Resolution Vectors (AI, SVG, PNG)", "Color & Font Hierarchy", "2 Free Revisions", "100% Commercial IP Rights"],
@@ -23,7 +23,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'পূর্ণাঙ্গ ব্র্যান্ডিং প্যাকেজ (জনপ্রিয়)' : 'Full Brand Suite (Popular)',
       description: language === 'bn' ? 'প্রতিষ্ঠিত ব্যবসার জন্য কমপ্লিট ব্র্যান্ড সিস্টেম।' : 'Ideal for growing companies wanting complete identity systems.',
-      price: language === 'bn' ? '৳ ২৫,০০০' : '$450',
+      price: language === 'bn' ? '৳ ১৫,০০০' : '৳ 15,000',
       isPopular: true,
       features: language === 'bn'
         ? ["৪টি প্রিমিয়াম লোগো কনসেপ্ট", "পূর্ণাঙ্গ ব্র্যান্ড গাইডলাইন বুকলেট", "ভিজিটিং কার্ড, প্যাড ও খাম ডিজাইন", "সোশ্যাল মিডিয়া কিট (ব্যানার ও ডিপি)", "সীমাহীন রিভিশন ও ৩D মকআপ"]
@@ -33,7 +33,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'প্যাকেজিং ও কর্পোরেট কিট' : 'Packaging & Corporate',
       description: language === 'bn' ? 'প্রোডাক্ট ব্র্যান্ডিং ও রিটেইল প্যাকেজিং সলিউশন।' : 'Complete packaging architecture & corporate collaterals.',
-      price: language === 'bn' ? '৳ ৫০,০০০+' : '$900+',
+      price: language === 'bn' ? '৳ ২৮,০০০+' : '৳ 28,000+',
       features: language === 'bn'
         ? ["প্রোডাক্ট বক্স ও ডাই-লাইন ডিজাইন", "বোতল ও লেবেল আর্কিটেকচার", "প্রিন্ট-রেডি CMYK মাস্টার ফাইলস", "৩D ফটোরিয়েলিস্টিক প্রোডাক্ট রেন্ডার", "মার্কেটিং ব্রোশিওর ও ক্যাটালগ"]
         : ["Product Box & Die-Line Layout", "Bottle Label & Container Graphics", "Print-Ready CMYK Master Files", "3D Photorealistic Product Renders", "Corporate Brochure & Catalog"],
@@ -42,7 +42,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'মাসিক ডিজাইন রিটেইনার' : 'Monthly Design Retainer',
       description: language === 'bn' ? 'নিয়মিত সোশ্যাল ও মার্কেটিং ডিজাইনের জন্য।' : 'Ongoing on-demand graphic design for fast-moving teams.',
-      price: language === 'bn' ? '৳ ৩৫,০০০/মাস' : '$650/mo',
+      price: language === 'bn' ? '৳ ৩৫,০০০/মাস' : '৳ 35,000/mo',
       features: language === 'bn'
         ? ["মাসিক ২৫টি ক্রিয়েটিভ ডিজাইন", "বিজ্ঞাপনী ব্যানার ও সোশ্যাল পোস্ট", "ফাস্ট ২৪ ঘণ্টার টার্নঅ্যারাউন্ড", "ডেডিকেটেড সিনিয়র আর্ট ডিরেক্টর"]
         : ["25 Monthly Custom Creatives", "Ad Banners & Social Post Sets", "Fast 24-Hour Turnaround", "Dedicated Senior Art Director"],

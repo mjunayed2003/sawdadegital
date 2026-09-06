@@ -14,7 +14,7 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'স্টার্টার ল্যান্ডিং পেজ UI' : 'Starter Landing Page',
       description: language === 'bn' ? 'হাই-কনভার্শন ল্যান্ডিং পেজ বা প্রোডাক্ট শোকেসের জন্য।' : 'Perfect for modern high-converting product landing pages.',
-      price: language === 'bn' ? '৳ ১৫,০০০' : '$250',
+      price: language === 'bn' ? '৳ ১৫,০০০' : '৳ 15,000',
       features: language === 'bn' 
         ? ["১টি কাস্টম ল্যান্ডিং পেজ ডিজাইন (Desktop & Mobile)", "ফিগমা কম্পোনেন্ট ও কালার টোকেন", "ক্লিকেবল ইন্টারঅ্যাক্টিভ প্রোটোটাইপ", "২টি ফ্রি রিভিশন", "ডেভেলপার হ্যান্ডঅফ এসেটস"]
         : ["1 Custom Landing Page (Desktop & Mobile)", "Figma Component & Color Tokens", "Clickable Interactive Prototype", "2 Free Revision Rounds", "Clean Developer Handoff Assets"],
@@ -23,26 +23,26 @@ export default function Pricing() {
     {
       name: language === 'bn' ? 'মোবাইল বা ওয়েব অ্যাপ UI (জনপ্রিয়)' : 'Full Mobile/Web App (Popular)',
       description: language === 'bn' ? 'সম্পূর্ণ মোবাইল অ্যাপ বা ওয়েব অ্যাপের ইন্টারফেস ডিজাইন।' : 'Ideal for modern mobile apps and SaaS web platforms.',
-      price: language === 'bn' ? '৳ ৪৫,০০০+' : '$750+',
+      price: language === 'bn' ? '৳ ৩০,০০০' : '৳ 30,000',
       isPopular: true,
       features: language === 'bn'
-        ? ["১০-১৫টি স্ক্রিনের সম্পূর্ণ ইউআই/ইউএক্স", "সম্পূর্ণ ফিগমা ডিজাইন সিস্টেম (Design System)", "ডার্ক ও লাইট মোড ভ্যারিয়েন্টস", "ইউজার জার্নি ও ওয়্যারফ্রেম টেস্টিং", "আনলিমিটেড প্রোটোটাইপ রিভিশন"]
-        : ["10-15 Complete UI Screens", "Full Modular Figma Design System", "Dark & Light Mode Variants", "User Journey Flow & Usability Audit", "Unlimited Interactive Prototype Tweaks"],
+        ? ["৮-১২টি স্ক্রিনের সম্পূর্ণ ইউআই/ইউএক্স", "সম্পূর্ণ ফিগমা ডিজাইন সিস্টেম (Design System)", "ডার্ক ও লাইট মোড ভ্যারিয়েন্টস", "ইউজার জার্নি ও ওয়্যারফ্রেম টেস্টিং", "আনলিমিটেড প্রোটোটাইপ রিভিশন"]
+        : ["8-12 Complete UI Screens", "Full Modular Figma Design System", "Dark & Light Mode Variants", "User Journey Flow & Usability Audit", "Unlimited Interactive Prototype Tweaks"],
       buttonBg: "bg-[#9D224D] text-white hover:bg-[#7A173A]"
     },
     {
       name: language === 'bn' ? 'এন্টারপ্রাইজ SaaS ড্যাশবোর্ড' : 'Enterprise SaaS Portal',
       description: language === 'bn' ? 'জটিল ডেটা প্ল্যাটফর্ম ও মাল্টি-রোল SaaS সিস্টেম।' : 'Heavy data dashboards and multi-tenant platforms.',
-      price: language === 'bn' ? '৳ ৮০,০০০+' : '$1,400+',
+      price: language === 'bn' ? '৳ ৬০,০০০+' : '৳ 60,000+',
       features: language === 'bn'
-        ? ["২৫+ জটিল ড্যাশবোর্ড স্ক্রিন ও টেবিল", "অটো-লেআউট ভ্যারিয়েবল ও টোকেন আর্কিটেকচার", "মাইক্রো-অ্যানিমেশন ও স্টেট ভেরিয়েশনস", "ইউজার ইন্টারভিউ ও হিউরিস্টিক অডিট", "ডেভেলপারদের সাথে ডিরেক্ট স্ল্যাক সাপোর্ট"]
-        : ["25+ Complex Dashboard & Table Screens", "Advanced Auto-Layout & Variables", "Fluid Micro-Interactions & States", "In-Depth Usability & Heuristic Audit", "Direct Engineering Slack Collaboration"],
+        ? ["২০+ জটিল ড্যাশবোর্ড স্ক্রিন ও টেবিল", "অটো-লেআউট ভ্যারিয়েবল ও টোকেন আর্কিটেকচার", "মাইক্রো-অ্যানিমেশন ও স্টেট ভেরিয়েশনস", "ইউজার ইন্টারভিউ ও হিউরিস্টিক অডিট", "ডেভেলপারদের সাথে ডিরেক্ট স্ল্যাক সাপোর্ট"]
+        : ["20+ Complex Dashboard & Table Screens", "Advanced Auto-Layout & Variables", "Fluid Micro-Interactions & States", "In-Depth Usability & Heuristic Audit", "Direct Engineering Slack Collaboration"],
       buttonBg: "bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white"
     },
     {
       name: language === 'bn' ? 'ইউএক্স অডিট ও রিডিজাইন' : 'UX Audit & Conversion CRO',
       description: language === 'bn' ? 'চলমান অ্যাপ বা ওয়েবসাইটের ড্রপ-অফ কমানোর জন্য।' : 'Fixing drop-offs and redesigning outdated interfaces.',
-      price: language === 'bn' ? '৳ ২৫,০০০' : '$400',
+      price: language === 'bn' ? '৳ ২৫,০০০' : '৳ 25,000',
       features: language === 'bn'
         ? ["সম্পূর্ণ হিটম্যাপ ও ড্রপ-অফ অডিট", "ফ্রিকশন দূর করার ওয়্যারফ্রেম রিডিজাইন", "কনভার্সন বৃদ্ধির অ্যাকশনেবল রিপোর্ট", "১-অন-১ স্ট্র্যাটেজি কল"]
         : ["Full Funnel Friction & Drop-Off Audit", "Frictionless Checkout Redesign", "Actionable Heuristic Report PDF", "1-on-1 Executive Strategy Walkthrough"],

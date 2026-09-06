@@ -128,6 +128,9 @@ export default function Navbar() {
               </div>
             </div>
 
+            <Link href="/pricing" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/pricing" ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
+              {t('pricing')}
+            </Link>
             <Link href="/projects" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/projects" ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
               {t('projects')}
             </Link>
@@ -226,6 +229,9 @@ export default function Navbar() {
                 )}
               </div>
 
+              <Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/pricing" ? "bg-[#334155] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}>
+                {t('pricing')}
+              </Link>
               <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/projects" ? "bg-[#334155] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}>
                 {t('projects')}
               </Link>

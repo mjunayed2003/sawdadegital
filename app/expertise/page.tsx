@@ -5,12 +5,13 @@ import Image from 'next/image';
 import Topbar from "@/components/layout/Topbar";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ServicePackages from "@/components/expertise/ServicePackages";
 import { LanguageProvider, useLanguage } from "@/components/LanguageContext";
 import { 
   FaCode, FaVideo, FaRobot, FaBullhorn, 
   FaPenNib, FaDesktop, FaMagnifyingGlass, 
   FaBriefcase, FaUsers, FaLayerGroup, FaClock, FaHandshake,
-  FaCrown, FaLaptopCode, FaChartPie, FaBullseye, FaShopify
+  FaCrown, FaLaptopCode, FaChartPie, FaShopify
 } from 'react-icons/fa6';
 import { FaLinkedinIn, FaXTwitter, FaFacebookF, FaGithub } from 'react-icons/fa6';
 import { FiArrowRight } from 'react-icons/fi';
@@ -118,23 +119,7 @@ function ExpertiseContent() {
       description: language === 'bn'
         ? 'কোম্পানির দীর্ঘমেয়াদী রূপকল্প গঠনে কৌশলগত দিকনির্দেশনা ও বিশেষজ্ঞ পরামর্শ প্রদান।'
         : 'Providing strategic guidance and expert advice to shape the company\'s long-term vision.'
-    },
-    { 
-      name: language === 'bn' ? 'মেজবাউল হক সরদার' : 'Mezbaul Haque Sarder', 
-      role: language === 'bn' ? 'ব্র্যান্ড অ্যান্ড কনটেন্ট এক্সিকিউটিভ' : 'Brand & Content Executive', 
-      initials: 'MS',
-      image: '/team-member/Mezbaul.PNG',
-      tag: language === 'bn' ? 'মিডিয়া ও আউটরিচ' : 'Media & Outreach',
-      accentColor: 'from-amber-500 to-rose-600',
-      lightBg: 'bg-rose-500/10 dark:bg-rose-500/15',
-      tagColor: 'text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/50 border-rose-200 dark:border-rose-800/40',
-      glowColor: 'group-hover:border-rose-500/40 group-hover:shadow-rose-500/10',
-      badgeIcon: <FaBullseye className="w-3.5 h-3.5 text-rose-500" />,
-      avatarGradient: 'from-rose-400 via-pink-500 to-purple-600',
-      description: language === 'bn'
-        ? 'আকর্ষণীয় স্টোরিটেলিং এবং কার্যকর মিডিয়া কমিউনিকেশনের মাধ্যমে ব্র্যান্ডের পরিচিতি বৃদ্ধি।'
-        : 'Amplifying brand voice through engaging storytelling and audience outreach.'
-    },
+    }
   ];
 
   const services = [
@@ -280,6 +265,9 @@ function ExpertiseContent() {
             ))}
           </div>
         </div>
+
+        {/* Interactive Service Packages & Pricing */}
+        <ServicePackages />
 
         {/* Why Choose Us Features */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
