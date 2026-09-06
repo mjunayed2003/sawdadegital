@@ -724,10 +724,10 @@ export default function ServicePackages({
           tiers: [
             {
               id: 'basic',
-              name: { bn: 'বেসিক CMS সাইট', en: 'Basic CMS Site' },
-              badge: { bn: '১৫,০০০ রেট', en: '15K Rate' },
-              price: 15000,
-              priceFormatted: { bn: '৳ ১৫,০০০', en: '৳ 15,000' },
+              name: { bn: 'ওয়ার্ডপ্রেস ও উইক্স স্টার্টার', en: 'WordPress & Wix Starter' },
+              badge: { bn: '২০,০০০ রেট', en: '20K Rate' },
+              price: 20000,
+              priceFormatted: { bn: '৳ ২০,০০০', en: '৳ 20,000' },
               billingPeriod: { bn: '/প্রজেক্ট', en: '/project' },
               description: {
                 bn: 'ওয়ার্ডপ্রেস বা উইক্সে ১-৩ পেজের দ্রুত, ক্লিন ও রেসপনসিভ ওয়েবসাইট।',
@@ -746,8 +746,8 @@ export default function ServicePackages({
               name: { bn: 'স্ট্যান্ডার্ড বিজনেস সাইট', en: 'Standard Business Site' },
               badge: { bn: 'সবচেয়ে জনপ্রিয়', en: 'Most Popular' },
               isPopular: true,
-              price: 25000,
-              priceFormatted: { bn: '৳ ২৫,০০০', en: '৳ 25,000' },
+              price: 35000,
+              priceFormatted: { bn: '৳ ৩৫,০০০', en: '৳ 35,000' },
               billingPeriod: { bn: '/প্রজেক্ট', en: '/project' },
               description: {
                 bn: 'উন্নতিশীল ব্যবসার জন্য মাল্টি-পেজ পূর্ণাঙ্গ ওয়েবসাইট (WooCommerce/বিকাশসহ)।',
@@ -765,8 +765,8 @@ export default function ServicePackages({
               id: 'premium',
               name: { bn: 'প্রিমিয়াম পোর্টাল / কাস্টম CMS', en: 'Premium Portal / Custom CMS' },
               badge: { bn: 'পূর্ণাঙ্গ ফিচার্ড', en: 'Fully Featured' },
-              price: 45000,
-              priceFormatted: { bn: '৳ ৪৫,০০০', en: '৳ 45,000' },
+              price: 60000,
+              priceFormatted: { bn: '৳ ৬০,০০০', en: '৳ 60,000' },
               billingPeriod: { bn: '/প্রজেক্ট', en: '/project' },
               description: {
                 bn: 'কাস্টম থিম, ডাইনামিক ফিল্টারিং ও হাই-স্পিড অপ্টিমাইজড ওয়ার্ডপ্রেস প্ল্যাটফর্ম।',
@@ -795,9 +795,9 @@ export default function ServicePackages({
             {
               id: 'basic',
               name: { bn: 'বেসিক শপিফাই স্টোর', en: 'Basic Shopify Store' },
-              badge: { bn: '২৫,০০০ রেট', en: '25K Rate' },
-              price: 25000,
-              priceFormatted: { bn: '৳ ২৫,০০০', en: '৳ 25,000' },
+              badge: { bn: '৩০,০০০ রেট', en: '30K Rate' },
+              price: 30000,
+              priceFormatted: { bn: '৳ ৩০,০০০', en: '৳ 30,000' },
               billingPeriod: { bn: '/স্টোর', en: '/store' },
               description: {
                 bn: 'শপিফাইতে দ্রুত সেল শুরু করার জন্য ক্লিন ও মোবাইল-ফ্রেন্ডলি স্টোর সেটআপ।',
@@ -816,8 +816,8 @@ export default function ServicePackages({
               name: { bn: 'স্ট্যান্ডার্ড শপিফাই স্টোর', en: 'Standard Shopify Store' },
               badge: { bn: 'সবচেয়ে জনপ্রিয়', en: 'Most Popular' },
               isPopular: true,
-              price: 45000,
-              priceFormatted: { bn: '৳ ৪৫,০০০', en: '৳ 45,000' },
+              price: 50000,
+              priceFormatted: { bn: '৳ ৫০,০০০', en: '৳ 50,000' },
               billingPeriod: { bn: '/স্টোর', en: '/store' },
               description: {
                 bn: 'অটোমেটেড পেমেন্ট, কুরিয়ার সিঙ্ক ও হাই-কনভার্শন শপিফাই সেলস সিস্টেম।',
@@ -835,8 +835,8 @@ export default function ServicePackages({
               id: 'premium',
               name: { bn: 'প্রিমিয়াম কাস্টম লিকুইড শপিফাই', en: 'Premium Custom Liquid Shopify' },
               badge: { bn: 'টপ-টিয়ার ব্র্যান্ড', en: 'Top-Tier Brand' },
-              price: 75000,
-              priceFormatted: { bn: '৳ ৭৫,০০০', en: '৳ 75,000' },
+              price: 90000,
+              priceFormatted: { bn: '৳ ৯০,০০০', en: '৳ 90,000' },
               billingPeriod: { bn: '/স্টোর', en: '/store' },
               description: {
                 bn: 'কাস্টম লিকুইড কোডিং, মাল্টি-কারেন্সি ও আল্ট্রাফাস্ট শপিফাই প্লাস আর্কিটেকচার।',
@@ -1266,8 +1266,24 @@ export default function ServicePackages({
     return `https://wa.me/8801700000000?text=${encodeURIComponent(text)}`;
   }, [currentMainCat, currentSubCat, activeTier, selectedAddons, activeAddons, calculateTotal, language]);
 
+  // Direct WhatsApp URL for a specific tier
+  const getTierWhatsAppUrl = (tier: TierData) => {
+    const serviceTitle = currentSubCat 
+      ? `${currentMainCat.title[language === 'bn' ? 'bn' : 'en']} (${currentSubCat.name[language === 'bn' ? 'bn' : 'en']})`
+      : currentMainCat.title[language === 'bn' ? 'bn' : 'en'];
+    
+    const tierName = tier.name[language === 'bn' ? 'bn' : 'en'];
+    const priceText = formatBDT(tier.price) + (tier.billingPeriod ? ` ${tier.billingPeriod[language === 'bn' ? 'bn' : 'en']}` : '');
+
+    const text = language === 'bn'
+      ? `আসসালামু আলাইকুম সাওদা ডিজিটাল। আমি "${serviceTitle}" সার্ভিসের "${tierName}" (${priceText}) প্যাকেজটি নিতে আগ্রহী। দয়া করে প্রজেক্ট শুরুর বিষয়ে জানাবেন।`
+      : `Hello Sawda Digital. I am interested in the "${tierName}" (${priceText}) package for "${serviceTitle}". Please let me know how we can proceed.`;
+
+    return `https://wa.me/8801700000000?text=${encodeURIComponent(text)}`;
+  };
+
   return (
-    <section id="service-packages" className="py-24 bg-[#FAFAFA] dark:bg-[#0f0f11] relative overflow-hidden transition-colors duration-300">
+    <section id="service-packages" className={`${hideHeader ? 'pt-2 pb-16 md:pb-20' : 'py-16 md:py-20'} bg-[#FAFAFA] dark:bg-[#0f0f11] relative overflow-hidden transition-colors duration-300`}>
       {/* Background Subtle Gradient Accents */}
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#9D224D]/10 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute top-1/2 -right-40 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -1276,16 +1292,16 @@ export default function ServicePackages({
         
         {/* Section Header */}
         {!hideHeader && (
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-sm">
               {language === 'bn' ? 'স্বচ্ছ ও সাশ্রয়ী প্যাকেজ' : 'TRANSPARENT SERVICE PACKAGES'}
             </div>
             
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0f172a] dark:text-white tracking-tight mb-5">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0f172a] dark:text-white tracking-tight mb-4">
               {language === 'bn' ? 'আপনার জন্য পারফেক্ট সার্ভিস প্যাকেজ বেছে নিন' : 'Choose Your Tailored Service Package'}
             </h2>
             
-            <p className="text-slate-600 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+            <p className="text-slate-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
               {language === 'bn' 
                 ? 'বেসিক, স্ট্যান্ডার্ড ও প্রিমিয়াম অপশন থেকে নির্বাচন করুন এবং প্রয়োজনে কাস্টম চেকবক্স দিয়ে নিজের মতো করে অ্যাড-অন যুক্ত করুন।'
                 : 'Select from our verified tiers or customize deliverables with modular add-ons to fit your exact business scope.'}
@@ -1294,7 +1310,10 @@ export default function ServicePackages({
         )}
 
         {/* 1. Main Service Categories Tabs - Styled as Sticky Service Sub-Navbar */}
-        <div className="sticky top-16 md:top-20 z-30 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3 bg-white/95 dark:bg-[#0f0f11]/95 backdrop-blur-md border-y border-slate-200/80 dark:border-white/10 shadow-sm mb-10 overflow-x-auto no-scrollbar">
+        <div 
+          className="sticky top-16 md:top-24 z-30 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3.5 bg-white/95 dark:bg-[#0f0f11]/95 backdrop-blur-md border-y border-slate-200/80 dark:border-white/10 shadow-sm mb-12 sm:mb-16 overflow-x-auto no-scrollbar"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           <div className="flex items-center justify-start lg:justify-center gap-2 sm:gap-2.5 min-w-max mx-auto">
             {serviceCategories.map((cat) => {
               const isActive = activeMainCat === cat.id;
@@ -1303,7 +1322,6 @@ export default function ServicePackages({
                   key={cat.id}
                   onClick={() => {
                     setActiveMainCat(cat.id);
-                    // Reset tier to basic when switching category
                     setSelectedTierId('basic');
                     setSelectedAddons([]);
                     if (cat.subcategories && cat.subcategories.length > 0) {
@@ -1324,7 +1342,7 @@ export default function ServicePackages({
           </div>
         </div>
 
-        {/* 2. Subcategory Tabs (if Video Production has multiple modules) */}
+        {/* 2. Subcategory Tabs (for Video Production or services with modules) */}
         {currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (
           <div className="flex flex-wrap items-center justify-center gap-2 mb-12 p-2 bg-slate-200/60 dark:bg-white/5 rounded-3xl max-w-4xl mx-auto border border-slate-300/60 dark:border-white/10">
             {currentMainCat.subcategories.map((sub) => {
@@ -1350,149 +1368,145 @@ export default function ServicePackages({
           </div>
         )}
 
-        {/* Main Interactive Package Card Box */}
-        <div className="bg-white dark:bg-[#161618] rounded-[2.5rem] border border-slate-200/80 dark:border-white/10 shadow-2xl overflow-hidden p-6 sm:p-10 md:p-12 transition-all">
-          
-          {/* Top Switcher: Basic / Standard / Premium / Business */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
-            <div>
-              <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#9D224D] mb-1">
-                <FaStar className="w-3.5 h-3.5" />
-                {language === 'bn' ? 'প্যাকেজ টিয়ার নির্বাচন করুন' : 'SELECT PACKAGE TIER'}
-              </div>
-              <h3 className="text-xl sm:text-2xl font-black text-[#0f172a] dark:text-white">
-                {currentSubCat 
-                  ? currentSubCat.name[language === 'bn' ? 'bn' : 'en']
-                  : currentMainCat.title[language === 'bn' ? 'bn' : 'en']}
-              </h3>
-            </div>
-
-            {/* Segmented Pill Selector for Tiers */}
-            <div className="inline-flex p-1.5 bg-slate-100 dark:bg-[#202024] rounded-2xl border border-slate-200/80 dark:border-white/10 flex-wrap justify-center gap-1">
-              {activeTiers.map((tier) => {
-                const isTierActive = selectedTierId === tier.id;
-                return (
-                  <button
-                    key={tier.id}
-                    onClick={() => setSelectedTierId(tier.id)}
-                    className={`relative px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-black transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
-                      isTierActive
-                        ? 'bg-[#9D224D] text-white shadow-md shadow-[#9D224D]/30'
-                        : 'text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-white/5'
-                    }`}
-                  >
-                    <span>{tier.name[language === 'bn' ? 'bn' : 'en']}</span>
-                    {tier.isPopular && !isTierActive && (
-                      <span className="w-2 h-2 rounded-full bg-[#9D224D] animate-ping" />
-                    )}
-                  </button>
-                );
-              })}
-            </div>
+        {/* 3. Active Service Title Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14 pt-2">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/30 dark:border-white/10 text-[#262626] dark:text-white text-xs font-black tracking-widest mb-4 uppercase shadow-xs">
+            {language === 'bn' ? 'সার্ভিস প্যাকেজ ও রেট' : 'SERVICE PACKAGES & RATES'}
           </div>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0f172a] dark:text-white tracking-tight mb-3">
+            {currentSubCat 
+              ? currentSubCat.name[language === 'bn' ? 'bn' : 'en']
+              : currentMainCat.title[language === 'bn' ? 'bn' : 'en']}
+          </h3>
+          <p className="text-sm sm:text-base text-slate-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            {currentMainCat.subtitle[language === 'bn' ? 'bn' : 'en']}
+          </p>
+        </div>
 
-          {/* Active Tier Details & Feature Highlights */}
-          {activeTier && (
-            <AnimatePresence mode="wait">
+        {/* 4. Side-by-Side Package Cards Grid (Exact same card grid style as the service pages) */}
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${activeTiers.length >= 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-8 mb-20 items-stretch`}>
+          {activeTiers.map((plan, index) => {
+            const isPopular = plan.isPopular;
+            return (
               <motion.div
-                key={activeTier.id + activeMainCat + activeSubCat}
-                initial={{ opacity: 0, y: 15 }}
+                key={plan.id}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.35 }}
-                className="py-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start"
+                transition={{ duration: 0.35, delay: index * 0.07 }}
+                className={`rounded-[2.5rem] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 relative border ${
+                  isPopular
+                    ? 'bg-white dark:bg-[#1a1a1a] border-[#9D224D] shadow-2xl scale-[1.02] z-10'
+                    : 'bg-white dark:bg-[#1a1a1a] border-[#FCE7F3] dark:border-white/10 shadow-md hover:shadow-xl hover:-translate-y-1'
+                }`}
               >
-                {/* Left: Price & Tier Summary */}
-                <div className="lg:col-span-5 flex flex-col justify-between p-8 rounded-3xl bg-slate-50 dark:bg-[#1f1f23] border border-slate-200/70 dark:border-white/10 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#9D224D]/10 rounded-bl-[100px] pointer-events-none" />
+                {isPopular && (
+                  <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#9D224D] text-white text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg whitespace-nowrap">
+                    {plan.badge ? plan.badge[language === 'bn' ? 'bn' : 'en'] : (language === 'bn' ? 'সবচেয়ে জনপ্রিয়' : 'Most Popular')}
+                  </span>
+                )}
 
-                  <div>
-                    {activeTier.badge && (
-                      <span className="inline-block px-3.5 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-[#9D224D]/15 text-[#9D224D] dark:text-rose-400 mb-4 border border-[#9D224D]/30">
-                        {activeTier.badge[language === 'bn' ? 'bn' : 'en']}
+                <div>
+                  <h4 className="text-lg sm:text-xl font-bold text-[#111827] dark:text-white mb-2">
+                    {plan.name[language === 'bn' ? 'bn' : 'en']}
+                  </h4>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-5 min-h-[34px] leading-relaxed">
+                    {plan.description[language === 'bn' ? 'bn' : 'en']}
+                  </p>
+                  
+                  <div className="text-3xl sm:text-4xl font-black text-[#9D224D] mb-5 flex items-baseline gap-1">
+                    <span>{formatBDT(plan.price)}</span>
+                    {plan.billingPeriod && (
+                      <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">
+                        {plan.billingPeriod[language === 'bn' ? 'bn' : 'en']}
                       </span>
                     )}
-
-                    <div className="flex items-baseline gap-2 mb-3">
-                      <span className="text-4xl sm:text-5xl font-black text-[#0f172a] dark:text-white tracking-tight">
-                        {formatBDT(activeTier.price)}
-                      </span>
-                      {activeTier.billingPeriod && (
-                        <span className="text-sm font-bold text-slate-500 dark:text-gray-400">
-                          {activeTier.billingPeriod[language === 'bn' ? 'bn' : 'en']}
-                        </span>
-                      )}
-                    </div>
-
-                    <p className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed mb-6">
-                      {activeTier.description[language === 'bn' ? 'bn' : 'en']}
-                    </p>
                   </div>
 
-                  <div className="pt-6 border-t border-slate-200 dark:border-white/10 flex flex-col gap-2">
-                    <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-gray-400">
-                      <FaShieldHalved className="text-emerald-500" />
-                      <span>{language === 'bn' ? '১০০% স্বচ্ছতা ও কোনো লুকানো চার্জ নেই' : '100% Transparent, No Hidden Fees'}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-gray-400">
-                      <FaCheck className="text-[#9D224D]" />
-                      <span>{language === 'bn' ? 'প্রফেশনাল টিম ও দ্রুত ডেলিভারি' : 'Senior Specialist Delivery & Quality Assurance'}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right: What's Included Feature Deliverables */}
-                <div className="lg:col-span-7">
-                  <h4 className="text-xs font-black uppercase tracking-wider text-slate-400 dark:text-gray-400 mb-6 flex items-center gap-2">
-                    <span>{language === 'bn' ? 'প্যাকেজে যা যা থাকছে:' : "WHAT'S INCLUDED IN THIS TIER:"}</span>
-                    <span className="h-px bg-slate-200 dark:bg-white/10 flex-1" />
-                  </h4>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {activeTier.features.map((feat, idx) => (
-                      <motion.div
-                        key={idx}
-                        initial={{ opacity: 0, x: 10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.25, delay: idx * 0.05 }}
-                        className="flex items-start gap-3 p-3.5 rounded-2xl bg-white dark:bg-[#1a1a1e] border border-slate-200/60 dark:border-white/5 hover:border-[#9D224D]/40 transition-colors shadow-xs"
-                      >
-                        <div className="w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">
-                          <FaCheck />
-                        </div>
-                        <span className="text-xs sm:text-sm font-medium text-slate-700 dark:text-gray-200 leading-snug">
-                          {feat[language === 'bn' ? 'bn' : 'en']}
-                        </span>
-                      </motion.div>
+                  <div className="space-y-3 pt-5 border-t border-gray-100 dark:border-white/10 mb-8">
+                    {plan.features.map((feature, fIndex) => (
+                      <div key={fIndex} className="flex items-start gap-2.5 text-xs text-gray-700 dark:text-gray-300">
+                        <FaCheck className="w-3.5 h-3.5 text-[#9D224D] shrink-0 mt-0.5" />
+                        <span>{feature[language === 'bn' ? 'bn' : 'en']}</span>
+                      </div>
                     ))}
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-          )}
 
-          {/* 3. Custom Checkboxes Section (At the Bottom) */}
-          <div className="mt-6 pt-10 border-t border-slate-200 dark:border-white/10">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+                <div className="space-y-2 pt-2">
+                  <a
+                    href={getTierWhatsAppUrl(plan)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full py-3.5 rounded-full font-bold text-xs flex items-center justify-center gap-2 transition-all duration-300 shadow-md ${
+                      isPopular
+                        ? 'bg-[#9D224D] text-white hover:bg-[#7A173A]'
+                        : 'bg-[#111827] dark:bg-white text-white dark:text-[#111827] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] dark:hover:text-white'
+                    }`}
+                  >
+                    <FaWhatsapp className="text-base" />
+                    <span>{language === 'bn' ? 'শুরু করুন / হোয়াটসঅ্যাপ' : 'Get Started / WhatsApp'}</span>
+                    <FaArrowRight className="w-3 h-3" />
+                  </a>
+                  
+                  {activeAddons && activeAddons.length > 0 && (
+                    <button
+                      onClick={() => {
+                        setSelectedTierId(plan.id);
+                        const addonSec = document.getElementById('custom-addons-section');
+                        if (addonSec) addonSec.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="w-full py-1.5 rounded-full text-[11px] font-semibold text-slate-500 dark:text-gray-400 hover:text-[#9D224D] dark:hover:text-rose-400 transition-colors flex items-center justify-center gap-1 cursor-pointer"
+                    >
+                      <span>{language === 'bn' ? '+ কাস্টম অ্যাড-অন যোগ করুন' : '+ Customize with Add-ons'}</span>
+                    </button>
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* 5. Custom Checkboxes Section (At the Bottom with dynamic live total) */}
+        {activeAddons && activeAddons.length > 0 && (
+          <div id="custom-addons-section" className="bg-white dark:bg-[#161618] rounded-[2.5rem] border border-slate-200/80 dark:border-white/10 shadow-xl p-6 sm:p-10 mb-12 transition-all">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
               <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-orange-500/10 text-orange-600 dark:text-orange-400 mb-1 border border-orange-500/20">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-orange-500/10 text-orange-600 dark:text-orange-400 mb-2 border border-orange-500/20">
                   {language === 'bn' ? 'কাস্টম অপশন' : 'CUSTOM MODULAR ADD-ONS'}
                 </span>
-                <h4 className="text-lg sm:text-xl font-black text-[#0f172a] dark:text-white">
+                <h4 className="text-xl sm:text-2xl font-black text-[#0f172a] dark:text-white">
                   {language === 'bn' 
                     ? 'চেকবক্স দিয়ে কাস্টম অ্যাড-অন যোগ করুন (ঐচ্ছিক)' 
                     : 'Customize Your Deliverables with Add-on Checkboxes'}
                 </h4>
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 mt-1">
+                  {language === 'bn'
+                    ? 'যেকোনো প্যাকেজের সাথে প্রয়োজনমতো অতিরিক্ত সেবা বেছে নিন, লাইভ মোট বাজেট স্বয়ংক্রিয়ভাবে আপডেট হবে।'
+                    : 'Check any custom extras to dynamically calculate your live estimate.'}
+                </p>
               </div>
-              <p className="text-xs font-medium text-slate-500 dark:text-gray-400 max-w-sm">
-                {language === 'bn'
-                  ? 'প্রয়োজন অনুযায়ী সার্ভিস সিলেক্ট করুন, লাইভ বাজেট স্বয়ংক্রিয়ভাবে আপডেট হবে।'
-                  : 'Check any custom extras to dynamically calculate your live estimate.'}
-              </p>
+
+              {/* Package selector for addon calculation */}
+              <div className="flex items-center gap-2 bg-slate-100 dark:bg-white/5 p-2 rounded-2xl border border-slate-200/70 dark:border-white/10">
+                <span className="text-xs font-bold text-slate-600 dark:text-gray-300 px-2 whitespace-nowrap">
+                  {language === 'bn' ? 'নির্বাচিত প্যাকেজ:' : 'Base Package:'}
+                </span>
+                <select
+                  value={selectedTierId}
+                  onChange={(e) => setSelectedTierId(e.target.value)}
+                  className="bg-white dark:bg-[#202024] text-xs font-bold text-slate-800 dark:text-white px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 focus:outline-none cursor-pointer"
+                >
+                  {activeTiers.map((t) => (
+                    <option key={t.id} value={t.id}>
+                      {t.name[language === 'bn' ? 'bn' : 'en']} ({formatBDT(t.price)})
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             {/* Checkbox Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
               {activeAddons.map((addon) => {
                 const isChecked = selectedAddons.includes(addon.id);
                 return (
@@ -1532,7 +1546,7 @@ export default function ServicePackages({
             <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-[#1e293b] to-slate-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-white/10">
               <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4">
                 <div className="w-14 h-14 rounded-2xl bg-[#9D224D]/30 border border-[#9D224D]/50 flex items-center justify-center text-white text-2xl flex-shrink-0">
-                  <FaCamera />
+                  <FaStar />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wider font-bold text-gray-400 mb-1">
@@ -1575,8 +1589,7 @@ export default function ServicePackages({
             </div>
 
           </div>
-
-        </div>
+        )}
 
       </div>
     </section>

@@ -87,42 +87,8 @@ function PricingContent() {
       <Topbar />
       <Navbar />
 
-      <main className="relative overflow-hidden pt-8 pb-20">
-        {/* Hero Section */}
-        <section className="relative pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-white/10 border border-[#9D224D]/20 dark:border-white/10 text-[#9D224D] dark:text-pink-300 text-xs font-black tracking-widest uppercase mb-5 shadow-sm"
-          >
-            <span>{language === 'bn' ? 'স্বচ্ছ প্রাইসিং ও সার্ভিস প্যাকেজ' : 'TRANSPARENT ALL-SERVICE PACKAGES'}</span>
-          </motion.div>
-
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-[#111827] dark:text-white mb-6 max-w-4xl mx-auto leading-tight"
-          >
-            {language === 'bn' 
-              ? 'সকল ডিজিটাল সেবার মূল্য তালিকা ও প্যাকেজ' 
-              : 'Enterprise Quality with Transparent BDT Pricing'}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8"
-          >
-            {language === 'bn'
-              ? 'নিচের সাব-ন্যাভবারে যে কোনো সার্ভিসের নামে ক্লিক করুন। প্রতিটি সার্ভিসের বিস্তারিত প্যাকেজ, ডেলিভারেবল এবং কাস্টম চেকবক্স দিয়ে লাইভ বাজেট দেখুন।'
-              : 'Click any service on the navigation bar below to view full deliverable tiers, modular add-on checkboxes, and instant budget calculations in Taka.'}
-          </motion.p>
-        </section>
-
-        {/* Interactive Service Packages Hub (With sticky sub-navbar) */}
+      <main className="relative overflow-hidden pt-28 sm:pt-32 md:pt-36 pb-24">
+        {/* Interactive Service Packages Hub (With sticky sub-navbar & side-by-side card grid) */}
         <ServicePackages initialCategory="web-development" hideHeader={true} />
 
         {/* Trust & Guarantee Grid */}
