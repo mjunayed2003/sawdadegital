@@ -62,11 +62,13 @@ interface MainServiceCategory {
 interface ServicePackagesProps {
   initialCategory?: string;
   hideHeader?: boolean;
+  hideCategories?: boolean;
 }
 
 export default function ServicePackages({ 
   initialCategory = 'web-development', 
-  hideHeader = false 
+  hideHeader = false,
+  hideCategories = false
 }: ServicePackagesProps = {}) {
   const { language } = useLanguage();
 
@@ -1310,37 +1312,38 @@ export default function ServicePackages({
         )}
 
         {/* 1. Main Service Categories Tabs - Styled as Sticky Service Sub-Navbar */}
-        <div 
-          className="sticky top-16 md:top-24 z-30 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3.5 bg-white/95 dark:bg-[#0f0f11]/95 backdrop-blur-md border-y border-slate-200/80 dark:border-white/10 shadow-sm mb-12 sm:mb-16 overflow-x-auto no-scrollbar"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          <div className="flex items-center justify-start lg:justify-center gap-2 sm:gap-2.5 min-w-max mx-auto">
-            {serviceCategories.map((cat) => {
-              const isActive = activeMainCat === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => {
-                    setActiveMainCat(cat.id);
-                    setSelectedTierId('basic');
-                    setSelectedAddons([]);
-                    if (cat.subcategories && cat.subcategories.length > 0) {
-                      setActiveSubCat(cat.subcategories[0].id);
-                    }
-                  }}
-                  className={`flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 shadow-sm cursor-pointer whitespace-nowrap ${
-                    isActive
-                      ? 'bg-[#9D224D] text-white shadow-md shadow-[#9D224D]/25 scale-[1.02]'
-                      : 'bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-300 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-200/60 dark:border-white/5'
-                  }`}
-                >
-                  <span className={isActive ? 'text-white' : 'text-[#9D224D]'}>{cat.icon}</span>
-                  <span>{cat.title[language === 'bn' ? 'bn' : 'en']}</span>
-                </button>
-              );
-            })}
+        {!hideCategories && (
+          <div className="sticky top-20 md:top-24 z-30 flex justify-start lg:justify-center mb-10 sm:mb-14 overflow-hidden px-1">
+            <div 
+              className="flex items-center gap-2 sm:gap-2.5 px-3 py-2.5 sm:py-3 bg-white/95 dark:bg-[#161618]/95 backdrop-blur-md border border-slate-200/80 dark:border-white/10 shadow-lg shadow-black/5 dark:shadow-white/5 overflow-x-auto thin-scrollbar rounded-[2rem] sm:rounded-full max-w-full mx-auto"
+            >
+              {serviceCategories.map((cat) => {
+                const isActive = activeMainCat === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => {
+                      setActiveMainCat(cat.id);
+                      setSelectedTierId('basic');
+                      setSelectedAddons([]);
+                      if (cat.subcategories && cat.subcategories.length > 0) {
+                        setActiveSubCat(cat.subcategories[0].id);
+                      }
+                    }}
+                    className={`flex items-center flex-shrink-0 gap-2 sm:gap-2.5 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 shadow-sm cursor-pointer whitespace-nowrap ${
+                      isActive
+                        ? 'bg-[#9D224D] text-white shadow-md shadow-[#9D224D]/25 scale-[1.02]'
+                        : 'bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-300 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-200/60 dark:border-white/5'
+                    }`}
+                  >
+                    <span className={isActive ? 'text-white' : 'text-[#9D224D]'}>{cat.icon}</span>
+                    <span>{cat.title[language === 'bn' ? 'bn' : 'en']}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* 2. Subcategory Tabs (for Video Production or services with modules) */}
         {currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (

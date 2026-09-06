@@ -87,9 +87,9 @@ function PricingContent() {
       <Topbar />
       <Navbar />
 
-      <main className="relative overflow-hidden pt-28 sm:pt-32 md:pt-36 pb-24">
+      <main className="relative overflow-hidden pt-16 md:pt-20 pb-24">
         {/* Interactive Service Packages Hub (With sticky sub-navbar & side-by-side card grid) */}
-        <ServicePackages initialCategory="web-development" hideHeader={true} />
+        <ServicePackages initialCategory="web-development" hideHeader={false} />
 
         {/* Trust & Guarantee Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
