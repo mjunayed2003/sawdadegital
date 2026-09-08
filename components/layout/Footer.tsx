@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Logo from '@/components/layout/Logo';
 import { 
   FaFacebookF, 
   FaLinkedinIn, 
@@ -54,9 +54,7 @@ export default function Footer() {
           
           {/* Brand Col (5 cols) */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-flex items-center gap-1.5 group">
-              <Image src="/sawdaDigitalLogo.png" alt="Sawda Digital Logo" width={180} height={45} className="h-8 sm:h-10 w-auto" />
-            </Link>
+            <Logo isFooter />
             
             <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
               {language === 'bn' 
