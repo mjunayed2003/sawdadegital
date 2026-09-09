@@ -1464,33 +1464,35 @@ export default function ServicePackages({
                 </motion.div>
               )}
             </AnimatePresence>
+          </div>
+        )}
 
-            {/* 2. Subcategory Tabs / Pills (if service has subcategories like WordPress/Wix vs Custom vs SaaS) */}
-            {currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (
-              <div className="mt-4 p-1.5 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200/80 dark:border-white/10 flex flex-wrap items-center justify-center gap-1.5">
-                {currentMainCat.subcategories.map((sub) => {
-                  const isSubActive = activeSubCat === sub.id;
-                  return (
-                    <button
-                      key={sub.id}
-                      type="button"
-                      onClick={() => {
-                        setActiveSubCat(sub.id);
-                        setSelectedTierId('basic');
-                        setSelectedAddons([]);
-                      }}
-                      className={`flex-1 min-w-[120px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-200 text-center cursor-pointer ${
-                        isSubActive
-                          ? 'bg-[#9D224D] text-white shadow-sm'
-                          : 'text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5'
-                      }`}
-                    >
-                      {sub.name[language === 'bn' ? 'bn' : 'en']}
-                    </button>
-                  );
-                })}
-              </div>
-            )}
+        {/* 2. Subcategory Tabs / Pills (if service has subcategories like WordPress/Wix vs Custom vs SaaS) */}
+        {currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (
+          <div className="max-w-xl mx-auto mb-10 px-4">
+            <div className="p-1.5 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200/80 dark:border-white/10 flex flex-wrap items-center justify-center gap-1.5 shadow-sm">
+              {currentMainCat.subcategories.map((sub) => {
+                const isSubActive = activeSubCat === sub.id;
+                return (
+                  <button
+                    key={sub.id}
+                    type="button"
+                    onClick={() => {
+                      setActiveSubCat(sub.id);
+                      setSelectedTierId('basic');
+                      setSelectedAddons([]);
+                    }}
+                    className={`flex-1 min-w-[120px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-200 text-center cursor-pointer ${
+                      isSubActive
+                        ? 'bg-[#9D224D] text-white shadow-sm'
+                        : 'text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5'
+                    }`}
+                  >
+                    {sub.name[language === 'bn' ? 'bn' : 'en']}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         )}
 
