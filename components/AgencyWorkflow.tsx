@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { useLanguage } from '@/components/LanguageContext';
 import { 
   FaMagnifyingGlass, 
@@ -17,13 +17,7 @@ import Link from 'next/link';
 
 export default function AgencyWorkflow() {
   const { language } = useLanguage();
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
+  const { MotionDiv } = useSafeMotion();
 
   const steps = [
     {

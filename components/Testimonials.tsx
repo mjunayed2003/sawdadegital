@@ -1,20 +1,15 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { useLanguage } from '@/components/LanguageContext';
 import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import Image from 'next/image';
 
 export default function Testimonials() {
   const { t } = useLanguage();
-  const [mounted, setMounted] = useState(false);
+  const { MotionDiv } = useSafeMotion();
   const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const reviews = [
     {

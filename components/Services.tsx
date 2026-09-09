@@ -1,8 +1,9 @@
 "use client";
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import { useLanguage } from '@/components/LanguageContext';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -75,13 +76,7 @@ const serviceCards = [
 
 export default function Services() {
   const { t } = useLanguage();
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
+  const { MotionDiv } = useSafeMotion();
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -145,6 +140,8 @@ export default function Services() {
                   width={600}
                   height={400}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  priority={index < 3}
+                  loading={index < 3 ? "eager" : "lazy"}
                 />
               </Link>
 

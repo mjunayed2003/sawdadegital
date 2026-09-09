@@ -15,17 +15,11 @@ import {
 } from 'react-icons/fa6';
 import { FaLinkedinIn, FaXTwitter, FaFacebookF, FaGithub } from 'react-icons/fa6';
 import { FiArrowRight } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 
 function ExpertiseContent() {
   const { language } = useLanguage();
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
+  const { MotionDiv } = useSafeMotion();
 
   const team = [
     { 

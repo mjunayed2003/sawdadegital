@@ -1,7 +1,8 @@
 "use client";
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageContext';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { FiArrowRight } from 'react-icons/fi';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { FaXTwitter, FaCrown, FaLaptopCode, FaChartPie, FaBullseye, FaShopify } from 'react-icons/fa6';
@@ -67,13 +68,7 @@ const teamMembers = [
 
 export default function Leadership() {
   const { t } = useLanguage();
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
+  const { MotionDiv } = useSafeMotion();
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },

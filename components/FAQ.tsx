@@ -1,19 +1,14 @@
 "use client";
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { useLanguage } from '@/components/LanguageContext';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 
 export default function FAQ() {
   const { t } = useLanguage();
-  const [mounted, setMounted] = React.useState(false);
+  const { MotionDiv } = useSafeMotion();
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const faqs = [
     { q: 'faq1Q', a: 'faq1A' },

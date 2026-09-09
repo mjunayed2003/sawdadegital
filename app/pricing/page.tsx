@@ -16,19 +16,14 @@ import {
   FaWhatsapp,
   FaArrowRight
 } from 'react-icons/fa6';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import Link from 'next/link';
 
 function PricingContent() {
   const { language } = useLanguage();
+  const { MotionDiv } = useSafeMotion();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const guarantees = [
     {

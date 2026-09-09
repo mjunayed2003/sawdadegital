@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FiSearch, FiArrowRight } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { useLanguage } from '@/components/LanguageContext';
 
 const demoImages = [
@@ -21,22 +22,17 @@ const motionVariants = [
 
 export default function Hero() {
   const { t } = useLanguage();
-  const [mounted, setMounted] = useState(false);
+  const { MotionDiv, MotionH1, MotionP, mounted } = useSafeMotion();
   const [imgIndex, setImgIndex] = useState(0);
   const [animIndex, setAnimIndex] = useState(0);
 
   useEffect(() => {
-    setMounted(true);
     const timer = setInterval(() => {
       setImgIndex((prev) => (prev + 1) % demoImages.length);
       setAnimIndex(Math.floor(Math.random() * motionVariants.length));
     }, 2000); // 2 seconds as requested
     return () => clearInterval(timer);
   }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
-  const MotionH1 = (mounted ? motion.h1 : 'h1') as any;
-  const MotionP = (mounted ? motion.p : 'p') as any;
 
   const containerVariants = {
     hidden: { opacity: 0 },

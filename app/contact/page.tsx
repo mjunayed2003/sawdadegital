@@ -4,7 +4,7 @@ import Topbar from "@/components/layout/Topbar";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { LanguageProvider, useLanguage } from "@/components/LanguageContext";
-import { motion } from 'framer-motion';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 import { FaLinkedinIn, FaXTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa6';
 import Link from 'next/link';
@@ -12,13 +12,7 @@ import ProtectedEmail from '@/components/ui/ProtectedEmail';
 
 function ContactContent() {
   const { language } = useLanguage();
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
+  const { MotionDiv } = useSafeMotion();
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#111111] font-sans overflow-x-hidden text-[#262626] dark:text-white transition-colors duration-300">

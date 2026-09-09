@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
+import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { useLanguage } from '@/components/LanguageContext';
 import { FiArrowRight } from 'react-icons/fi';
 import Link from 'next/link';
@@ -35,13 +36,7 @@ const projects = [
 
 export default function SelectedWork() {
   const { t } = useLanguage();
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const MotionDiv = (mounted ? motion.div : 'div') as any;
+  const { MotionDiv } = useSafeMotion();
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
