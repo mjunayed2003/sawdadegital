@@ -49,6 +49,14 @@ const homeFaqSchema = {
     },
     {
       "@type": "Question",
+      name: "Does Sawda Digital offer digital marketing, web design, and SEO services in Rangpur as well as Dhaka?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes! Sawda Digital actively serves clients across both Dhaka and Rangpur, as well as businesses throughout Bangladesh. Whether you are a local enterprise in Rangpur or Dhaka looking for website development, Facebook boosting, Google Ads, or SEO, our expert team provides dedicated on-demand support and customized packages.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "What technologies do you use for Web & App Development?",
       acceptedAnswer: {
         "@type": "Answer",
