@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageContext';
 import { 
@@ -18,7 +18,8 @@ import {
   FaCode,
   FaRobot,
   FaDesktop,
-  FaShopify
+  FaShopify,
+  FaChevronDown
 } from 'react-icons/fa6';
 import Link from 'next/link';
 
@@ -77,6 +78,28 @@ export default function ServicePackages({
   const [activeSubCat, setActiveSubCat] = useState<string>(initialCategory === 'video-production' ? 'model-video' : 'wp-wix');
   const [selectedTierId, setSelectedTierId] = useState<string>('basic');
   const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown on outside click or Escape key
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   useEffect(() => {
     if (initialCategory) {
@@ -1311,63 +1334,136 @@ export default function ServicePackages({
           </div>
         )}
 
-        {/* 1. Main Service Categories Tabs - Styled as Sticky Service Sub-Navbar */}
+        {/* 1. Main Service Categories Dropdown Selector */}
         {!hideCategories && (
-          <div className="sticky top-20 md:top-24 z-30 flex justify-start lg:justify-center mb-10 sm:mb-14 overflow-hidden px-1">
-            <div 
-              className="flex items-center gap-2 sm:gap-2.5 px-3 py-2.5 sm:py-3 bg-white/95 dark:bg-[#161618]/95 backdrop-blur-md border border-slate-200/80 dark:border-white/10 shadow-lg shadow-black/5 dark:shadow-white/5 overflow-x-auto thin-scrollbar rounded-[2rem] sm:rounded-full max-w-full mx-auto"
-            >
-              {serviceCategories.map((cat) => {
-                const isActive = activeMainCat === cat.id;
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => {
-                      setActiveMainCat(cat.id);
-                      setSelectedTierId('basic');
-                      setSelectedAddons([]);
-                      if (cat.subcategories && cat.subcategories.length > 0) {
-                        setActiveSubCat(cat.subcategories[0].id);
-                      }
-                    }}
-                    className={`flex items-center flex-shrink-0 gap-2 sm:gap-2.5 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 shadow-sm cursor-pointer whitespace-nowrap ${
-                      isActive
-                        ? 'bg-[#9D224D] text-white shadow-md shadow-[#9D224D]/25 scale-[1.02]'
-                        : 'bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-300 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-200/60 dark:border-white/5'
-                    }`}
-                  >
-                    <span className={isActive ? 'text-white' : 'text-[#9D224D]'}>{cat.icon}</span>
-                    <span>{cat.title[language === 'bn' ? 'bn' : 'en']}</span>
-                  </button>
-                );
-              })}
+          <div className="relative z-30 max-w-xl mx-auto mb-10 px-4" ref={dropdownRef}>
+            <div className="text-center mb-2.5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FCE7F3] dark:bg-white/10 text-[#9D224D] dark:text-[#f472b6] text-[11px] font-extrabold uppercase tracking-widest border border-[#9D224D]/20 dark:border-white/10 shadow-xs">
+                <span>⚡</span>
+                {language === 'bn' ? 'সার্ভিস নির্বাচন করুন' : 'SELECT SERVICE CATEGORY'}
+              </span>
             </div>
-          </div>
-        )}
 
-        {/* 2. Subcategory Tabs (for Video Production or services with modules) */}
-        {currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-12 p-2 bg-slate-200/60 dark:bg-white/5 rounded-3xl max-w-4xl mx-auto border border-slate-300/60 dark:border-white/10">
-            {currentMainCat.subcategories.map((sub) => {
-              const isSubActive = activeSubCat === sub.id;
-              return (
-                <button
-                  key={sub.id}
-                  onClick={() => {
-                    setActiveSubCat(sub.id);
-                    setSelectedTierId('basic');
-                    setSelectedAddons([]);
-                  }}
-                  className={`px-4 py-2 rounded-2xl text-xs font-bold transition-all duration-200 cursor-pointer ${
-                    isSubActive
-                      ? 'bg-white dark:bg-[#1a1a1a] text-[#9D224D] dark:text-white shadow-md'
-                      : 'text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white'
-                  }`}
+            {/* Dropdown Trigger Button */}
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(prev => !prev)}
+              aria-expanded={isDropdownOpen}
+              className="w-full flex items-center justify-between gap-3 p-3.5 sm:p-4 bg-white dark:bg-[#161618] border-2 border-slate-200 dark:border-white/10 hover:border-[#9D224D] dark:hover:border-[#9D224D] rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+            >
+              <div className="flex items-center gap-3.5 min-w-0">
+                <div className="w-12 h-12 rounded-2xl bg-[#9D224D]/10 text-[#9D224D] flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-105 group-hover:bg-[#9D224D] group-hover:text-white transition-all duration-300">
+                  {currentMainCat.icon}
+                </div>
+                <div className="text-left truncate">
+                  <div className="text-base sm:text-lg font-black text-slate-900 dark:text-white truncate">
+                    {currentMainCat.title[language === 'bn' ? 'bn' : 'en']}
+                  </div>
+                  <div className="text-xs text-slate-500 dark:text-gray-400 truncate">
+                    {currentMainCat.subtitle[language === 'bn' ? 'bn' : 'en']}
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 flex-shrink-0">
+                <span className="hidden sm:inline-block px-2.5 py-1 text-[11px] font-bold rounded-full bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-gray-300">
+                  {serviceCategories.length} {language === 'bn' ? 'টি সেবা' : 'Services'}
+                </span>
+                <div className={`w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center text-slate-500 dark:text-gray-400 group-hover:text-[#9D224D] transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}>
+                  <FaChevronDown className="w-3.5 h-3.5" />
+                </div>
+              </div>
+            </button>
+
+            {/* Dropdown Menu Modal / List */}
+            <AnimatePresence>
+              {isDropdownOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -10, scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute left-4 right-4 mt-2 p-2 sm:p-2.5 bg-white/98 dark:bg-[#161618]/98 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl z-50 max-h-[70vh] overflow-y-auto thin-scrollbar"
                 >
-                  {sub.name[language === 'bn' ? 'bn' : 'en']}
-                </button>
-              );
-            })}
+                  <div className="grid grid-cols-1 gap-1">
+                    {serviceCategories.map((cat) => {
+                      const isActive = activeMainCat === cat.id;
+                      return (
+                        <button
+                          key={cat.id}
+                          type="button"
+                          onClick={() => {
+                            setActiveMainCat(cat.id);
+                            setSelectedTierId('basic');
+                            setSelectedAddons([]);
+                            if (cat.subcategories && cat.subcategories.length > 0) {
+                              setActiveSubCat(cat.subcategories[0].id);
+                            }
+                            setIsDropdownOpen(false);
+                          }}
+                          className={`w-full flex items-center justify-between p-3 rounded-xl sm:rounded-2xl transition-all duration-200 text-left cursor-pointer ${
+                            isActive
+                              ? 'bg-[#9D224D]/10 dark:bg-[#9D224D]/25 border border-[#9D224D]/30'
+                              : 'hover:bg-slate-50 dark:hover:bg-white/5 border border-transparent'
+                          }`}
+                        >
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0 transition-colors ${
+                              isActive
+                                ? 'bg-[#9D224D] text-white'
+                                : 'bg-slate-100 dark:bg-white/5 text-[#9D224D]'
+                            }`}>
+                              {cat.icon}
+                            </div>
+                            <div className="truncate">
+                              <div className={`text-sm font-bold truncate ${isActive ? 'text-[#9D224D] dark:text-white' : 'text-slate-800 dark:text-gray-200'}`}>
+                                {cat.title[language === 'bn' ? 'bn' : 'en']}
+                              </div>
+                              <div className="text-[11px] text-slate-500 dark:text-gray-400 truncate">
+                                {cat.subtitle[language === 'bn' ? 'bn' : 'en']}
+                              </div>
+                            </div>
+                          </div>
+
+                          {isActive && (
+                            <div className="w-6 h-6 rounded-full bg-[#9D224D] text-white flex items-center justify-center flex-shrink-0 text-xs">
+                              <FaCheck className="w-3 h-3" />
+                            </div>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* 2. Subcategory Tabs / Pills (if service has subcategories like WordPress/Wix vs Custom vs SaaS) */}
+            {currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (
+              <div className="mt-4 p-1.5 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200/80 dark:border-white/10 flex flex-wrap items-center justify-center gap-1.5">
+                {currentMainCat.subcategories.map((sub) => {
+                  const isSubActive = activeSubCat === sub.id;
+                  return (
+                    <button
+                      key={sub.id}
+                      type="button"
+                      onClick={() => {
+                        setActiveSubCat(sub.id);
+                        setSelectedTierId('basic');
+                        setSelectedAddons([]);
+                      }}
+                      className={`flex-1 min-w-[120px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-200 text-center cursor-pointer ${
+                        isSubActive
+                          ? 'bg-[#9D224D] text-white shadow-sm'
+                          : 'text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5'
+                      }`}
+                    >
+                      {sub.name[language === 'bn' ? 'bn' : 'en']}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
         )}
 
