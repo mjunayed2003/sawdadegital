@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 import { FaLinkedinIn, FaXTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa6';
 import Link from 'next/link';
+import ProtectedEmail from '@/components/ui/ProtectedEmail';
 
 function ContactContent() {
   const { language } = useLanguage();
@@ -76,7 +77,7 @@ function ContactContent() {
                     </div>
                     <div>
                       <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">{language === 'bn' ? 'ইমেইল পাঠান' : 'Email Us'}</p>
-                      <a href="mailto:hello@sawdadigital.com" className="text-lg font-bold hover:text-[#9D224D] transition-colors">hello@sawdadigital.com</a>
+                      <ProtectedEmail className="text-lg font-bold hover:text-[#9D224D] transition-colors" />
                     </div>
                   </div>
                   
@@ -102,26 +103,27 @@ function ContactContent() {
                     {language === 'bn' ? 'সোশ্যাল মিডিয়ায় যুক্ত থাকুন' : 'Follow Us'}
                   </p>
                   <div className="flex gap-3">
-                    <Link href="https://facebook.com" target="_blank" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
+                    <a href="https://facebook.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
                       <FaFacebookF className="text-white text-sm" />
-                    </Link>
-                    <Link href="https://linkedin.com" target="_blank" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
+                    </a>
+                    <a href="https://linkedin.com/company/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="LinkedIn" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
                       <FaLinkedinIn className="text-white text-sm" />
-                    </Link>
-                    <Link href="https://twitter.com" target="_blank" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
+                    </a>
+                    <a href="https://twitter.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Twitter" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
                       <FaXTwitter className="text-white text-sm" />
-                    </Link>
-                    <Link href="https://instagram.com" target="_blank" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
+                    </a>
+                    <a href="https://instagram.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Instagram" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
                       <FaInstagram className="text-white text-sm" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
 
               {/* WhatsApp Direct */}
-              <Link 
-                href="https://whatsapp.com" 
+              <a 
+                href="https://wa.me/8801234567890" 
                 target="_blank"
+                rel="noopener noreferrer nofollow"
                 className="bg-emerald-50 dark:bg-emerald-950/40 rounded-3xl p-6 border border-emerald-200 dark:border-emerald-800/60 shadow-sm flex items-center justify-between cursor-pointer group hover:shadow-md transition-all duration-300"
               >
                 <div className="flex items-center gap-4">
@@ -137,7 +139,7 @@ function ContactContent() {
                     </p>
                   </div>
                 </div>
-              </Link>
+              </a>
             </motion.div>
 
             {/* Contact Form (Right Column) */}

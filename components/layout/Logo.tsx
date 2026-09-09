@@ -38,14 +38,11 @@ export default function Logo({ className = "", isFooter = false, priority = fals
             width={600}
             height={600}
             priority={priority}
-            className={`absolute max-w-none pointer-events-none transition-all duration-300 ${
+            className={`absolute max-w-none pointer-events-none object-contain transition-all duration-300 ${
               isFooter
                 ? 'w-[230px] sm:w-[280px] h-[230px] sm:h-[280px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-screen invert hue-rotate-180 brightness-110 contrast-125'
                 : 'w-[210px] sm:w-[250px] md:w-[285px] h-[210px] sm:h-[250px] md:h-[285px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-multiply dark:mix-blend-screen dark:invert dark:hue-rotate-180 dark:brightness-125'
             }`}
-            style={{
-              objectFit: 'contain',
-            }}
           />
         </div>
       </div>

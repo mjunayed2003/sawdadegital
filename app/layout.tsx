@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import JsonLd from "@/components/seo/JsonLd";
+import GoogleAnalytics from "@/components/seo/GoogleAnalytics";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -123,7 +124,14 @@ const organizationSchema = {
       description:
         "Sawda Digital is an elite full-service digital agency in Dhaka, Bangladesh specializing in custom web design, mobile app development, UI/UX, SEO, and social marketing.",
       telephone: "+8801234567890",
-      email: "hello@sawdadigital.com",
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+8801234567890",
+        contactType: "customer service",
+        areaServed: ["BD", "Global"],
+        availableLanguage: ["English", "Bengali"],
+        url: "https://sawdadigital.com/contact",
+      },
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
@@ -191,6 +199,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <GoogleAnalytics />
         <JsonLd data={organizationSchema} />
       </head>
       <body className="min-h-full flex flex-col bg-white dark:bg-[#1a1a1a] transition-colors duration-300">

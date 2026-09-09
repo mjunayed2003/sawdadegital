@@ -174,15 +174,15 @@ function AboutContent() {
                   </div>
 
                   <div className="pt-2 border-t border-slate-100 dark:border-white/10 flex items-center justify-center gap-3">
-                    <Link href="https://linkedin.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
+                    <a href="https://linkedin.com/company/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaLinkedinIn />
-                    </Link>
-                    <Link href="https://facebook.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
+                    </a>
+                    <a href="https://facebook.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaFacebookF />
-                    </Link>
-                    <Link href="https://twitter.com" target="_blank" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
+                    </a>
+                    <a href="https://twitter.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Twitter" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaXTwitter />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>

@@ -50,22 +50,52 @@ export default function Topbar() {
           </div>
 
           {/* Social Icons including YouTube */}
-          <div className="flex items-center gap-3 sm:gap-4 sm:border-l border-slate-600 sm:pl-4">
-            <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#1877f2] transition-colors" aria-label="Facebook">
+          <div className="flex items-center gap-1 sm:gap-2 sm:border-l border-slate-600 sm:pl-3">
+            <a 
+              href="https://facebook.com/sawdadigital" 
+              target="_blank" 
+              rel="noopener noreferrer nofollow" 
+              className="p-1.5 hover:text-[#1877f2] transition-colors flex items-center justify-center" 
+              aria-label="Facebook"
+            >
               <FaFacebookF className="w-3.5 h-3.5" />
-            </Link>
-            <Link href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#25d366] transition-colors" aria-label="WhatsApp">
+            </a>
+            <a 
+              href="https://wa.me/8801234567890" 
+              target="_blank" 
+              rel="noopener noreferrer nofollow" 
+              className="p-1.5 hover:text-[#25d366] transition-colors flex items-center justify-center" 
+              aria-label="WhatsApp"
+            >
               <FaWhatsapp className="w-4 h-4" />
-            </Link>
-            <Link href="https://youtube.com/@sawdadigital" target="_blank" rel="noopener noreferrer" className="hover:text-[#ff0000] transition-colors" aria-label="YouTube">
+            </a>
+            <a 
+              href="https://youtube.com/@sawdadigital" 
+              target="_blank" 
+              rel="noopener noreferrer nofollow" 
+              className="p-1.5 hover:text-[#ff0000] transition-colors flex items-center justify-center" 
+              aria-label="YouTube"
+            >
               <FaYoutube className="w-3.5 h-3.5" />
-            </Link>
-            <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#e4405f] transition-colors" aria-label="Instagram">
-              <FaInstagram className="w-4 h-4" />
-            </Link>
-            <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#1da1f2] transition-colors" aria-label="Twitter">
+            </a>
+            <a 
+              href="https://instagram.com/sawdadigital" 
+              target="_blank" 
+              rel="noopener noreferrer nofollow" 
+              className="p-1.5 hover:text-[#e4405f] transition-colors flex items-center justify-center" 
+              aria-label="Instagram"
+            >
+              <FaInstagram className="w-3.5 h-3.5" />
+            </a>
+            <a 
+              href="https://twitter.com/sawdadigital" 
+              target="_blank" 
+              rel="noopener noreferrer nofollow" 
+              className="p-1.5 hover:text-[#1da1f2] transition-colors flex items-center justify-center" 
+              aria-label="Twitter"
+            >
               <FaTwitter className="w-3.5 h-3.5" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

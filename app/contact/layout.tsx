@@ -35,7 +35,7 @@ const contactSchemas = {
         '@type': 'LocalBusiness',
         name: 'Sawda Digital',
         telephone: '+8801234567890',
-        email: 'hello@sawdadigital.com',
+        url: 'https://sawdadigital.com/contact',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'House 12, Road 5, Banani',

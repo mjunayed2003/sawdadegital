@@ -188,9 +188,9 @@ function PricingContent() {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <a
-                  href="https://wa.me/8801700000000?text=Hello%20Sawda%20Digital,%20I%20would%20like%20to%20discuss%20a%20project%20budget"
+                  href="https://wa.me/8801234567890?text=Hello%20Sawda%20Digital,%20I%20would%20like%20to%20discuss%20a%20project%20budget"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
                   className="px-8 py-4 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm flex items-center gap-3 transition-all shadow-lg shadow-emerald-500/30 hover:scale-105"
                 >
                   <FaWhatsapp className="w-5 h-5" />
