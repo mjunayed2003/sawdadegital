@@ -91,7 +91,7 @@ function PricingContent() {
 
       <main className="relative overflow-hidden pt-16 md:pt-20 pb-24">
         {/* Interactive Service Packages Hub */}
-        <ServicePackages initialCategory="web-development" hideHeader={true} hideCategories={true} />
+        <ServicePackages initialCategory="web-development" hideHeader={false} hideCategories={false} />
 
         {/* Trust & Guarantee Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">

@@ -79,7 +79,9 @@ export default function ServicePackages({
   const [selectedTierId, setSelectedTierId] = useState<string>('basic');
   const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const [isSubDropdownOpen, setIsSubDropdownOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const subDropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown on outside click or Escape key
   useEffect(() => {
@@ -87,10 +89,14 @@ export default function ServicePackages({
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsDropdownOpen(false);
       }
+      if (subDropdownRef.current && !subDropdownRef.current.contains(event.target as Node)) {
+        setIsSubDropdownOpen(false);
+      }
     }
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
         setIsDropdownOpen(false);
+        setIsSubDropdownOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -1361,100 +1367,312 @@ export default function ServicePackages({
           </div>
         )}
 
-        {/* 1. Main Service Categories Dropdown Selector */}
+        {/* 1. Pricing Dropdown Selector Hub */}
         {!hideCategories && (
-          <div className="relative z-30 max-w-xl mx-auto mb-10 px-4" ref={dropdownRef}>
-            <div className="text-center mb-2.5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FCE7F3] dark:bg-white/10 text-[#9D224D] dark:text-[#f472b6] text-[11px] font-extrabold uppercase tracking-widest border border-[#9D224D]/20 dark:border-white/10 shadow-xs">
+          <div className={`relative z-30 ${currentMainCat.subcategories && currentMainCat.subcategories.length > 0 ? 'max-w-3xl' : 'max-w-xl'} mx-auto mb-10 px-4`}>
+            <div className="text-center mb-3">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FCE7F3] dark:bg-white/10 text-[#9D224D] dark:text-[#f472b6] text-[11px] font-extrabold uppercase tracking-widest border border-[#9D224D]/20 dark:border-white/10 shadow-xs">
                 <span>⚡</span>
-                {language === 'bn' ? 'সার্ভিস নির্বাচন করুন' : 'SELECT SERVICE CATEGORY'}
+                {currentMainCat.subcategories && currentMainCat.subcategories.length > 0
+                  ? (language === 'bn' ? 'সার্ভিস ও সাব-ক্যাটাগরি ড্রপডাউন' : 'SELECT SERVICE & SUB-CATEGORY')
+                  : (language === 'bn' ? 'সার্ভিস ড্রপডাউন নির্বাচন করুন' : 'SELECT SERVICE CATEGORY')}
               </span>
             </div>
 
-            {/* Dropdown Trigger Button */}
+            <div className={`grid ${currentMainCat.subcategories && currentMainCat.subcategories.length > 0 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'} gap-3 sm:gap-4 items-center`}>
+              
+              {/* Dropdown 1: Main Service Category */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsDropdownOpen(prev => !prev);
+                    setIsSubDropdownOpen(false);
+                  }}
+                  aria-expanded={isDropdownOpen}
+                  className="w-full flex items-center justify-between gap-3 p-3.5 sm:p-4 bg-white dark:bg-[#161618] border-2 border-slate-200 dark:border-white/10 hover:border-[#9D224D] dark:hover:border-[#9D224D] rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                >
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="w-11 h-11 rounded-2xl bg-[#9D224D]/10 text-[#9D224D] flex items-center justify-center text-lg flex-shrink-0 group-hover:scale-105 group-hover:bg-[#9D224D] group-hover:text-white transition-all duration-300">
+                      {currentMainCat.icon}
+                    </div>
+                    <div className="text-left truncate">
+                      <div className="text-[10px] uppercase font-bold tracking-wider text-slate-400 dark:text-gray-500">
+                        {language === 'bn' ? 'মূল সার্ভিস' : 'Main Service'}
+                      </div>
+                      <div className="text-sm sm:text-base font-black text-slate-900 dark:text-white truncate">
+                        {currentMainCat.title[language === 'bn' ? 'bn' : 'en']}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-1.5 flex-shrink-0">
+                    <div className={`w-7 h-7 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center text-slate-500 dark:text-gray-400 group-hover:text-[#9D224D] transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}>
+                      <FaChevronDown className="w-3 h-3" />
+                    </div>
+                  </div>
+                </button>
+
+                {/* Dropdown Menu Modal / List */}
+                <AnimatePresence>
+                  {isDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -10, scale: 0.98 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute left-0 right-0 mt-2 p-2 sm:p-2.5 bg-white/98 dark:bg-[#161618]/98 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl z-50 max-h-[70vh] overflow-y-auto thin-scrollbar"
+                    >
+                      <div className="grid grid-cols-1 gap-1.5">
+                        {serviceCategories.map((cat) => {
+                          const isActive = activeMainCat === cat.id;
+                          const hasSub = cat.subcategories && cat.subcategories.length > 0;
+                          return (
+                            <div key={cat.id} className="flex flex-col">
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  setActiveMainCat(cat.id);
+                                  setSelectedTierId('basic');
+                                  setSelectedAddons([]);
+                                  if (hasSub && cat.subcategories) {
+                                    setActiveSubCat(cat.subcategories[0].id);
+                                  }
+                                  if (!hasSub) {
+                                    setIsDropdownOpen(false);
+                                  }
+                                }}
+                                className={`w-full flex items-center justify-between p-3 rounded-xl sm:rounded-2xl transition-all duration-200 text-left cursor-pointer ${
+                                  isActive
+                                    ? 'bg-[#9D224D]/10 dark:bg-[#9D224D]/25 border border-[#9D224D]/30'
+                                    : 'hover:bg-slate-50 dark:hover:bg-white/5 border border-transparent'
+                                }`}
+                              >
+                                <div className="flex items-center gap-3 min-w-0">
+                                  <div className={`w-9 h-9 rounded-xl flex items-center justify-center text-base flex-shrink-0 transition-colors ${
+                                    isActive
+                                      ? 'bg-[#9D224D] text-white'
+                                      : 'bg-slate-100 dark:bg-white/5 text-[#9D224D]'
+                                  }`}>
+                                    {cat.icon}
+                                  </div>
+                                  <div className="truncate">
+                                    <div className={`text-sm font-bold truncate ${isActive ? 'text-[#9D224D] dark:text-white' : 'text-slate-800 dark:text-gray-200'}`}>
+                                      {cat.title[language === 'bn' ? 'bn' : 'en']}
+                                    </div>
+                                    <div className="text-[11px] text-slate-500 dark:text-gray-400 truncate">
+                                      {cat.subtitle[language === 'bn' ? 'bn' : 'en']}
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div className="flex items-center gap-2 flex-shrink-0">
+                                  {hasSub && (
+                                    <span className="text-[10px] px-2 py-0.5 rounded-md bg-[#9D224D]/10 dark:bg-[#9D224D]/20 text-[#9D224D] dark:text-[#f472b6] font-bold">
+                                      {cat.subcategories?.length} {language === 'bn' ? 'টি অপশন' : 'Options'}
+                                    </span>
+                                  )}
+                                  {isActive && (
+                                    <div className="w-5 h-5 rounded-full bg-[#9D224D] text-white flex items-center justify-center flex-shrink-0 text-xs">
+                                      <FaCheck className="w-2.5 h-2.5" />
+                                    </div>
+                                  )}
+                                </div>
+                              </button>
+
+                              {/* Nested Subcategories inside main dropdown */}
+                              {hasSub && isActive && (
+                                <div className="ml-6 pl-3 my-1.5 border-l-2 border-[#9D224D]/30 flex flex-col gap-1">
+                                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-gray-500 py-1">
+                                    {language === 'bn' ? 'সাব-সার্ভিস বেছে নিন:' : 'Choose Sub-Service:'}
+                                  </span>
+                                  {cat.subcategories?.map((sub) => {
+                                    const isSubActive = activeSubCat === sub.id;
+                                    return (
+                                      <button
+                                        key={sub.id}
+                                        type="button"
+                                        onClick={() => {
+                                          setActiveMainCat(cat.id);
+                                          setActiveSubCat(sub.id);
+                                          setSelectedTierId('basic');
+                                          setSelectedAddons([]);
+                                          setIsDropdownOpen(false);
+                                        }}
+                                        className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                                          isSubActive
+                                            ? 'bg-[#9D224D] text-white shadow-xs'
+                                            : 'text-slate-600 dark:text-gray-300 hover:bg-slate-100 dark:hover:bg-white/5'
+                                        }`}
+                                      >
+                                        <span>{sub.name[language === 'bn' ? 'bn' : 'en']}</span>
+                                        {isSubActive && <FaCheck className="w-2.5 h-2.5" />}
+                                      </button>
+                                    );
+                                  })}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Dropdown 2: Subcategory Dropdown (Right inside the pricing dropdown selector) */}
+              {currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (
+                <div className="relative" ref={subDropdownRef}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsSubDropdownOpen(prev => !prev);
+                      setIsDropdownOpen(false);
+                    }}
+                    aria-expanded={isSubDropdownOpen}
+                    className="w-full flex items-center justify-between gap-3 p-3.5 sm:p-4 bg-white dark:bg-[#161618] border-2 border-slate-200 dark:border-white/10 hover:border-[#9D224D] dark:hover:border-[#9D224D] rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-11 h-11 rounded-2xl bg-[#9D224D]/10 text-[#9D224D] flex items-center justify-center text-base flex-shrink-0 group-hover:scale-105 group-hover:bg-[#9D224D] group-hover:text-white transition-all duration-300">
+                        <FaCheck className="w-4 h-4" />
+                      </div>
+                      <div className="text-left truncate">
+                        <div className="text-[10px] uppercase font-bold tracking-wider text-[#9D224D] dark:text-rose-400">
+                          {language === 'bn' ? 'সাব-ক্যাটাগরি' : 'Sub-Category'}
+                        </div>
+                        <div className="text-sm sm:text-base font-black text-slate-900 dark:text-white truncate">
+                          {currentSubCat?.name[language === 'bn' ? 'bn' : 'en']}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 flex-shrink-0">
+                      <div className={`w-7 h-7 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center text-slate-500 dark:text-gray-400 group-hover:text-[#9D224D] transition-transform duration-300 ${isSubDropdownOpen ? 'rotate-180' : ''}`}>
+                        <FaChevronDown className="w-3 h-3" />
+                      </div>
+                    </div>
+                  </button>
+
+                  {/* Subcategory Dropdown Menu */}
+                  <AnimatePresence>
+                    {isSubDropdownOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10, scale: 0.98 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.98 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute left-0 right-0 mt-2 p-2 bg-white/98 dark:bg-[#161618]/98 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl z-50 max-h-[60vh] overflow-y-auto thin-scrollbar"
+                      >
+                        <div className="grid grid-cols-1 gap-1">
+                          {currentMainCat.subcategories.map((sub) => {
+                            const isSubActive = activeSubCat === sub.id;
+                            return (
+                              <button
+                                key={sub.id}
+                                type="button"
+                                onClick={() => {
+                                  setActiveSubCat(sub.id);
+                                  setSelectedTierId('basic');
+                                  setSelectedAddons([]);
+                                  setIsSubDropdownOpen(false);
+                                }}
+                                className={`w-full flex items-center justify-between p-3 rounded-xl sm:rounded-2xl transition-all duration-200 text-left cursor-pointer ${
+                                  isSubActive
+                                    ? 'bg-[#9D224D]/10 dark:bg-[#9D224D]/25 border border-[#9D224D]/30 text-[#9D224D] dark:text-white font-bold'
+                                    : 'hover:bg-slate-50 dark:hover:bg-white/5 border border-transparent text-slate-700 dark:text-gray-300'
+                                }`}
+                              >
+                                <span className="text-sm font-semibold">{sub.name[language === 'bn' ? 'bn' : 'en']}</span>
+                                {isSubActive && (
+                                  <div className="w-5 h-5 rounded-full bg-[#9D224D] text-white flex items-center justify-center text-xs flex-shrink-0">
+                                    <FaCheck className="w-2.5 h-2.5" />
+                                  </div>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )}
+
+            </div>
+          </div>
+        )}
+
+        {/* Dedicated Service Page Subcategory Dropdown (when hideCategories is true, e.g. /services/video-production) */}
+        {hideCategories && currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (
+          <div className="relative z-20 max-w-md mx-auto mb-10 px-4" ref={subDropdownRef}>
+            <div className="text-center mb-2.5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FCE7F3] dark:bg-white/10 text-[#9D224D] dark:text-[#f472b6] text-[11px] font-extrabold uppercase tracking-widest border border-[#9D224D]/20 dark:border-white/10 shadow-xs">
+                <span>⚡</span>
+                {language === 'bn' ? 'প্যাকেজ টাইপ নির্বাচন করুন' : 'SELECT PACKAGE TYPE'}
+              </span>
+            </div>
+
             <button
               type="button"
-              onClick={() => setIsDropdownOpen(prev => !prev)}
-              aria-expanded={isDropdownOpen}
+              onClick={() => setIsSubDropdownOpen(prev => !prev)}
+              aria-expanded={isSubDropdownOpen}
               className="w-full flex items-center justify-between gap-3 p-3.5 sm:p-4 bg-white dark:bg-[#161618] border-2 border-slate-200 dark:border-white/10 hover:border-[#9D224D] dark:hover:border-[#9D224D] rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
             >
-              <div className="flex items-center gap-3.5 min-w-0">
-                <div className="w-12 h-12 rounded-2xl bg-[#9D224D]/10 text-[#9D224D] flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-105 group-hover:bg-[#9D224D] group-hover:text-white transition-all duration-300">
-                  {currentMainCat.icon}
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="w-10 h-10 rounded-xl bg-[#9D224D]/10 text-[#9D224D] flex items-center justify-center text-base flex-shrink-0 group-hover:scale-105 group-hover:bg-[#9D224D] group-hover:text-white transition-all duration-300">
+                  <FaCheck className="w-4 h-4" />
                 </div>
                 <div className="text-left truncate">
-                  <div className="text-base sm:text-lg font-black text-slate-900 dark:text-white truncate">
-                    {currentMainCat.title[language === 'bn' ? 'bn' : 'en']}
+                  <div className="text-[10px] uppercase font-bold tracking-wider text-[#9D224D] dark:text-rose-400">
+                    {language === 'bn' ? 'সাব-ক্যাটাগরি' : 'Sub-Category'}
                   </div>
-                  <div className="text-xs text-slate-500 dark:text-gray-400 truncate">
-                    {currentMainCat.subtitle[language === 'bn' ? 'bn' : 'en']}
+                  <div className="text-sm sm:text-base font-black text-slate-900 dark:text-white truncate">
+                    {currentSubCat?.name[language === 'bn' ? 'bn' : 'en']}
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 flex-shrink-0">
-                <span className="hidden sm:inline-block px-2.5 py-1 text-[11px] font-bold rounded-full bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-gray-300">
-                  {serviceCategories.length} {language === 'bn' ? 'টি সেবা' : 'Services'}
-                </span>
-                <div className={`w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center text-slate-500 dark:text-gray-400 group-hover:text-[#9D224D] transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}>
-                  <FaChevronDown className="w-3.5 h-3.5" />
+              <div className="flex items-center gap-1.5 flex-shrink-0">
+                <div className={`w-7 h-7 rounded-full bg-slate-100 dark:bg-white/5 flex items-center justify-center text-slate-500 dark:text-gray-400 group-hover:text-[#9D224D] transition-transform duration-300 ${isSubDropdownOpen ? 'rotate-180' : ''}`}>
+                  <FaChevronDown className="w-3 h-3" />
                 </div>
               </div>
             </button>
 
-            {/* Dropdown Menu Modal / List */}
+            {/* Subcategory Dropdown Menu */}
             <AnimatePresence>
-              {isDropdownOpen && (
+              {isSubDropdownOpen && (
                 <motion.div
                   initial={{ opacity: 0, y: -10, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -10, scale: 0.98 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-4 right-4 mt-2 p-2 sm:p-2.5 bg-white/98 dark:bg-[#161618]/98 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl z-50 max-h-[70vh] overflow-y-auto thin-scrollbar"
+                  className="absolute left-4 right-4 mt-2 p-2 bg-white/98 dark:bg-[#161618]/98 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl z-40 max-h-[60vh] overflow-y-auto thin-scrollbar"
                 >
                   <div className="grid grid-cols-1 gap-1">
-                    {serviceCategories.map((cat) => {
-                      const isActive = activeMainCat === cat.id;
+                    {currentMainCat.subcategories.map((sub) => {
+                      const isSubActive = activeSubCat === sub.id;
                       return (
                         <button
-                          key={cat.id}
+                          key={sub.id}
                           type="button"
                           onClick={() => {
-                            setActiveMainCat(cat.id);
+                            setActiveSubCat(sub.id);
                             setSelectedTierId('basic');
                             setSelectedAddons([]);
-                            if (cat.subcategories && cat.subcategories.length > 0) {
-                              setActiveSubCat(cat.subcategories[0].id);
-                            }
-                            setIsDropdownOpen(false);
+                            setIsSubDropdownOpen(false);
                           }}
                           className={`w-full flex items-center justify-between p-3 rounded-xl sm:rounded-2xl transition-all duration-200 text-left cursor-pointer ${
-                            isActive
-                              ? 'bg-[#9D224D]/10 dark:bg-[#9D224D]/25 border border-[#9D224D]/30'
-                              : 'hover:bg-slate-50 dark:hover:bg-white/5 border border-transparent'
+                            isSubActive
+                              ? 'bg-[#9D224D]/10 dark:bg-[#9D224D]/25 border border-[#9D224D]/30 text-[#9D224D] dark:text-white font-bold'
+                              : 'hover:bg-slate-50 dark:hover:bg-white/5 border border-transparent text-slate-700 dark:text-gray-300'
                           }`}
                         >
-                          <div className="flex items-center gap-3 min-w-0">
-                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0 transition-colors ${
-                              isActive
-                                ? 'bg-[#9D224D] text-white'
-                                : 'bg-slate-100 dark:bg-white/5 text-[#9D224D]'
-                            }`}>
-                              {cat.icon}
-                            </div>
-                            <div className="truncate">
-                              <div className={`text-sm font-bold truncate ${isActive ? 'text-[#9D224D] dark:text-white' : 'text-slate-800 dark:text-gray-200'}`}>
-                                {cat.title[language === 'bn' ? 'bn' : 'en']}
-                              </div>
-                              <div className="text-[11px] text-slate-500 dark:text-gray-400 truncate">
-                                {cat.subtitle[language === 'bn' ? 'bn' : 'en']}
-                              </div>
-                            </div>
-                          </div>
-
-                          {isActive && (
-                            <div className="w-6 h-6 rounded-full bg-[#9D224D] text-white flex items-center justify-center flex-shrink-0 text-xs">
-                              <FaCheck className="w-3 h-3" />
+                          <span className="text-sm font-semibold">{sub.name[language === 'bn' ? 'bn' : 'en']}</span>
+                          {isSubActive && (
+                            <div className="w-5 h-5 rounded-full bg-[#9D224D] text-white flex items-center justify-center text-xs flex-shrink-0">
+                              <FaCheck className="w-2.5 h-2.5" />
                             </div>
                           )}
                         </button>
@@ -1464,35 +1682,6 @@ export default function ServicePackages({
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-        )}
-
-        {/* 2. Subcategory Tabs / Pills (if service has subcategories like WordPress/Wix vs Custom vs SaaS) */}
-        {currentMainCat.subcategories && currentMainCat.subcategories.length > 0 && (
-          <div className="max-w-xl mx-auto mb-10 px-4">
-            <div className="p-1.5 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200/80 dark:border-white/10 flex flex-wrap items-center justify-center gap-1.5 shadow-sm">
-              {currentMainCat.subcategories.map((sub) => {
-                const isSubActive = activeSubCat === sub.id;
-                return (
-                  <button
-                    key={sub.id}
-                    type="button"
-                    onClick={() => {
-                      setActiveSubCat(sub.id);
-                      setSelectedTierId('basic');
-                      setSelectedAddons([]);
-                    }}
-                    className={`flex-1 min-w-[120px] px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-200 text-center cursor-pointer ${
-                      isSubActive
-                        ? 'bg-[#9D224D] text-white shadow-sm'
-                        : 'text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/5'
-                    }`}
-                  >
-                    {sub.name[language === 'bn' ? 'bn' : 'en']}
-                  </button>
-                );
-              })}
-            </div>
           </div>
         )}
 
