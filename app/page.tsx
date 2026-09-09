@@ -14,10 +14,10 @@ import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Sawda Digital | Web, App & SEO Agency in Bangladesh",
+    absolute: "Sawda Digital | Digital Marketing, Web, App & SEO Agency in Bangladesh",
   },
   description:
-    "Sawda Digital is a top digital agency in Bangladesh providing custom web development, mobile apps, UI/UX design, and SEO services to scale your brand.",
+    "Sawda Digital is a leading digital marketing agency in Bangladesh integrating high-performance web development, mobile apps, UI/UX design, and data-backed SEO to drive sustainable business revenue.",
   alternates: {
     canonical: "https://sawdadigital.com",
     languages: {
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sawda Digital | Web, App & SEO Agency in Bangladesh",
+    title: "Sawda Digital | Digital Marketing, Web, App & SEO Agency in Bangladesh",
     description:
-      "Sawda Digital is a top digital agency in Bangladesh providing custom web development, mobile apps, UI/UX design, and SEO services to scale your brand.",
+      "Full-service digital marketing and tech agency in Bangladesh. Custom web development, mobile apps, UI/UX design, and Page 1 Google SEO to accelerate growth.",
     url: "https://sawdadigital.com",
     type: "website",
   },
@@ -39,6 +39,14 @@ const homeFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does Sawda Digital combine Digital Marketing, Web, App, SEO, and UI/UX for business growth?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sawda Digital operates an integrated growth model: our UI/UX team designs conversion-first user experiences, our engineering team builds lightning-fast Next.js websites and mobile apps, our SEO specialists secure Page 1 Google rankings, and our digital marketing leads run targeted Meta & Google Ads to convert visitors into loyal clients.",
+      },
+    },
     {
       "@type": "Question",
       name: "What technologies do you use for Web & App Development?",

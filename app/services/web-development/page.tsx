@@ -12,23 +12,23 @@ import { LanguageProvider } from "@/components/LanguageContext";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Custom Web Design & Development Services in Bangladesh",
+  title: "Web Design & Development Agency in Bangladesh | SEO & Conversion Focused",
   description:
-    "Custom high-performance web development, Next.js web applications, and enterprise SaaS platforms built by Sawda Digital. Blazing speed, top-tier UI/UX, and robust security.",
+    "Custom high-performance web development, Next.js applications, and e-commerce websites built by Sawda Digital. Engineered with modern UI/UX, sub-second speed, and built-in technical SEO.",
   alternates: {
     canonical: "https://sawdadigital.com/services/web-development",
   },
   openGraph: {
-    title: "Web Design & Development Services | Sawda Digital",
+    title: "Web Design & Development Agency in Bangladesh | Sawda Digital",
     description:
-      "Modern full-stack web applications, SaaS platforms, and enterprise websites engineered for speed and conversion.",
+      "Modern full-stack web applications, SaaS platforms, and enterprise websites engineered for speed, SEO ranking, and conversion.",
     url: "https://sawdadigital.com/services/web-development",
     type: "website",
   },
   twitter: {
     title: "Web Design & Development | Sawda Digital",
     description:
-      "Scalable web applications built with Next.js, React, and modern cloud infrastructures.",
+      "Scalable web applications built with Next.js, React, and modern cloud infrastructures with built-in SEO.",
   },
 };
 

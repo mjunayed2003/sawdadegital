@@ -12,23 +12,23 @@ import { LanguageProvider } from "@/components/LanguageContext";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Social Media Marketing & Performance Sales Agency",
+  title: "Digital Marketing & Performance Sales Agency in Bangladesh",
   description:
-    "Data-backed social media marketing, Facebook & Instagram ads, targeted B2B lead generation, and compound brand growth strategies by Sawda Digital in Bangladesh.",
+    "Top digital marketing agency in Bangladesh. Data-driven Facebook & Instagram ads, Google Ads PPC, B2B lead generation funnels, and compound brand growth strategies by Sawda Digital.",
   alternates: {
     canonical: "https://sawdadigital.com/services/marketing-sales",
   },
   openGraph: {
-    title: "Social Media Management & Performance Marketing | Sawda Digital",
+    title: "Digital Marketing & Performance Sales Agency | Sawda Digital",
     description:
-      "Laser-targeted social campaigns, high-converting ad creative, and predictable revenue funnels.",
+      "Laser-targeted social campaigns, Google Ads, high-converting creative, and predictable revenue funnels designed to scale brands.",
     url: "https://sawdadigital.com/services/marketing-sales",
     type: "website",
   },
   twitter: {
-    title: "Social Media Marketing & Sales Growth | Sawda Digital",
+    title: "Digital Marketing & Growth Agency | Sawda Digital",
     description:
-      "Scale your revenue with high-ROI paid acquisition and strategic organic social campaigns.",
+      "Scale your revenue with high-ROI paid acquisition, strategic organic social, and conversion funnels.",
   },
 };
 

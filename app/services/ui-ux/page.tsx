@@ -12,23 +12,23 @@ import { LanguageProvider } from "@/components/LanguageContext";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "UI/UX Design & Product Prototyping Studio",
+  title: "UI/UX Design Agency & Product Prototyping in Bangladesh",
   description:
-    "User research, wireframing, interactive Figma prototypes, and conversion-optimized design systems designed by Sawda Digital to elevate digital experiences.",
+    "Top UI/UX design agency in Bangladesh. Human-centered user research, interactive Figma wireframes, conversion-first UI design, and scalable design systems for web and mobile apps by Sawda Digital.",
   alternates: {
     canonical: "https://sawdadigital.com/services/ui-ux",
   },
   openGraph: {
-    title: "UI/UX Design Services | Sawda Digital",
+    title: "UI/UX Design Agency in Bangladesh | Sawda Digital",
     description:
-      "Crafting intuitive, engaging, and beautiful product interfaces that users love.",
+      "Crafting intuitive, engaging, and conversion-optimized product interfaces for web and mobile apps.",
     url: "https://sawdadigital.com/services/ui-ux",
     type: "website",
   },
   twitter: {
-    title: "UI/UX Design Studio | Sawda Digital",
+    title: "UI/UX Design Agency | Sawda Digital",
     description:
-      "Modern product design, intuitive UX, and design systems for web and mobile apps.",
+      "Modern product design, intuitive UX, and design systems for high-converting web and mobile apps.",
   },
 };
 

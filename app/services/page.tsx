@@ -12,21 +12,21 @@ import {
 import { FiArrowRight, FiCheck } from 'react-icons/fi';
 
 export const metadata: Metadata = {
-  title: 'All Digital Services | Web, Mobile Apps, SEO, UI/UX & Marketing',
+  title: 'Digital Services | Digital Marketing, Web, App, SEO & UI/UX Agency',
   description:
-    'Explore Sawda Digital’s 8 specialized service suites: Custom Web Development, Mobile App Engineering, UI/UX Design, SEO & Google Marketing, E-commerce Stores, Media Production, and Brand Identity in Bangladesh.',
+    'Explore Sawda Digital’s integrated digital growth suites: Performance Digital Marketing, Custom Web Development, Mobile App Engineering, UI/UX Design, and Result-Driven SEO in Bangladesh.',
   alternates: {
     canonical: 'https://sawdadigital.com/services',
   },
   openGraph: {
-    title: 'Our Specialized Digital Services | Sawda Digital',
+    title: 'Digital Marketing, Web, App, SEO & UI/UX Services | Sawda Digital',
     description:
-      'Full-spectrum digital capabilities: custom software, apps, UI/UX, SEO, and multimedia production built to scale your business.',
+      'Full-spectrum digital marketing and tech capabilities: custom software, mobile apps, UI/UX, SEO, and paid ad acquisition built to scale your business.',
     url: 'https://sawdadigital.com/services',
     type: 'website',
   },
   twitter: {
-    title: 'Specialized Digital Services | Sawda Digital',
+    title: 'Digital Marketing & Tech Services | Sawda Digital',
     description:
       'Full-spectrum digital capabilities built to scale ambitious companies in Bangladesh and worldwide.',
   },

@@ -12,23 +12,23 @@ import { LanguageProvider } from "@/components/LanguageContext";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "SEO & Google Marketing Agency in Bangladesh - Rank #1",
+  title: "SEO Agency in Bangladesh | Digital Marketing & Google Page #1 Ranking",
   description:
-    "Dominate Google Search results with Sawda Digital. Comprehensive technical SEO audits, high-intent keyword ranking, authoritative backlinks, and high-ROI Google Ads campaigns.",
+    "Dominate Google Search with Sawda Digital, a leading SEO and digital marketing agency in Bangladesh. Technical SEO audits, high-intent keyword ranking, quality link building, and Google Ads management.",
   alternates: {
     canonical: "https://sawdadigital.com/services/seo",
   },
   openGraph: {
-    title: "SEO & Google Marketing Services | Sawda Digital",
+    title: "SEO Agency in Bangladesh | Sawda Digital",
     description:
-      "Data-driven SEO strategies and Google Search Ads to capture high-intent leads and dominate page 1.",
+      "Data-driven technical SEO strategies and Google Ads PPC campaigns to capture high-intent buyers and dominate page 1 search results.",
     url: "https://sawdadigital.com/services/seo",
     type: "website",
   },
   twitter: {
-    title: "SEO & Google Marketing | Sawda Digital",
+    title: "SEO Agency in Bangladesh | Sawda Digital",
     description:
-      "Data-driven technical SEO and PPC search campaigns that scale organic traffic and conversions.",
+      "Data-driven technical SEO and PPC search campaigns that scale organic traffic, leads, and revenue.",
   },
 };
 

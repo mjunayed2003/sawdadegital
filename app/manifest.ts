@@ -2,9 +2,9 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Sawda Digital - Premier Digital Agency in Bangladesh',
+    name: 'Sawda Digital - Digital Marketing, Web, App & SEO Agency',
     short_name: 'Sawda Digital',
-    description: 'Bespoke web development, mobile apps, UI/UX, SEO, and social marketing services by Sawda Digital.',
+    description: 'Premier digital marketing agency in Bangladesh specializing in web development, mobile apps, UI/UX design, and SEO.',
     start_url: '/',
     display: 'standalone',
     background_color: '#1a1a1a',

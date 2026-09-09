@@ -12,21 +12,21 @@ import { LanguageProvider } from "@/components/LanguageContext";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development (iOS & Android) in Bangladesh",
+  title: "Mobile App Development Company in Bangladesh | iOS & Android Apps",
   description:
-    "Native and cross-platform mobile application development for iOS and Android by Sawda Digital. High-performance, intuitive UI, and secure enterprise backend integration.",
+    "Top mobile app development company in Bangladesh. Custom iOS & Android mobile apps engineered with React Native and Flutter, featuring intuitive UI/UX and scalable cloud architectures by Sawda Digital.",
   alternates: {
     canonical: "https://sawdadigital.com/services/app-development",
   },
   openGraph: {
-    title: "Mobile App Development Services | Sawda Digital",
+    title: "Mobile App Development Company in Bangladesh | Sawda Digital",
     description:
-      "Crafting world-class iOS and Android applications with React Native and Flutter.",
+      "Crafting world-class iOS and Android applications with React Native, Flutter, and conversion-focused UI/UX.",
     url: "https://sawdadigital.com/services/app-development",
     type: "website",
   },
   twitter: {
-    title: "Mobile App Development | Sawda Digital",
+    title: "Mobile App Development Company | Sawda Digital",
     description:
       "Cross-platform iOS and Android apps engineered for speed, responsiveness, and scale.",
   },
