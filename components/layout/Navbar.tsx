@@ -22,7 +22,8 @@ import {
   FaTimes,
   FaGlobe,
   FaShoppingCart,
-  FaMobileAlt
+  FaMobileAlt,
+  FaTag
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageContext';
@@ -32,6 +33,7 @@ export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobilePricingOpen, setIsMobilePricingOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const lastScrollY = React.useRef(0);
@@ -88,6 +90,17 @@ export default function Navbar() {
     { name: t('uiUx'), icon: <FaDesktop />, path: "/services/ui-ux" },
   ];
 
+  const pricingItems = [
+    { name: t('webDesign'), icon: <FaCode />, path: "/pricing?category=web-development" },
+    { name: t('mediaProduction'), icon: <FaVideo />, path: "/pricing?category=video-production" },
+    { name: t('socialMarketing'), icon: <FaBullhorn />, path: "/pricing?category=social-media" },
+    { name: t('brandingGraphics'), icon: <FaPaintBrush />, path: "/pricing?category=branding-graphics" },
+    { name: t('seoGoogle'), icon: <FaSearch />, path: "/pricing?category=seo-marketing" },
+    { name: t('ecommerce'), icon: <FaShoppingCart />, path: "/pricing?category=ecommerce" },
+    { name: t('appDev'), icon: <FaMobileAlt />, path: "/pricing?category=app-development" },
+    { name: t('uiUx'), icon: <FaDesktop />, path: "/pricing?category=ui-ux" },
+  ];
+
   return (
     <>
       <header className={`fixed left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
@@ -126,9 +139,47 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="/pricing" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/pricing" ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
-              {t('pricing')}
-            </Link>
+            {/* Pricing Dropdown */}
+            <div className="relative group">
+              <Link 
+                href="/pricing" 
+                className={`flex items-center gap-2 text-sm font-bold px-5 py-2.5 rounded-full cursor-pointer transition-colors ${pathname.startsWith("/pricing") ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}
+              >
+                {t('pricing')}
+                <FaChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />
+              </Link>
+              <div className="absolute top-full left-0 pt-4 w-[340px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="bg-white dark:bg-[#262626] rounded-2xl shadow-lg border border-[#FCE7F3] dark:border-white/10 p-3 flex flex-col gap-1 max-h-[70vh] overflow-y-auto">
+                  <Link 
+                    href="/pricing" 
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        setTimeout(() => window.dispatchEvent(new Event('categorychange')), 50);
+                      }
+                    }}
+                    className="flex items-center gap-4 px-4 py-3 text-[15px] font-bold text-[#9D224D] dark:text-[#f472b6] hover:text-white hover:bg-[#9D224D] rounded-xl transition-colors group/item bg-[#FCE7F3]/40 dark:bg-white/5 mb-1"
+                  >
+                    <span className="text-lg w-5 flex justify-center text-[#9D224D] group-hover/item:text-white"><FaTag /></span>
+                    {language === 'bn' ? 'সকল প্যাকেজ ও প্রাইসিং' : 'All Pricing & Packages'}
+                  </Link>
+                  {pricingItems.map((item, idx) => (
+                    <Link 
+                      key={idx} 
+                      href={item.path} 
+                      onClick={() => {
+                        if (typeof window !== 'undefined') {
+                          setTimeout(() => window.dispatchEvent(new Event('categorychange')), 50);
+                        }
+                      }}
+                      className="flex items-center gap-4 px-4 py-3 text-[15px] font-medium text-[#262626] dark:text-gray-200 hover:text-white hover:bg-[#334155] rounded-xl transition-colors group/item"
+                    >
+                      <span className="text-lg w-5 flex justify-center text-[#334155] group-hover/item:text-white">{item.icon}</span>
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <Link href="/projects" className={`text-sm font-bold px-5 py-2.5 rounded-full transition-colors ${pathname === "/projects" ? "bg-[#FCE7F3] text-[#262626] dark:bg-white/20 dark:text-white hover:bg-[#334155] hover:text-white" : "text-[#262626] hover:bg-[#FCE7F3] dark:text-gray-200 dark:hover:bg-white/10"}`}>
               {t('projects')}
             </Link>
@@ -227,9 +278,49 @@ export default function Navbar() {
                 )}
               </div>
 
-              <Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/pricing" ? "bg-[#334155] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}>
-                {t('pricing')}
-              </Link>
+              <div className="flex flex-col">
+                <button 
+                  onClick={() => setIsMobilePricingOpen(!isMobilePricingOpen)} 
+                  className={`flex items-center justify-between text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname.startsWith("/pricing") ? "text-[#334155]" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}
+                >
+                  {t('pricing')}
+                  <FaChevronDown className={`w-3 h-3 transition-transform ${isMobilePricingOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isMobilePricingOpen && (
+                  <div className="flex flex-col gap-1 pl-6 pr-2 py-2">
+                    <Link 
+                      href="/pricing" 
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        if (typeof window !== 'undefined') {
+                          setTimeout(() => window.dispatchEvent(new Event('categorychange')), 50);
+                        }
+                      }}
+                      className="flex items-center gap-3 px-3 py-2 text-sm font-bold rounded-lg transition-colors text-[#9D224D] dark:text-[#f472b6] hover:bg-[#FCE7F3] dark:hover:bg-white/10"
+                    >
+                      <span className="text-lg w-5 flex justify-center text-[#9D224D]"><FaTag /></span>
+                      {language === 'bn' ? 'সকল প্যাকেজ ওভারভিউ' : 'All Pricing Overview'}
+                    </Link>
+                    {pricingItems.map((item, idx) => (
+                      <Link 
+                        key={idx} 
+                        href={item.path} 
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          if (typeof window !== 'undefined') {
+                            setTimeout(() => window.dispatchEvent(new Event('categorychange')), 50);
+                          }
+                        }}
+                        className={`flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors text-gray-600 dark:text-gray-300 hover:bg-[#FCE7F3] dark:hover:bg-white/10`}
+                      >
+                        <span className="text-lg w-5 flex justify-center text-[#334155]">{item.icon}</span>
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
               <Link href="/projects" onClick={() => setIsMobileMenuOpen(false)} className={`text-base font-bold px-4 py-3 rounded-xl transition-colors ${pathname === "/projects" ? "bg-[#334155] text-white" : "text-[#262626] dark:text-gray-200 hover:bg-[#FCE7F3] dark:hover:bg-white/10"}`}>
                 {t('projects')}
               </Link>

@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sawdadigital.com"),
   title: {
-    default: "Sawda Digital | Best Digital Agency in Bangladesh | Web, App, Marketing & SEO",
+    default: "Sawda Digital | Web, App & SEO Agency in Bangladesh",
     template: "%s | Sawda Digital",
   },
   description:
-    "Sawda Digital is a premier full-service digital agency in Dhaka, Bangladesh. We engineer high-converting web applications, mobile apps, UI/UX designs, data-driven SEO & Google Ads, and e-commerce solutions that scale businesses.",
+    "Sawda Digital is a top digital agency in Bangladesh providing custom web development, mobile apps, UI/UX design, and SEO services to scale your brand.",
   applicationName: "Sawda Digital",
   authors: [{ name: "Sawda Digital", url: "https://sawdadigital.com" }],
   creator: "Sawda Digital",
@@ -52,8 +52,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://sawdadigital.com",
     languages: {
-      "en-US": "https://sawdadigital.com",
-      "bn-BD": "https://sawdadigital.com",
+      "en": "https://sawdadigital.com",
+      "bn": "https://sawdadigital.com",
+      "x-default": "https://sawdadigital.com",
     },
   },
   openGraph: {

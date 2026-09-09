@@ -101,17 +101,6 @@ export default function ServicePackages({
     };
   }, []);
 
-  useEffect(() => {
-    if (initialCategory) {
-      setActiveMainCat(initialCategory);
-      if (initialCategory === 'video-production') {
-        setActiveSubCat('model-video');
-      } else if (initialCategory === 'web-development') {
-        setActiveSubCat('wp-wix');
-      }
-    }
-  }, [initialCategory]);
-
   // Raw Services & Pricing Data based on client specifications
   const serviceCategories: MainServiceCategory[] = useMemo(() => [
     {
@@ -1190,6 +1179,44 @@ export default function ServicePackages({
       ]
     }
   ], []);
+
+  // Sync category with URL or custom event
+  useEffect(() => {
+    const handleCategorySync = () => {
+      if (typeof window !== 'undefined') {
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('category') || params.get('service');
+        if (cat) {
+          const match = serviceCategories.find(c => c.id === cat);
+          if (match) {
+            setActiveMainCat(cat);
+            setSelectedTierId('basic');
+            setSelectedAddons([]);
+            if (match.subcategories && match.subcategories.length > 0) {
+              setActiveSubCat(match.subcategories[0].id);
+            }
+            return;
+          }
+        }
+      }
+      if (initialCategory) {
+        setActiveMainCat(initialCategory);
+        if (initialCategory === 'video-production') {
+          setActiveSubCat('model-video');
+        } else if (initialCategory === 'web-development') {
+          setActiveSubCat('wp-wix');
+        }
+      }
+    };
+
+    handleCategorySync();
+    window.addEventListener('popstate', handleCategorySync);
+    window.addEventListener('categorychange', handleCategorySync);
+    return () => {
+      window.removeEventListener('popstate', handleCategorySync);
+      window.removeEventListener('categorychange', handleCategorySync);
+    };
+  }, [initialCategory, serviceCategories]);
 
   // Active Category Data
   const currentMainCat = useMemo(() => {
