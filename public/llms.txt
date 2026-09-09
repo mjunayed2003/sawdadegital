@@ -1,0 +1,44 @@
+# Sawda Digital - Premier Full-Service Digital Agency in Bangladesh
+
+> Sawda Digital is a leading digital agency based in Banani, Dhaka, Bangladesh. We build high-performance web applications, iOS & Android mobile apps, bespoke UI/UX designs, data-driven SEO & Google Ads campaigns, and robust e-commerce solutions that scale ambitious businesses.
+
+## Company Information
+- **Name**: Sawda Digital
+- **Website**: https://sawdadigital.com
+- **Headquarters**: House 12, Road 5, Banani, Dhaka 1213, Bangladesh
+- **Phone**: +880 1234 567 890
+- **Email**: hello@sawdadigital.com
+- **Sitemap**: https://sawdadigital.com/sitemap.xml
+- **Robots**: https://sawdadigital.com/robots.txt
+
+## Executive Leadership
+- **Md Khairul Bashar**: Founder & CEO (Executive Leadership & Growth Strategy)
+- **Md Junayed**: Co-Founder & Lead Software Engineer (Architecture, Scalable Software, Fullstack Systems)
+- **Md Mohibullah Islam Reza**: Head of Strategy & Business Development (Market Intelligence, Optimization Models)
+- **Md Asfier Rahman Marjan**: Wix, WordPress & Shopify Specialist (High-Converting E-Commerce Stores)
+
+## Core Capabilities & Services
+- **Web Design & Development**: https://sawdadigital.com/services/web-development
+  - High-performance Next.js web applications, corporate websites, SaaS platforms, and custom portals built for speed and security.
+- **Mobile App Development**: https://sawdadigital.com/services/app-development
+  - Native and cross-platform iOS & Android mobile applications engineered with React Native and Flutter.
+- **UI/UX Design & Prototyping**: https://sawdadigital.com/services/ui-ux
+  - Human-centered product design, intuitive wireframing, clickable Figma prototypes, and cohesive design systems.
+- **SEO & Google Marketing**: https://sawdadigital.com/services/seo
+  - Technical SEO audits, Page 1 Google ranking strategies, high-authority backlink building, and high-ROI Google Search Ads.
+- **E-Commerce Solutions**: https://sawdadigital.com/services/ecommerce
+  - Custom online stores, Shopify development, and automated inventory systems integrated with bKash, Nagad, Stripe, and SSLCommerz.
+- **Social Media Marketing & Sales**: https://sawdadigital.com/services/marketing-sales
+  - Targeted Facebook, Instagram, and LinkedIn ad campaigns, community management, and compound audience growth.
+- **Branding & Graphics Design**: https://sawdadigital.com/services/graphics-design
+  - Complete corporate visual identities, iconic logos, vector brand style guidelines, and marketing collateral.
+- **Media & Content Production**: https://sawdadigital.com/services/video-production
+  - Commercial video ads, brand storytelling documentaries, 2D/3D animations, and cinematic product reels.
+
+## Key Pages & Navigation
+- All Services Hub: https://sawdadigital.com/services
+- Pricing & Packages: https://sawdadigital.com/pricing
+- Selected Work & Portfolio: https://sawdadigital.com/projects
+- Technical Expertise: https://sawdadigital.com/expertise
+- About Us: https://sawdadigital.com/about
+- Contact Us: https://sawdadigital.com/contact

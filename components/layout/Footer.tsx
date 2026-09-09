@@ -66,33 +66,50 @@ export default function Footer() {
             <div className="space-y-3 pt-2 text-xs">
               <div className="flex items-center gap-3 text-gray-300">
                 <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#9D224D] flex-shrink-0">
-                  <FaEnvelope className="w-3.5 h-3.5" />
+                  <FaPhone className="w-3.5 h-3.5" />
                 </span>
-                <a href="mailto:hello@sawdadigital.com" className="hover:text-[#9D224D] transition-colors">hello@sawdadigital.com</a>
+                <a href="tel:+8801234567890" className="hover:text-[#9D224D] transition-colors font-medium">+880 1234 567 890</a>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#9D224D] flex-shrink-0">
+                  <FaEnvelope className="w-3.5 h-3.5" />
+                </span>
+                <a 
+                  href="mailto:hello@sawdadigital.com" 
+                  aria-label="Send email to Sawda Digital"
+                  className="hover:text-[#9D224D] transition-colors"
+                >
+                  hello<span className="text-[#9D224D]">@</span>sawdadigital.com
+                </a>
+              </div>
+              <div className="flex items-start gap-3 text-gray-300">
+                <span className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#9D224D] flex-shrink-0 mt-0.5">
                   <FaLocationDot className="w-3.5 h-3.5" />
                 </span>
-                <span>Dhaka, Bangladesh</span>
+                <address className="not-italic leading-relaxed text-gray-400">
+                  House 12, Road 5, Banani, Dhaka 1213, Bangladesh
+                </address>
               </div>
             </div>
 
             {/* Social Icons */}
             <div className="flex items-center gap-2.5 pt-2">
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="https://facebook.com/sawdadigital" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaFacebookF className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="https://linkedin.com/company/sawdadigital" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaLinkedinIn className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="https://youtube.com/@sawdadigital" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <FaYoutube className="w-3.5 h-3.5" />
+              </a>
+              <a href="https://twitter.com/sawdadigital" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaXTwitter className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="https://instagram.com/sawdadigital" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaInstagram className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
+              <a href="https://github.com/sawdadigital" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#9D224D] border border-white/10 text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:scale-110">
                 <FaGithub className="w-3.5 h-3.5" />
               </a>
             </div>

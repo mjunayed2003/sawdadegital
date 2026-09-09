@@ -3,6 +3,7 @@ import Topbar from "@/components/layout/Topbar";
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import AgencyWorkflow from "@/components/AgencyWorkflow";
 import SelectedWork from "@/components/SelectedWork";
 import Leadership from "@/components/Leadership";
 import Testimonials from "@/components/Testimonials";
@@ -12,16 +13,23 @@ import { LanguageProvider } from "@/components/LanguageContext";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Sawda Digital | Best Digital Agency in Bangladesh - Web, App, Marketing & SEO",
+  title: {
+    absolute: "Sawda Digital | Web, App & SEO Agency in Bangladesh",
+  },
   description:
-    "Sawda Digital is a premier full-service digital agency in Dhaka, Bangladesh. We build high-performance websites, mobile apps, bespoke UI/UX designs, data-driven SEO & Google Ads, and e-commerce solutions that drive real business growth.",
+    "Sawda Digital is a top digital agency in Bangladesh providing custom web development, mobile apps, UI/UX design, and SEO services to scale your brand.",
   alternates: {
     canonical: "https://sawdadigital.com",
+    languages: {
+      "en": "https://sawdadigital.com",
+      "bn": "https://sawdadigital.com",
+      "x-default": "https://sawdadigital.com",
+    },
   },
   openGraph: {
-    title: "Sawda Digital | Premier Full-Service Digital Agency in Bangladesh",
+    title: "Sawda Digital | Web, App & SEO Agency in Bangladesh",
     description:
-      "Transforming ambitious businesses with high-performance web development, mobile apps, UI/UX, SEO, and strategic digital marketing.",
+      "Sawda Digital is a top digital agency in Bangladesh providing custom web development, mobile apps, UI/UX design, and SEO services to scale your brand.",
     url: "https://sawdadigital.com",
     type: "website",
   },
@@ -84,6 +92,7 @@ export default function Home() {
         <main>
           <Hero />
           <Services />
+          <AgencyWorkflow />
           <SelectedWork />
           <Leadership />
           <Testimonials />
