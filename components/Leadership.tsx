@@ -67,6 +67,13 @@ const teamMembers = [
 
 export default function Leadership() {
   const { t } = useLanguage();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -86,7 +93,7 @@ export default function Leadership() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <motion.div 
+        <MotionDiv 
           className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,10 +116,10 @@ export default function Leadership() {
             {t('meetFullTeam')}
             <FiArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
           </Link>
-        </motion.div>
+        </MotionDiv>
 
         {/* Team Grid */}
-        <motion.div 
+        <MotionDiv 
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"
           variants={containerVariants}
           initial="hidden"
@@ -120,7 +127,7 @@ export default function Leadership() {
           viewport={{ once: true, margin: "-100px" }}
         >
           {teamMembers.map((member) => (
-            <motion.div 
+            <MotionDiv 
               key={member.id} 
               variants={itemVariants}
               whileHover={{ y: -8 }}
@@ -143,7 +150,7 @@ export default function Leadership() {
                 <div className="relative p-1.5 rounded-[2.7rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
                   <div className={`w-44 h-44 lg:w-48 lg:h-48 rounded-[2.5rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
                     {member.image ? (
-                      <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || 'object-center'}`} sizes="(max-width: 768px) 176px, 192px" />
+                      <Image src={member.image} alt={member.name} width={200} height={200} className={`w-full h-full object-cover ${member.objectPosition || 'object-center'}`} />
                     ) : (
                       <>
                         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px]" />
@@ -176,9 +183,9 @@ export default function Leadership() {
                   <FaXTwitter className="w-3.5 h-3.5" />
                 </a>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
-        </motion.div>
+        </MotionDiv>
 
       </div>
     </section>

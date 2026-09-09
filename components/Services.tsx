@@ -75,6 +75,13 @@ const serviceCards = [
 
 export default function Services() {
   const { t } = useLanguage();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -98,7 +105,7 @@ export default function Services() {
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#334155] dark:bg-[#111111] rounded-full blur-[100px] opacity-20 translate-x-1/3 translate-y-1/3 pointer-events-none transition-colors duration-300"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
+        <MotionDiv 
           className="text-center max-w-3xl mx-auto mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,9 +121,9 @@ export default function Services() {
           <p className="text-gray-500 dark:text-gray-300 text-base md:text-lg leading-relaxed transition-colors duration-300">
             {t('servicesDesc')}
           </p>
-        </motion.div>
+        </MotionDiv>
 
-        <motion.div 
+        <MotionDiv 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -124,7 +131,7 @@ export default function Services() {
           viewport={{ once: true, margin: "-100px" }}
         >
           {serviceCards.map((service, index) => (
-            <motion.div 
+            <MotionDiv 
               key={service.key} 
               variants={itemVariants}
               className="bg-white dark:bg-[#262626] rounded-[2rem] p-3 shadow-lg hover:shadow-2xl border border-[#FAFAFA] dark:border-white/5 transition-all duration-500 group relative"
@@ -135,9 +142,9 @@ export default function Services() {
                 <Image 
                   src={service.image} 
                   alt={t(service.titleKey)} 
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
                 />
               </Link>
 
@@ -166,9 +173,9 @@ export default function Services() {
                   <FiArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
-        </motion.div>
+        </MotionDiv>
       </div>
     </section>
   );

@@ -17,6 +17,13 @@ import Link from 'next/link';
 
 export default function AgencyWorkflow() {
   const { language } = useLanguage();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const steps = [
     {
@@ -133,7 +140,7 @@ export default function AgencyWorkflow() {
         {/* 5-Step Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-24">
           {steps.map((step, idx) => (
-            <motion.div
+            <MotionDiv
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -155,7 +162,7 @@ export default function AgencyWorkflow() {
                   {step.desc}
                 </p>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
 

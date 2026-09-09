@@ -26,11 +26,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.3 }}
         transition={{ duration: 1.5 }}
-        className="absolute inset-0 z-0" 
-        style={{ 
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'103.92304845413264\' viewBox=\'0 0 60 103.92304845413264\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M30 103.92304845413264L60 86.60254037844386L60 51.96152422706632L30 34.64101615137754L0 51.96152422706632L0 86.60254037844386ZM30 51.96152422706632L60 34.64101615137754L60 0L30 -17.32050807568877L0 0L0 34.64101615137754Z\' fill=\'none\' stroke=\'%23e5e7eb\' stroke-width=\'1\'/%3E%3C/svg%3E")',
-          backgroundSize: '120px 207.846px'
-        }}
+        className="absolute inset-0 z-0 bg-grid-isometric"
       ></motion.div>
       
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

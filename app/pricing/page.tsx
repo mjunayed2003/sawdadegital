@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Topbar from "@/components/layout/Topbar";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -22,6 +22,13 @@ import Link from 'next/link';
 function PricingContent() {
   const { language } = useLanguage();
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const guarantees = [
     {
@@ -106,7 +113,7 @@ function PricingContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {guarantees.map((item, index) => (
-              <motion.div
+              <MotionDiv
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +126,7 @@ function PricingContent() {
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{item.title}</h3>
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-400 leading-relaxed">{item.desc}</p>
-              </motion.div>
+              </MotionDiv>
             ))}
           </div>
         </section>
@@ -153,7 +160,7 @@ function PricingContent() {
                   </button>
                   <AnimatePresence initial={false}>
                     {isOpen && (
-                      <motion.div
+                      <MotionDiv
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
@@ -163,7 +170,7 @@ function PricingContent() {
                         <div className="p-6 pt-4 text-xs sm:text-sm text-slate-600 dark:text-gray-400 leading-relaxed">
                           {faq.a}
                         </div>
-                      </motion.div>
+                      </MotionDiv>
                     )}
                   </AnimatePresence>
                 </div>

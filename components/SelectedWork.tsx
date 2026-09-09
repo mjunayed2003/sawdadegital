@@ -12,26 +12,36 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
     titleKey: 'project3Title',
     descKey: 'project3Desc',
-    color: '#9D224D'
+    textColor: 'text-[#9D224D]',
+    bgColor: 'bg-[#9D224D]',
   },
   {
     id: 2,
     image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80',
     titleKey: 'project1Title',
     descKey: 'project1Desc',
-    color: '#334155'
+    textColor: 'text-[#334155] dark:text-slate-400',
+    bgColor: 'bg-[#334155] dark:bg-slate-400',
   },
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
     titleKey: 'project2Title',
     descKey: 'project2Desc',
-    color: '#262626'
+    textColor: 'text-[#262626] dark:text-gray-300',
+    bgColor: 'bg-[#262626] dark:bg-gray-300',
   }
 ];
 
 export default function SelectedWork() {
   const { t } = useLanguage();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -55,7 +65,7 @@ export default function SelectedWork() {
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#334155] rounded-full blur-[120px] opacity-15 pointer-events-none -z-10"></div>
 
         {/* Header */}
-        <motion.div 
+        <MotionDiv 
           className="text-center mb-24"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,10 +77,10 @@ export default function SelectedWork() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[#262626] dark:text-white tracking-tight transition-colors duration-300">
             {t('recentProud')}
           </h2>
-        </motion.div>
+        </MotionDiv>
 
         {/* Projects Grid (Staggered/Asymmetric) */}
-        <motion.div 
+        <MotionDiv 
           className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 mb-20"
           variants={containerVariants}
           initial="hidden"
@@ -78,7 +88,7 @@ export default function SelectedWork() {
           viewport={{ once: true, margin: "-100px" }}
         >
           {projects.map((project, index) => (
-            <motion.div 
+            <MotionDiv 
               key={project.id} 
               variants={itemVariants}
               className={`group cursor-pointer flex flex-col ${index === 1 ? 'lg:translate-y-16' : ''}`}
@@ -90,20 +100,20 @@ export default function SelectedWork() {
                 <Image 
                   src={project.image} 
                   alt={t(project.titleKey)} 
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
+                  width={800}
+                  height={500}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
                 />
                 
                 {/* Floating Action Button */}
                 <div className="absolute bottom-4 right-4 w-12 h-12 bg-white dark:bg-[#111111] rounded-xl flex items-center justify-center shadow-lg transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 z-20 group-hover:-rotate-12">
-                  <FiArrowRight className="w-5 h-5" style={{ color: project.color }} />
+                  <FiArrowRight className={`w-5 h-5 ${project.textColor}`} />
                 </div>
               </div>
               
               <div className="px-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-6 h-[2px]" style={{ backgroundColor: project.color }}></div>
+                  <div className={`w-6 h-[2px] ${project.bgColor}`}></div>
                   <h3 className="text-xl font-black text-[#262626] dark:text-white group-hover:text-[#9D224D] dark:group-hover:text-[#9D224D] transition-colors duration-300">
                     {t(project.titleKey)}
                   </h3>
@@ -112,12 +122,12 @@ export default function SelectedWork() {
                   {t(project.descKey)}
                 </p>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
-        </motion.div>
+        </MotionDiv>
 
         {/* Action Button */}
-        <motion.div 
+        <MotionDiv 
           className="flex justify-center mt-12 lg:mt-32"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +143,7 @@ export default function SelectedWork() {
               <FiArrowRight className="w-4 h-4 text-[#262626] dark:text-white group-hover:text-white dark:group-hover:text-white transform group-hover:rotate-45 transition-all duration-500" />
             </span>
           </Link>
-        </motion.div>
+        </MotionDiv>
 
       </div>
     </section>

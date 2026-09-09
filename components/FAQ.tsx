@@ -6,7 +6,14 @@ import { FiPlus, FiMinus } from 'react-icons/fi';
 
 export default function FAQ() {
   const { t } = useLanguage();
+  const [mounted, setMounted] = React.useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const faqs = [
     { q: 'faq1Q', a: 'faq1A' },
@@ -28,7 +35,7 @@ export default function FAQ() {
           
           {/* Left Column: Sticky Header */}
           <div className="lg:col-span-5 lg:sticky lg:top-32">
-            <motion.div 
+            <MotionDiv 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -43,7 +50,7 @@ export default function FAQ() {
               <p className="text-gray-500 dark:text-gray-300 text-base leading-relaxed max-w-md transition-colors duration-300">
                 {t('faqDesc')}
               </p>
-            </motion.div>
+            </MotionDiv>
           </div>
 
           {/* Right Column: Accordion */}
@@ -53,7 +60,7 @@ export default function FAQ() {
                 const isOpen = openIndex === index;
                 
                 return (
-                  <motion.div 
+                  <MotionDiv 
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +69,7 @@ export default function FAQ() {
                     className={`bg-[#FAFAFA] dark:bg-[#1a1a1a] rounded-2xl border transition-colors duration-300 ${isOpen ? 'border-[#9D224D] shadow-md bg-white dark:bg-[#262626]' : 'border-[#FCE7F3] dark:border-white/10 hover:border-[#334155] dark:hover:border-white/30'}`}
                   >
                     <button 
-                      onClick={() => toggleFaq(index)}
+                       onClick={() => toggleFaq(index)}
                       className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none"
                     >
                       <h3 className={`text-base md:text-lg font-bold pr-8 transition-colors duration-300 ${isOpen ? 'text-[#9D224D]' : 'text-[#262626] dark:text-white'}`}>
@@ -75,7 +82,7 @@ export default function FAQ() {
                     
                     <AnimatePresence>
                       {isOpen && (
-                        <motion.div 
+                        <MotionDiv 
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
@@ -85,10 +92,10 @@ export default function FAQ() {
                           <div className="px-6 md:px-8 pb-6 md:pb-8 text-gray-500 dark:text-gray-400 leading-relaxed border-t border-[#FCE7F3]/50 dark:border-white/10 mt-2 pt-6 transition-colors duration-300">
                             {t(faq.a)}
                           </div>
-                        </motion.div>
+                        </MotionDiv>
                       )}
                     </AnimatePresence>
-                  </motion.div>
+                  </MotionDiv>
                 );
               })}
             </div>

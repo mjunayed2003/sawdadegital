@@ -70,7 +70,7 @@ function ProjectsContent() {
       <Navbar />
       
       <main className="relative pb-32">
-        <div className="absolute inset-0 top-0 h-[60vh] z-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <div className="absolute inset-0 top-0 h-[60vh] z-0 opacity-40 pointer-events-none bg-grid-dots-light"></div>
         
         {/* Header Section */}
         <div className="relative z-10 pt-20 pb-16">
@@ -118,7 +118,7 @@ function ProjectsContent() {
                     <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                   </div>
                   <div className="flex-1 relative overflow-hidden bg-slate-100 dark:bg-[#262626]">
-                    <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                    <Image src={project.image} alt={project.title} width={600} height={400} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                       <span className="text-[#9D224D] text-xs font-bold uppercase tracking-wider mb-1">{project.category}</span>
                       <h3 className="text-white text-lg font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-300">{project.title}</h3>
@@ -140,7 +140,7 @@ function ProjectsContent() {
                     <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                   </div>
                   <div className="flex-1 relative overflow-hidden bg-slate-100 dark:bg-[#262626]">
-                    <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out object-top" />
+                    <Image src={project.image} alt={project.title} width={800} height={500} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out object-top" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/90 via-[#0f172a]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                       <span className="text-[#9D224D] text-xs font-bold uppercase tracking-wider mb-1">{project.category}</span>
                       <h3 className="text-white text-2xl font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-300">{project.title}</h3>

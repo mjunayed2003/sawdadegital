@@ -7,7 +7,14 @@ import Image from 'next/image';
 
 export default function Testimonials() {
   const { t } = useLanguage();
+  const [mounted, setMounted] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const reviews = [
     {
@@ -56,7 +63,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <motion.div 
+        <MotionDiv 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +75,7 @@ export default function Testimonials() {
           <h2 className="text-3xl md:text-4xl font-black text-[#262626] dark:text-white tracking-tight transition-colors duration-300">
             {t('testimonialsTitle')}
           </h2>
-        </motion.div>
+        </MotionDiv>
 
         {/* Unique Testimonial Slider Card */}
         <div className="max-w-4xl mx-auto relative">
@@ -79,7 +86,7 @@ export default function Testimonials() {
             <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-[#9D224D] rounded-full blur-[80px] opacity-10 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none"></div>
 
             <AnimatePresence mode="wait">
-              <motion.div
+              <MotionDiv
                 key={activeIndex}
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -113,9 +120,9 @@ export default function Testimonials() {
                     <Image 
                       src={current.image} 
                       alt={t(current.nameKey)} 
-                      fill
-                      sizes="56px"
-                      className="object-cover"
+                      width={56}
+                      height={56}
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
@@ -127,7 +134,7 @@ export default function Testimonials() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </MotionDiv>
             </AnimatePresence>
 
             {/* Prev / Next controls */}

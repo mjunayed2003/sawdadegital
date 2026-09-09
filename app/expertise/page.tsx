@@ -19,6 +19,13 @@ import { motion } from 'framer-motion';
 
 function ExpertiseContent() {
   const { language } = useLanguage();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   const team = [
     { 
@@ -146,7 +153,7 @@ function ExpertiseContent() {
       <Navbar />
       
       <main className="relative pb-32">
-        <div className="absolute inset-0 top-0 h-[60vh] z-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <div className="absolute inset-0 top-0 h-[60vh] z-0 opacity-40 pointer-events-none bg-grid-dots-light"></div>
 
         {/* Leadership Team Section */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 mb-32 max-w-7xl">
@@ -166,7 +173,7 @@ function ExpertiseContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, idx) => (
-              <motion.div 
+              <MotionDiv 
                 key={idx} 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -188,7 +195,7 @@ function ExpertiseContent() {
                   <div className="relative p-1.5 rounded-[2.7rem] bg-gradient-to-b from-white dark:from-white/20 to-slate-100 dark:to-white/5 border border-slate-200/60 dark:border-white/10 shadow-md group-hover:shadow-xl transition-all duration-500">
                     <div className={`w-44 h-44 lg:w-48 lg:h-48 rounded-[2.5rem] bg-gradient-to-br ${member.avatarGradient} flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-[1.03] transition-transform duration-500`}>
                       {member.image ? (
-                        <Image src={member.image} alt={member.name} fill className={`object-cover ${member.objectPosition || ''}`} sizes="(max-width: 768px) 176px, 192px" />
+                        <Image src={member.image} alt={member.name} width={200} height={200} className={`w-full h-full object-cover ${member.objectPosition || ''}`} />
                       ) : (
                         <span className="text-4xl font-black text-white tracking-wider drop-shadow-md">
                           {member.initials}
@@ -223,7 +230,7 @@ function ExpertiseContent() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </MotionDiv>
             ))}
           </div>
         </div>

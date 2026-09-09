@@ -21,16 +21,22 @@ const motionVariants = [
 
 export default function Hero() {
   const { t } = useLanguage();
+  const [mounted, setMounted] = useState(false);
   const [imgIndex, setImgIndex] = useState(0);
   const [animIndex, setAnimIndex] = useState(0);
 
   useEffect(() => {
+    setMounted(true);
     const timer = setInterval(() => {
       setImgIndex((prev) => (prev + 1) % demoImages.length);
       setAnimIndex(Math.floor(Math.random() * motionVariants.length));
     }, 2000); // 2 seconds as requested
     return () => clearInterval(timer);
   }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
+  const MotionH1 = (mounted ? motion.h1 : 'h1') as any;
+  const MotionP = (mounted ? motion.p : 'p') as any;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -45,43 +51,34 @@ export default function Hero() {
   return (
     <section className="relative bg-transparent py-16 md:py-24 overflow-hidden min-h-[85vh] flex items-center">
       {/* Subtle Background Pattern */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
-        transition={{ duration: 1.5 }}
-        className="absolute inset-0 z-0" 
-        style={{ 
-          backgroundImage: 'radial-gradient(#334155 1.5px, transparent 1.5px)', 
-          backgroundSize: '30px 30px' 
-        }}
-      ></motion.div>
+      <div className="absolute inset-0 z-0 bg-grid-dots opacity-30"></div>
       
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
           
           {/* Left Content */}
-          <motion.div 
+          <MotionDiv 
             className="max-w-2xl"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/40 dark:border-white/10 text-[#262626] dark:text-white text-sm font-bold mb-8 shadow-sm transition-colors duration-300">
+            <MotionDiv variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE7F3] dark:bg-[#262626] border border-[#334155]/40 dark:border-white/10 text-[#262626] dark:text-white text-sm font-bold mb-8 shadow-sm transition-colors duration-300">
               <span className="w-2.5 h-2.5 rounded-full bg-[#9D224D] animate-pulse"></span>
               {t('discoverTop')}
-            </motion.div>
+            </MotionDiv>
             
-            <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-[70px] font-black text-[#262626] dark:text-white tracking-tight leading-[1.1] transition-colors duration-300">
+            <MotionH1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-[70px] font-black text-[#262626] dark:text-white tracking-tight leading-[1.1] transition-colors duration-300">
               {t('unlockYour')} <br />
               {t('brands')} <span className="relative inline-block text-white px-4 py-1 mt-2 bg-[#9D224D] rounded-2xl -rotate-2 transform shadow-md">{t('potential')}</span>
-            </motion.h1>
+            </MotionH1>
             
-            <motion.p variants={itemVariants} className="mt-8 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed font-medium transition-colors duration-300">
+            <MotionP variants={itemVariants} className="mt-8 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg leading-relaxed font-medium transition-colors duration-300">
               {t('heroDesc')}
-            </motion.p>
+            </MotionP>
 
             {/* Action Area */}
-            <motion.div variants={itemVariants} className="mt-10 flex flex-col sm:flex-row gap-5">
+            <MotionDiv variants={itemVariants} className="mt-10 flex flex-col sm:flex-row gap-5">
               <button className="flex-1 bg-[#262626] dark:bg-[#111111] hover:bg-[#9D224D] dark:hover:bg-[#9D224D] text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 shadow-[0_8px_20px_-6px_rgba(38,38,38,0.5)] dark:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_20px_-6px_rgba(255,127,17,0.5)] hover:-translate-y-1 flex items-center justify-center gap-2">
                 <FiSearch className="w-5 h-5" />
                 {t('findAgency')}
@@ -90,10 +87,10 @@ export default function Hero() {
                 {t('contactUs')}
                 <FiArrowRight className="w-5 h-5 text-[#334155] group-hover:translate-x-1 transition-transform" />
               </button>
-            </motion.div>
+            </MotionDiv>
 
             {/* Popular Categories */}
-            <motion.div variants={itemVariants} className="mt-12">
+            <MotionDiv variants={itemVariants} className="mt-12">
               <p className="text-sm font-bold text-gray-400 mb-4 uppercase tracking-widest">{t('popularServices')}</p>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -102,7 +99,7 @@ export default function Hero() {
                   { key: 'webDevelopment', label: t('webDevelopment') },
                   { key: 'branding', label: t('branding') }
                 ].map((category, idx) => (
-                  <motion.div 
+                  <MotionDiv 
                     key={category.key}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -114,71 +111,73 @@ export default function Hero() {
                     >
                       {category.label}
                     </Link>
-                  </motion.div>
+                  </MotionDiv>
                 ))}
               </div>
-            </motion.div>
-          </motion.div>
+            </MotionDiv>
+          </MotionDiv>
 
           {/* Right Content - Demo Image Slider */}
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative hidden lg:block h-[600px] w-full"
-          >
-            {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-[#FCE7F3] dark:bg-[#262626] rounded-full blur-3xl opacity-60 transition-colors duration-300"></div>
-            
-            {/* Main Image Container */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[480px] z-20">
-              <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-[#FCE7F3]">
-                <AnimatePresence mode="popLayout">
-                  <motion.img 
-                    key={imgIndex}
-                    src={demoImages[imgIndex]} 
-                    alt="Creative team working" 
-                    className="absolute inset-0 w-full h-full object-cover"
-                    initial={motionVariants[animIndex].initial}
-                    animate={motionVariants[animIndex].animate}
-                    exit={motionVariants[animIndex].exit}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
-                  />
-                </AnimatePresence>
-              </div>
+          {mounted && (
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative hidden lg:block h-[600px] w-full"
+            >
+              {/* Background Glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-[#FCE7F3] dark:bg-[#262626] rounded-full blur-3xl opacity-60 transition-colors duration-300"></div>
               
-              {/* Decorative Accent Card */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.5 }}
-                className="absolute -bottom-6 -left-6 bg-white dark:bg-[#262626] p-4 rounded-2xl shadow-xl border border-[#FCE7F3] dark:border-white/10 flex items-center gap-4 z-30 transition-colors duration-300"
-              >
-                <div className="w-12 h-12 bg-[#9D224D]/10 rounded-full flex items-center justify-center">
-                  <div className="w-6 h-6 bg-[#9D224D] rounded-full animate-ping" style={{ animationDuration: '2s' }}></div>
+              {/* Main Image Container */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[480px] z-20">
+                <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-[#FCE7F3]">
+                  <AnimatePresence mode="popLayout">
+                    <motion.img 
+                      key={imgIndex}
+                      src={demoImages[imgIndex]} 
+                      alt="Creative team working" 
+                      className="absolute inset-0 w-full h-full object-cover"
+                      initial={motionVariants[animIndex].initial}
+                      animate={motionVariants[animIndex].animate}
+                      exit={motionVariants[animIndex].exit}
+                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                    />
+                  </AnimatePresence>
                 </div>
-                <div>
-                  <div className="text-[#262626] dark:text-white font-bold text-sm transition-colors duration-300">{t('topRated')}</div>
-                  <div className="text-gray-500 dark:text-gray-400 text-xs transition-colors duration-300">{t('agenciesWorldwide')}</div>
-                </div>
-              </motion.div>
-            </div>
+                
+                {/* Decorative Accent Card */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1, duration: 0.5 }}
+                  className="absolute -bottom-6 -left-6 bg-white dark:bg-[#262626] p-4 rounded-2xl shadow-xl border border-[#FCE7F3] dark:border-white/10 flex items-center gap-4 z-30 transition-colors duration-300"
+                >
+                  <div className="w-12 h-12 bg-[#9D224D]/10 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-[#9D224D] rounded-full animate-ping-slow"></div>
+                  </div>
+                  <div>
+                    <div className="text-[#262626] dark:text-white font-bold text-sm transition-colors duration-300">{t('topRated')}</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-xs transition-colors duration-300">{t('agenciesWorldwide')}</div>
+                  </div>
+                </motion.div>
+              </div>
 
-            {/* Decorative Dots */}
-            <motion.div 
-              animate={{ 
-                rotate: [0, 90, 180, 270, 360], 
-                scale: [1, 1.1, 1] 
-              }}
-              transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-              className="absolute top-12 right-12 w-24 h-24 bg-[#9D224D] rounded-3xl -rotate-12 shadow-lg opacity-80 z-10"
-            ></motion.div>
-            <motion.div 
-              animate={{ y: [0, -20, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute bottom-24 right-4 w-12 h-12 bg-[#334155] rounded-full shadow-lg opacity-90 z-10"
-            ></motion.div>
-          </motion.div>
+              {/* Decorative Dots */}
+              <motion.div 
+                animate={{ 
+                  rotate: [0, 90, 180, 270, 360], 
+                  scale: [1, 1.1, 1] 
+                }}
+                transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+                className="absolute top-12 right-12 w-24 h-24 bg-[#9D224D] rounded-3xl -rotate-12 shadow-lg opacity-80 z-10"
+              ></motion.div>
+              <motion.div 
+                animate={{ y: [0, -20, 0] }}
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                className="absolute bottom-24 right-4 w-12 h-12 bg-[#334155] rounded-full shadow-lg opacity-90 z-10"
+              ></motion.div>
+            </motion.div>
+          )}
           
         </div>
       </div>

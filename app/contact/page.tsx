@@ -12,6 +12,13 @@ import ProtectedEmail from '@/components/ui/ProtectedEmail';
 
 function ContactContent() {
   const { language } = useLanguage();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const MotionDiv = (mounted ? motion.div : 'div') as any;
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#111111] font-sans overflow-x-hidden text-[#262626] dark:text-white transition-colors duration-300">
@@ -19,11 +26,11 @@ function ContactContent() {
       <Navbar />
       
       <main className="relative pb-32">
-        <div className="absolute inset-0 top-0 h-[60vh] z-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#334155 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <div className="absolute inset-0 top-0 h-[60vh] z-0 opacity-30 pointer-events-none bg-grid-dots"></div>
 
         {/* Header Section */}
         <div className="relative z-10 pt-20 pb-12 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -39,7 +46,7 @@ function ContactContent() {
                 ? 'আপনার নির্দিষ্ট কোনো প্রজেক্টের পরিকল্পনা থাকুক বা নতুন আইডিয়া নিয়ে পরামর্শ প্রয়োজন হোক—আমাদের অভিজ্ঞ টিম আপনাকে সহায়তা করতে প্রস্তুত।'
                 : 'Whether you have a specific project in mind or just want to explore possibilities, our senior team is ready to help you achieve your goals.'}
             </p>
-          </motion.div>
+          </MotionDiv>
         </div>
 
         {/* Main Contact Section */}
@@ -47,7 +54,7 @@ function ContactContent() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             
             {/* Contact Information (Left Column) */}
-            <motion.div 
+            <MotionDiv 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -140,10 +147,10 @@ function ContactContent() {
                   </div>
                 </div>
               </a>
-            </motion.div>
+            </MotionDiv>
 
             {/* Contact Form (Right Column) */}
-            <motion.div 
+            <MotionDiv 
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -239,7 +246,7 @@ function ContactContent() {
                   </button>
                 </form>
               </div>
-            </motion.div>
+            </MotionDiv>
             
           </div>
         </div>
