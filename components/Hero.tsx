@@ -14,24 +14,15 @@ const demoImages = [
   "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
 ];
 
-const motionVariants = [
-  { initial: { opacity: 0, scale: 0.8 }, animate: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 1.1 } }, // Zoom
-  { initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -100 } }, // Slide left
-  { initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -100 } }, // Slide up
-  { initial: { opacity: 0, rotate: 15, scale: 0.9 }, animate: { opacity: 1, rotate: 0, scale: 1 }, exit: { opacity: 0, rotate: -15, scale: 0.9 } }, // Spin
-];
-
 export default function Hero() {
   const { t } = useLanguage();
   const { MotionDiv, MotionH1, MotionP, mounted } = useSafeMotion();
   const [imgIndex, setImgIndex] = useState(0);
-  const [animIndex, setAnimIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setImgIndex((prev) => (prev + 1) % demoImages.length);
-      setAnimIndex(Math.floor(Math.random() * motionVariants.length));
-    }, 2000); // 2 seconds as requested
+    }, 5000); // Calm 5 seconds interval
     return () => clearInterval(timer);
   }, []);
 
@@ -137,23 +128,23 @@ export default function Hero() {
                       src={demoImages[imgIndex]} 
                       alt="Creative team working" 
                       className="absolute inset-0 w-full h-full object-cover"
-                      initial={motionVariants[animIndex].initial}
-                      animate={motionVariants[animIndex].animate}
-                      exit={motionVariants[animIndex].exit}
-                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 1, ease: "easeInOut" }}
                     />
                   </AnimatePresence>
                 </div>
                 
                 {/* Decorative Accent Card */}
                 <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1, duration: 0.5 }}
+                  transition={{ delay: 0.6, duration: 0.5 }}
                   className="absolute -bottom-6 -left-6 bg-white dark:bg-[#262626] p-4 rounded-2xl shadow-xl border border-[#FCE7F3] dark:border-white/10 flex items-center gap-4 z-30 transition-colors duration-300"
                 >
-                  <div className="w-12 h-12 bg-[#9D224D]/10 rounded-full flex items-center justify-center">
-                    <div className="w-6 h-6 bg-[#9D224D] rounded-full animate-ping-slow"></div>
+                  <div className="w-10 h-10 bg-[#9D224D]/10 rounded-full flex items-center justify-center">
+                    <div className="w-3.5 h-3.5 bg-[#9D224D] rounded-full"></div>
                   </div>
                   <div>
                     <div className="text-[#262626] dark:text-white font-bold text-sm transition-colors duration-300">{t('topRated')}</div>
@@ -162,20 +153,13 @@ export default function Hero() {
                 </motion.div>
               </div>
 
-              {/* Decorative Dots */}
-              <motion.div 
-                animate={{ 
-                  rotate: [0, 90, 180, 270, 360], 
-                  scale: [1, 1.1, 1] 
-                }}
-                transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-                className="absolute top-12 right-12 w-24 h-24 bg-[#9D224D] rounded-3xl -rotate-12 shadow-lg opacity-80 z-10"
-              ></motion.div>
-              <motion.div 
-                animate={{ y: [0, -20, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute bottom-24 right-4 w-12 h-12 bg-[#334155] rounded-full shadow-lg opacity-90 z-10"
-              ></motion.div>
+              {/* Subtle Decorative Accents */}
+              <div 
+                className="absolute top-12 right-12 w-24 h-24 bg-[#9D224D]/50 rounded-3xl -rotate-12 shadow-sm opacity-50 z-10"
+              />
+              <div 
+                className="absolute bottom-24 right-4 w-12 h-12 bg-[#334155]/50 rounded-full shadow-sm opacity-50 z-10"
+              />
             </motion.div>
           )}
           
