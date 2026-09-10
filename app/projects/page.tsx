@@ -171,19 +171,19 @@ function ProjectsContent() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
               <div>
-                <div className="text-4xl font-black text-[#9D224D] mb-2">+২১৮%</div>
+                <div className="text-4xl font-black text-[#9D224D] mb-2">+218%</div>
                 <div className="text-slate-500 dark:text-gray-400 font-medium text-sm">
                   {language === 'bn' ? 'অর্গানিক সার্চ ট্রাফিক' : 'Organic Traffic'}
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-black text-[#9D224D] mb-2">৩.২x</div>
+                <div className="text-4xl font-black text-[#9D224D] mb-2">3.2x</div>
                 <div className="text-slate-500 dark:text-gray-400 font-medium text-sm">
                   {language === 'bn' ? 'কোয়ালিফাইড কাস্টমার লিডস' : 'Qualified Pipeline'}
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-black text-[#9D224D] mb-2">৪২%</div>
+                <div className="text-4xl font-black text-[#9D224D] mb-2">42%</div>
                 <div className="text-slate-500 dark:text-gray-400 font-medium text-sm">
                   {language === 'bn' ? 'কম বিজ্ঞাপন খরচ (CAC)' : 'Lower CAC'}
                 </div>
