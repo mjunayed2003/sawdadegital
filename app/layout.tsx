@@ -158,34 +158,35 @@ const organizationSchema = {
       },
       image: "https://sawdadigital.com/og-image.png",
       description:
-        "Sawda Digital is an elite full-service digital marketing and technology agency serving Dhaka, Rangpur, and all of Bangladesh, specializing in performance digital marketing, custom web design, mobile app engineering, UI/UX prototyping, and Google SEO.",
-      telephone: "+8801234567890",
+        "Sawda Digital is an elite full-service digital marketing and technology agency based in Saidpur, Nilphamari, Rangpur Division, serving all of Bangladesh and global clients, specializing in performance digital marketing, custom web design, mobile app engineering, UI/UX prototyping, and Google SEO.",
+      telephone: "+8801316464075",
+      email: "sawdadigital@gmail.com",
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+8801234567890",
+        telephone: "+8801316464075",
         contactType: "customer service",
-        areaServed: ["Dhaka", "Rangpur", "BD", "Global"],
+        areaServed: ["Saidpur", "Nilphamari", "Rangpur", "Dhaka", "BD", "Global"],
         availableLanguage: ["English", "Bengali"],
         url: "https://sawdadigital.com/contact",
       },
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "House 12, Road 5, Banani",
-        addressLocality: "Dhaka",
-        postalCode: "1213",
+        streetAddress: "Saidpur, Nilphamari",
+        addressLocality: "Saidpur",
+        addressRegion: "Rangpur Division",
         addressCountry: "BD",
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 23.7937,
-        longitude: 90.4066,
+        latitude: 25.7785,
+        longitude: 88.8974,
       },
       sameAs: [
-        "https://facebook.com/sawdadigital",
+        "https://www.facebook.com/share/194KjGcPox/?mibextid=wwXIfr",
         "https://linkedin.com/company/sawdadigital",
-        "https://twitter.com/sawdadigital",
-        "https://instagram.com/sawdadigital",
+        "https://x.com/sawdadigital?s=11",
+        "https://www.instagram.com/sawdadigital?stkn=cGJuazZmNHZ1bjc4&utm_source=qr",
       ],
       founder: [
         {
@@ -196,7 +197,7 @@ const organizationSchema = {
         {
           "@type": "Person",
           name: "Md Junayed",
-          jobTitle: "Co-Founder & Lead Software Engineer",
+          jobTitle: "Head of Web & Technology",
         },
       ],
       areaServed: [

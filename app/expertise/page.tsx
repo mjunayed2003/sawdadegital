@@ -40,11 +40,11 @@ function ExpertiseContent() {
     },
     { 
       name: language === 'bn' ? 'মোঃ জুনায়েদ' : 'Md Junayed', 
-      role: language === 'bn' ? 'সহ-প্রতিষ্ঠাতা ও লিড সফটওয়্যার ইঞ্জিনিয়ার' : 'Co-Founder & Lead Software Engineer', 
+      role: language === 'bn' ? 'হেড অব ওয়েব অ্যান্ড টেকনোলজি' : 'Head of Web & Technology', 
       initials: 'MJ',
       image: '/team-member/junayed.jpeg',
       objectPosition: 'object-[center_15%] scale-[1.35]',
-      tag: language === 'bn' ? 'টেক ও আর্কিটেকচার' : 'Tech & Architecture',
+      tag: language === 'bn' ? 'ওয়েব ও টেকনোলজি' : 'Web & Technology',
       accentColor: 'from-blue-500 to-indigo-600',
       lightBg: 'bg-blue-500/10 dark:bg-blue-500/15',
       tagColor: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border-blue-200 dark:border-blue-800/40',
@@ -104,22 +104,6 @@ function ExpertiseContent() {
       description: language === 'bn'
         ? 'উদ্ভাবনী ব্র্যান্ডিংয়ের মাধ্যমে ব্র্যান্ড কৌশল, বিপণন প্রচারাভিযান এবং ব্যবসায়িক প্রবৃদ্ধি পরিচালনা।'
         : 'Driving brand strategy, marketing campaigns, and business growth through innovative branding.'
-    },
-    { 
-      name: language === 'bn' ? 'আবু হুরায়রা' : 'Abu Hurayrah', 
-      role: language === 'bn' ? 'এক্সিকিউটিভ অ্যাডভাইজর' : 'Executive Advisor', 
-      initials: 'AH',
-      image: '/team-member/AbuHurayrah.jpeg',
-      tag: language === 'bn' ? 'পরামর্শদাতা' : 'Advisory',
-      accentColor: 'from-cyan-500 to-blue-600',
-      lightBg: 'bg-cyan-500/10 dark:bg-cyan-500/15',
-      tagColor: 'text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/50 border-cyan-200 dark:border-cyan-800/40',
-      glowColor: 'group-hover:border-cyan-500/40 group-hover:shadow-cyan-500/10',
-      badgeIcon: <FaHandshake className="w-3.5 h-3.5 text-cyan-500" />,
-      avatarGradient: 'from-cyan-400 via-blue-500 to-cyan-600',
-      description: language === 'bn'
-        ? 'কোম্পানির দীর্ঘমেয়াদী রূপকল্প গঠনে কৌশলগত দিকনির্দেশনা ও বিশেষজ্ঞ পরামর্শ প্রদান।'
-        : 'Providing strategic guidance and expert advice to shape the company\'s long-term vision.'
     }
   ];
 
@@ -216,10 +200,10 @@ function ExpertiseContent() {
                     <a href="https://linkedin.com/company/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaLinkedinIn />
                     </a>
-                    <a href="https://facebook.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
+                    <a href="https://www.facebook.com/share/194KjGcPox/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaFacebookF />
                     </a>
-                    <a href="https://twitter.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Twitter" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
+                    <a href="https://x.com/sawdadigital?s=11" target="_blank" rel="noopener noreferrer nofollow" aria-label="Twitter" className="w-8 h-8 rounded-full bg-slate-100 dark:bg-white/5 hover:bg-[#9D224D] dark:hover:bg-[#9D224D] hover:text-white text-slate-500 dark:text-gray-400 flex items-center justify-center text-xs transition-colors">
                       <FaXTwitter />
                     </a>
                   </div>

@@ -5,6 +5,7 @@ import { FiSearch, FiArrowRight } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { useLanguage } from '@/components/LanguageContext';
+import DynamicCosmicBackground from '@/components/ui/DynamicCosmicBackground';
 
 const demoImages = [
   "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
@@ -46,8 +47,11 @@ export default function Hero() {
 
   return (
     <section className="relative bg-transparent py-16 md:py-24 overflow-hidden min-h-[85vh] flex items-center">
+      {/* Dynamic Cosmic Running Colors & Rotating Stars */}
+      <DynamicCosmicBackground />
+
       {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 z-0 bg-grid-dots opacity-30"></div>
+      <div className="absolute inset-0 z-0 bg-grid-dots opacity-30 pointer-events-none"></div>
       
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">

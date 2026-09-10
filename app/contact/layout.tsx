@@ -4,7 +4,7 @@ import JsonLd from '@/components/seo/JsonLd';
 export const metadata: Metadata = {
   title: 'Contact Us | Start Your Next Digital Project',
   description:
-    'Get in touch with Sawda Digital. Reach out via phone (+880 1234 567 890), email, or WhatsApp for custom web development, mobile apps, UI/UX, or digital marketing in Dhaka, Bangladesh.',
+    'Get in touch with Sawda Digital. Reach out via phone (+880 1316 464075), email, or WhatsApp for custom web development, mobile apps, UI/UX, or digital marketing in Saidpur, Nilphamari, Rangpur Division, Bangladesh.',
   alternates: {
     canonical: 'https://sawdadigital.com/contact',
   },
@@ -30,17 +30,17 @@ const contactSchemas = {
       '@id': 'https://sawdadigital.com/contact#webpage',
       url: 'https://sawdadigital.com/contact',
       name: 'Contact Sawda Digital',
-      description: 'Contact page for Sawda Digital in Banani, Dhaka, Bangladesh.',
+      description: 'Contact page for Sawda Digital in Saidpur, Nilphamari, Rangpur Division, Bangladesh.',
       mainEntity: {
         '@type': 'LocalBusiness',
         name: 'Sawda Digital',
-        telephone: '+8801234567890',
+        telephone: '+8801316464075',
         url: 'https://sawdadigital.com/contact',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'House 12, Road 5, Banani',
-          addressLocality: 'Dhaka',
-          postalCode: '1213',
+          streetAddress: 'Saidpur, Nilphamari',
+          addressLocality: 'Saidpur',
+          addressRegion: 'Rangpur Division',
           addressCountry: 'BD',
         },
       },

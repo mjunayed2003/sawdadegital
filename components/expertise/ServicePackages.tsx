@@ -1321,7 +1321,7 @@ export default function ServicePackages({
       ? `সর্বমোট প্রাক্কলিত বাজেট: ${formatBDT(calculateTotal.grandTotal)}\n\nদয়া করে প্রজেক্টটি শুরুর বিষয়ে বিস্তারিত জানাবেন।`
       : `Total Estimated Budget: ${formatBDT(calculateTotal.grandTotal)}\n\nPlease let me know how we can proceed.`;
 
-    return `https://wa.me/8801700000000?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/8801316464075?text=${encodeURIComponent(text)}`;
   }, [currentMainCat, currentSubCat, activeTier, selectedAddons, activeAddons, calculateTotal, language]);
 
   // Direct WhatsApp URL for a specific tier
@@ -1337,7 +1337,7 @@ export default function ServicePackages({
       ? `আসসালামু আলাইকুম সাওদা ডিজিটাল। আমি "${serviceTitle}" সার্ভিসের "${tierName}" (${priceText}) প্যাকেজটি নিতে আগ্রহী। দয়া করে প্রজেক্ট শুরুর বিষয়ে জানাবেন।`
       : `Hello Sawda Digital. I am interested in the "${tierName}" (${priceText}) package for "${serviceTitle}". Please let me know how we can proceed.`;
 
-    return `https://wa.me/8801700000000?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/8801316464075?text=${encodeURIComponent(text)}`;
   };
 
   return (

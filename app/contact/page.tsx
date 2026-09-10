@@ -68,7 +68,7 @@ function ContactContent() {
                     </div>
                     <div>
                       <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">{language === 'bn' ? 'ফোন করুন' : 'Call Us'}</p>
-                      <a href="tel:+8801234567890" className="text-lg font-bold hover:text-[#9D224D] transition-colors">+880 1234 567 890</a>
+                      <a href="tel:+8801316464075" className="text-lg font-bold hover:text-[#9D224D] transition-colors">+880 1316 464075</a>
                     </div>
                   </div>
                   
@@ -90,8 +90,8 @@ function ContactContent() {
                       <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">{language === 'bn' ? 'অফিস ঠিকানা' : 'Visit Us'}</p>
                       <p className="text-base font-bold leading-snug text-gray-200">
                         {language === 'bn' 
-                          ? 'বাড়ি ১২, রোড ৫, বনানী, ঢাকা ১২১৩, বাংলাদেশ' 
-                          : 'House 12, Road 5, Banani, Dhaka 1213, Bangladesh'}
+                          ? 'সৈয়দপুর, নীলফামারী, রংপুর বিভাগ, বাংলাদেশ' 
+                          : 'Saidpur, Nilphamari, Rangpur Division, Bangladesh'}
                       </p>
                     </div>
                   </div>
@@ -104,16 +104,16 @@ function ContactContent() {
                     {language === 'bn' ? 'সোশ্যাল মিডিয়ায় যুক্ত থাকুন' : 'Follow Us'}
                   </p>
                   <div className="flex gap-3">
-                    <a href="https://facebook.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
+                    <a href="https://www.facebook.com/share/194KjGcPox/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
                       <FaFacebookF className="text-white text-sm" />
                     </a>
                     <a href="https://linkedin.com/company/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="LinkedIn" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
                       <FaLinkedinIn className="text-white text-sm" />
                     </a>
-                    <a href="https://twitter.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Twitter" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
+                    <a href="https://x.com/sawdadigital?s=11" target="_blank" rel="noopener noreferrer nofollow" aria-label="Twitter" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
                       <FaXTwitter className="text-white text-sm" />
                     </a>
-                    <a href="https://instagram.com/sawdadigital" target="_blank" rel="noopener noreferrer nofollow" aria-label="Instagram" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
+                    <a href="https://www.instagram.com/sawdadigital?stkn=cGJuazZmNHZ1bjc4&utm_source=qr" target="_blank" rel="noopener noreferrer nofollow" aria-label="Instagram" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#9D224D] hover:border-[#9D224D] transition-all duration-300">
                       <FaInstagram className="text-white text-sm" />
                     </a>
                   </div>
@@ -122,7 +122,7 @@ function ContactContent() {
 
               {/* WhatsApp Direct */}
               <a 
-                href="https://wa.me/8801234567890" 
+                href="https://wa.me/8801316464075" 
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 className="bg-emerald-50 dark:bg-emerald-950/40 rounded-3xl p-6 border border-emerald-200 dark:border-emerald-800/60 shadow-sm flex items-center justify-between cursor-pointer group hover:shadow-md transition-all duration-300"

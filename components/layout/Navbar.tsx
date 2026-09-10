@@ -28,6 +28,7 @@ import {
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/components/LanguageContext';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { triggerColorSplash } from '@/components/ui/colorSplash';
 
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
@@ -199,8 +200,11 @@ export default function Navbar() {
                 <FaGlobe className="w-3.5 h-3.5" />
               </div>
               <button 
-                onClick={() => setLanguage('en')}
-                className={`relative text-xs font-bold tracking-wider px-3 py-1 rounded-full transition-colors duration-200 z-10 ${
+                onClick={(e) => {
+                  if (language !== 'en') triggerColorSplash(e);
+                  setLanguage('en');
+                }}
+                className={`relative text-xs font-bold tracking-wider px-3 py-1 rounded-full transition-all duration-200 active:scale-95 z-10 ${
                   language === 'en' ? 'text-white' : 'text-gray-600 dark:text-gray-400 hover:text-[#262626] dark:hover:text-white'
                 }`}
               >
@@ -214,8 +218,11 @@ export default function Navbar() {
                 English
               </button>
               <button 
-                onClick={() => setLanguage('bn')}
-                className={`relative text-xs font-bold tracking-wider px-3.5 py-1 rounded-full transition-colors duration-200 z-10 ${
+                onClick={(e) => {
+                  if (language !== 'bn') triggerColorSplash(e);
+                  setLanguage('bn');
+                }}
+                className={`relative text-xs font-bold tracking-wider px-3.5 py-1 rounded-full transition-all duration-200 active:scale-95 z-10 ${
                   language === 'bn' ? 'text-white' : 'text-gray-600 dark:text-gray-400 hover:text-[#262626] dark:hover:text-white'
                 }`}
               >
@@ -339,8 +346,12 @@ export default function Navbar() {
                     <FaGlobe className="w-3.5 h-3.5" />
                   </div>
                   <button 
-                    onClick={() => { setLanguage('en'); setIsMobileMenuOpen(false); }}
-                    className={`relative text-xs font-bold tracking-wider px-3 py-1 rounded-full transition-colors duration-200 z-10 ${
+                    onClick={(e) => {
+                      if (language !== 'en') triggerColorSplash(e);
+                      setLanguage('en');
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`relative text-xs font-bold tracking-wider px-3 py-1 rounded-full transition-all duration-200 active:scale-95 z-10 ${
                       language === 'en' ? 'text-white' : 'text-gray-600 dark:text-gray-400 hover:text-[#262626] dark:hover:text-white'
                     }`}
                   >
@@ -354,8 +365,12 @@ export default function Navbar() {
                     English
                   </button>
                   <button 
-                    onClick={() => { setLanguage('bn'); setIsMobileMenuOpen(false); }}
-                    className={`relative text-xs font-bold tracking-wider px-3.5 py-1 rounded-full transition-colors duration-200 z-10 ${
+                    onClick={(e) => {
+                      if (language !== 'bn') triggerColorSplash(e);
+                      setLanguage('bn');
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`relative text-xs font-bold tracking-wider px-3.5 py-1 rounded-full transition-all duration-200 active:scale-95 z-10 ${
                       language === 'bn' ? 'text-white' : 'text-gray-600 dark:text-gray-400 hover:text-[#262626] dark:hover:text-white'
                     }`}
                   >

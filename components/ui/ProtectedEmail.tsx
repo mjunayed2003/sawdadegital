@@ -10,8 +10,8 @@ interface ProtectedEmailProps {
 }
 
 export default function ProtectedEmail({
-  user = "hello",
-  domain = "sawdadigital.com",
+  user = "sawdadigital",
+  domain = "gmail.com",
   className = "",
   accentAt = false,
 }: ProtectedEmailProps) {

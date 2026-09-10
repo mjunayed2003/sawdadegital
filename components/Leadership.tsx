@@ -30,7 +30,7 @@ const teamMembers = [
     initials: 'MJ',
     image: '/team-member/junayed.jpeg',
     objectPosition: 'object-[center_15%] scale-[1.35]',
-    tag: 'Tech & Architecture',
+    tag: 'Web & Technology',
     accentColor: 'from-blue-500 to-indigo-600',
     tagColor: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border-blue-200 dark:border-blue-800/40',
     glowColor: 'group-hover:border-blue-500/40 group-hover:shadow-blue-500/10',
