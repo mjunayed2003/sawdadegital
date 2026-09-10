@@ -131,13 +131,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/sawdaDigitalLogo.png", sizes: "192x192", type: "image/png" },
-    ],
-    apple: [
-      { url: "/sawdaDigitalLogo.png", sizes: "180x180", type: "image/png" },
-    ],
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   manifest: "/manifest.webmanifest",
   category: "technology",

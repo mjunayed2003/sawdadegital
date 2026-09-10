@@ -11,9 +11,9 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#9D224D',
     icons: [
       {
-        src: '/sawdaDigitalLogo.png',
+        src: '/favicon.ico',
         sizes: 'any',
-        type: 'image/png',
+        type: 'image/x-icon',
       },
     ],
   };
