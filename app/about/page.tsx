@@ -25,7 +25,7 @@ function AboutContent() {
       name: language === 'bn' ? 'মোঃ খাইরুল বাশার' : 'Md Khairul Bashar', 
       role: language === 'bn' ? 'প্রতিষ্ঠাতা ও সিইও' : 'Founder & CEO', 
       initials: 'KB',
-      image: '/team-member/MdKhairulBashar3.PNG',
+      image: '/team-member/MdKhairulBashar.jpge',
       objectPosition: '',
       tag: language === 'bn' ? 'এক্সিকিউটিভ লিড' : 'Executive Lead',
       accentColor: 'from-amber-500 to-orange-600',
@@ -40,9 +40,9 @@ function AboutContent() {
     },
     { 
       name: language === 'bn' ? 'মোঃ জুনায়েদ' : 'Md Junayed', 
-      role: language === 'bn' ? 'হেড অব ওয়েব অ্যান্ড টেকনোলজি' : 'Head of Web & Technology', 
+      role: language === 'bn' ? 'হেড অব এআই ইঞ্জিনিয়ারিং ও সফটওয়্যার ইঞ্জিনিয়ার' : 'Head of AI Engineering & Software Engineer', 
       initials: 'MJ',
-      image: '/team-member/junayed3.jpeg',
+      image: '/team-member/junayed.jpeg',
       objectPosition: 'object-[center_15%] scale-[1]',
       tag: language === 'bn' ? 'ওয়েব ও টেকনোলজি' : 'Web & Technology',
       accentColor: 'from-blue-500 to-indigo-600',
@@ -58,7 +58,7 @@ function AboutContent() {
       name: language === 'bn' ? 'মোঃ মহিবুল্লাহ ইসলাম রেজা' : 'Md Mohibullah Islam Reza', 
       role: language === 'bn' ? 'হেড অব স্ট্র্যাটেজি অ্যান্ড বিজনেস ডেভেলপমেন্ট' : 'Head of Strategy & Business Development', 
       initials: 'MR',
-      image: '/team-member/reza.PNG',
+      image: '/team-member/reza2.jpeg',
       objectPosition: 'object-top',
       tag: language === 'bn' ? 'মার্কেট ও স্ট্র্যাটেজি' : 'Market & Strategy',
       accentColor: 'from-emerald-500 to-teal-600',
@@ -85,23 +85,6 @@ function AboutContent() {
       description: language === 'bn'
         ? 'শপিফাই স্টোরফ্রন্ট, কাস্টম ওয়ার্ডপ্রেস এবং উইক্স প্ল্যাটফর্মে হাই-পারফর্মিং ওয়েবসাইট তৈরি।'
         : 'Specializing in high-converting Shopify stores, custom WordPress websites, and modern Wix solutions.'
-    },
-    { 
-      name: language === 'bn' ? 'আশিক মোস্তফা তন্ময়' : 'Ashik Mostofa Tonmoy', 
-      role: language === 'bn' ? 'মার্কেটিং অ্যান্ড ব্র্যান্ডিং এক্সিকিউটিভ' : 'Marketing & Branding Executive', 
-      initials: 'AT',
-      image: '/team-member/AshikMostofaTonmoy.jpeg',
-      objectPosition: 'object-[center_5%] scale-[1.3]',
-      tag: language === 'bn' ? 'মার্কেটিং ও ব্র্যান্ডিং' : 'Marketing & Branding',
-      accentColor: 'from-violet-500 to-purple-600',
-      lightBg: 'bg-violet-500/10 dark:bg-violet-500/15',
-      tagColor: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50 border-violet-200 dark:border-violet-800/40',
-      glowColor: 'group-hover:border-violet-500/40 group-hover:shadow-violet-500/10',
-      badgeIcon: <FaBullhorn className="w-3.5 h-3.5 text-violet-500" />,
-      avatarGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
-      description: language === 'bn'
-        ? 'উদ্ভাবনী ব্র্যান্ডিংয়ের মাধ্যমে ব্র্যান্ড কৌশল, বিপণন প্রচারাভিযান এবং ব্যবসায়িক প্রবৃদ্ধি পরিচালনা।'
-        : 'Driving brand strategy, marketing campaigns, and business growth through innovative branding.'
     },
   ];
 

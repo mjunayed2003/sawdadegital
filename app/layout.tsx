@@ -193,7 +193,7 @@ const organizationSchema = {
         {
           "@type": "Person",
           name: "Md Junayed",
-          jobTitle: "Head of Web & Technology",
+          jobTitle: "Head of AI Engineering & Software Engineer",
         },
       ],
       areaServed: [

@@ -14,7 +14,7 @@
 
 ## Executive Leadership
 - **Md Khairul Bashar**: Founder & CEO (Executive Leadership & Growth Strategy)
-- **Md Junayed**: Head of Web & Technology (Architecture, Scalable Software, Fullstack Systems)
+- **Md Junayed**: Head of AI Engineering & Software Engineer (Architecture, Scalable Software, Fullstack Systems)
 - **Md Mohibullah Islam Reza**: Head of Strategy & Business Development (Market Intelligence, Optimization Models)
 - **Md Asfier Rahman Marjan**: Wix, WordPress & Shopify Specialist (High-Converting E-Commerce Stores)
 

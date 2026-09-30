@@ -19,7 +19,7 @@ export default function Topbar() {
           </a>
           <span className="hidden md:flex items-center gap-1.5 text-slate-400">
             <FaMapMarkerAlt className="w-3 h-3 text-[#f472b6]" />
-            <span>Saidpur, Nilphamari, Rangpur</span>
+            <span>Saidpur, Nilphamari, Rangpur, Bangladesh</span>
           </span>
         </div>
 

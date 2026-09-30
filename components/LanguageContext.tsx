@@ -131,7 +131,7 @@ heroDesc: {
   meetExperts: { en: 'The Minds Driving Your Success', bn: 'আপনার সাফল্যের পেছনের কারিগর' },
   meetFullTeam: { en: 'Connect with our team', bn: 'আমাদের দলের সাথে সংযুক্ত হোন' },
   roleFounder: { en: 'Founder & CEO', bn: 'প্রতিষ্ঠাতা ও সিইও' },
-  roleCoFounder: { en: 'Head of Web & Technology', bn: 'হেড অব ওয়েব অ্যান্ড টেকনোলজি' },
+  roleCoFounder: { en: 'Head of AI Engineering & Software Engineer', bn: 'হেড অব এআই ইঞ্জিনিয়ারিং ও সফটওয়্যার ইঞ্জিনিয়ার' },
   roleStrategist: { en: 'Head of Strategy & Business Development', bn: 'হেড অব স্ট্র্যাটেজি অ্যান্ড বিজনেস ডেভেলপমেন্ট' },
   roleBrandRep: { en: 'Wix, WordPress & Shopify Specialist', bn: 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই বিশেষজ্ঞ' },
   roleWebShopify: { en: 'Wix, WordPress & Shopify Specialist', bn: 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই বিশেষজ্ঞ' },
