@@ -5,7 +5,7 @@ import { useLanguage } from '@/components/LanguageContext';
 import { useSafeMotion } from '@/components/ui/SafeMotion';
 import { FiArrowRight } from 'react-icons/fi';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { FaXTwitter, FaCrown, FaLaptopCode, FaChartPie, FaBullseye, FaShopify } from 'react-icons/fa6';
+import { FaXTwitter, FaCrown, FaLaptopCode, FaChartPie, FaBullseye, FaShopify, FaBullhorn } from 'react-icons/fa6';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -15,8 +15,8 @@ const teamMembers = [
     name: 'Md Khairul Bashar',
     roleKey: 'roleFounder',
     initials: 'KB',
-    image: '/team-member/MdKhairulBashar.PNG',
-    objectPosition: 'object-top',
+    image: '/team-member/MdKhairulBashar3.PNG',
+    objectPosition: '',
     tag: 'Executive Lead',
     accentColor: 'from-amber-500 to-orange-600',
     tagColor: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 border-amber-200 dark:border-amber-800/40',
@@ -29,8 +29,8 @@ const teamMembers = [
     name: 'Md Junayed',
     roleKey: 'roleCoFounder',
     initials: 'MJ',
-    image: '/team-member/junayed.jpeg',
-    objectPosition: 'object-[center_15%] scale-[1.35]',
+    image: '/team-member/junayed3.jpeg',
+    objectPosition: 'object-[center_15%] scale-[1]',
     tag: 'Web & Technology',
     accentColor: 'from-blue-500 to-indigo-600',
     tagColor: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border-blue-200 dark:border-blue-800/40',
@@ -65,6 +65,20 @@ const teamMembers = [
     glowColor: 'group-hover:border-rose-500/40 group-hover:shadow-rose-500/10',
     badgeIcon: <FaShopify className="w-3.5 h-3.5 text-rose-500" />,
     avatarGradient: 'from-rose-400 via-pink-500 to-purple-600',
+  },
+  {
+    id: 5,
+    name: 'Ashik Mostofa Tonmoy',
+    roleKey: 'roleMarketingExecutive',
+    initials: 'AT',
+    image: '/team-member/AshikMostofaTonmoy.jpeg',
+    objectPosition: 'object-[center_5%] scale-[1.3]',
+    tag: 'Marketing & Branding',
+    accentColor: 'from-violet-500 to-purple-600',
+    tagColor: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50 border-violet-200 dark:border-violet-800/40',
+    glowColor: 'group-hover:border-violet-500/40 group-hover:shadow-violet-500/10',
+    badgeIcon: <FaBullhorn className="w-3.5 h-3.5 text-violet-500" />,
+    avatarGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
   }
 ];
 
@@ -117,7 +131,7 @@ export default function Leadership() {
 
         {/* Team Grid */}
         <MotionDiv 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

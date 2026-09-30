@@ -25,10 +25,11 @@ function AboutContent() {
       name: language === 'bn' ? 'মোঃ খাইরুল বাশার' : 'Md Khairul Bashar', 
       role: language === 'bn' ? 'প্রতিষ্ঠাতা ও সিইও' : 'Founder & CEO', 
       initials: 'KB',
-      image: '/team-member/MdKhairulBashar.PNG',
-      objectPosition: 'object-top',
+      image: '/team-member/MdKhairulBashar3.PNG',
+      objectPosition: '',
       tag: language === 'bn' ? 'এক্সিকিউটিভ লিড' : 'Executive Lead',
       accentColor: 'from-amber-500 to-orange-600',
+      lightBg: 'bg-amber-500/10 dark:bg-amber-500/15',
       tagColor: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 border-amber-200 dark:border-amber-800/40',
       glowColor: 'group-hover:border-amber-500/40 group-hover:shadow-amber-500/10',
       badgeIcon: <FaCrown className="w-3.5 h-3.5 text-amber-500" />,
@@ -41,8 +42,8 @@ function AboutContent() {
       name: language === 'bn' ? 'মোঃ জুনায়েদ' : 'Md Junayed', 
       role: language === 'bn' ? 'হেড অব ওয়েব অ্যান্ড টেকনোলজি' : 'Head of Web & Technology', 
       initials: 'MJ',
-      image: '/team-member/junayed.jpeg',
-      objectPosition: 'object-[center_15%] scale-[1.35]',
+      image: '/team-member/junayed3.jpeg',
+      objectPosition: 'object-[center_15%] scale-[1]',
       tag: language === 'bn' ? 'ওয়েব ও টেকনোলজি' : 'Web & Technology',
       accentColor: 'from-blue-500 to-indigo-600',
       tagColor: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 border-blue-200 dark:border-blue-800/40',
@@ -84,6 +85,23 @@ function AboutContent() {
       description: language === 'bn'
         ? 'শপিফাই স্টোরফ্রন্ট, কাস্টম ওয়ার্ডপ্রেস এবং উইক্স প্ল্যাটফর্মে হাই-পারফর্মিং ওয়েবসাইট তৈরি।'
         : 'Specializing in high-converting Shopify stores, custom WordPress websites, and modern Wix solutions.'
+    },
+    { 
+      name: language === 'bn' ? 'আশিক মোস্তফা তন্ময়' : 'Ashik Mostofa Tonmoy', 
+      role: language === 'bn' ? 'মার্কেটিং অ্যান্ড ব্র্যান্ডিং এক্সিকিউটিভ' : 'Marketing & Branding Executive', 
+      initials: 'AT',
+      image: '/team-member/AshikMostofaTonmoy.jpeg',
+      objectPosition: 'object-[center_5%] scale-[1.3]',
+      tag: language === 'bn' ? 'মার্কেটিং ও ব্র্যান্ডিং' : 'Marketing & Branding',
+      accentColor: 'from-violet-500 to-purple-600',
+      lightBg: 'bg-violet-500/10 dark:bg-violet-500/15',
+      tagColor: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50 border-violet-200 dark:border-violet-800/40',
+      glowColor: 'group-hover:border-violet-500/40 group-hover:shadow-violet-500/10',
+      badgeIcon: <FaBullhorn className="w-3.5 h-3.5 text-violet-500" />,
+      avatarGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
+      description: language === 'bn'
+        ? 'উদ্ভাবনী ব্র্যান্ডিংয়ের মাধ্যমে ব্র্যান্ড কৌশল, বিপণন প্রচারাভিযান এবং ব্যবসায়িক প্রবৃদ্ধি পরিচালনা।'
+        : 'Driving brand strategy, marketing campaigns, and business growth through innovative branding.'
     },
   ];
 
@@ -129,7 +147,7 @@ function AboutContent() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {team.map((member, idx) => (
               <MotionDiv 
                 key={idx} 
