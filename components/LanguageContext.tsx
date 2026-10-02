@@ -136,6 +136,7 @@ heroDesc: {
   roleBrandRep: { en: 'Wix, WordPress & Shopify Specialist', bn: 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই বিশেষজ্ঞ' },
   roleWebShopify: { en: 'Wix, WordPress & Shopify Specialist', bn: 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই বিশেষজ্ঞ' },
   roleMarketingExecutive: { en: 'Marketing & Branding Executive', bn: 'মার্কেটিং অ্যান্ড ব্র্যান্ডিং এক্সিকিউটিভ' },
+  roleExecutiveMember: { en: 'Executive Member', bn: 'নির্বাহী সদস্য' },
 
   // Testimonials Section
   testimonialsBadge: { en: 'CLIENT SUCCESS STORIES', bn: 'গ্রাহক সাফল্যের গল্প' },

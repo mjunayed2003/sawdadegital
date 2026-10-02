@@ -11,7 +11,7 @@ import {
   FaCode, FaVideo, FaRobot, FaBullhorn, 
   FaPenNib, FaDesktop, FaMagnifyingGlass, 
   FaBriefcase, FaUsers, FaLayerGroup, FaClock, FaHandshake,
-  FaCrown, FaLaptopCode, FaChartPie, FaShopify
+  FaCrown, FaLaptopCode, FaChartPie, FaShopify, FaBullseye
 } from 'react-icons/fa6';
 import { FaLinkedinIn, FaXTwitter, FaFacebookF, FaGithub } from 'react-icons/fa6';
 import { FiArrowRight } from 'react-icons/fi';
@@ -72,6 +72,23 @@ function ExpertiseContent() {
       description: language === 'bn'
         ? 'ডেটা-ভিত্তিক বাজার বিশ্লেষণ এবং ব্যবসায়িক প্রবৃদ্ধি বৃদ্ধির কৌশল প্রণয়ন।'
         : 'Developing data-driven market strategies and business optimization models.'
+    },
+    { 
+      name: language === 'bn' ? 'মেজবাউল হক সরদার' : 'Mezbaul Haque Sarder', 
+      role: language === 'bn' ? 'নির্বাহী সদস্য' : 'Executive Member', 
+      initials: 'MS',
+      image: '/team-member/Mezbaul Haque Sarder.jpeg',
+      objectPosition: 'object-[center_15%] scale-[1]',
+      tag: language === 'bn' ? 'এক্সিকিউটিভ মেম্বার' : 'Executive Member',
+      accentColor: 'from-cyan-500 to-blue-600',
+      lightBg: 'bg-cyan-500/10 dark:bg-cyan-500/15',
+      tagColor: 'text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/50 border-cyan-200 dark:border-cyan-800/40',
+      glowColor: 'group-hover:border-cyan-500/40 group-hover:shadow-cyan-500/10',
+      badgeIcon: <FaBullseye className="w-3.5 h-3.5 text-cyan-500" />,
+      avatarGradient: 'from-cyan-400 via-blue-500 to-indigo-600',
+      description: language === 'bn'
+        ? 'সাংগঠনিক কার্যক্রম পরিচালনা এবং ব্যবসায়িক প্রবৃদ্ধি নিশ্চিতকরণে কৌশলগত ভূমিকা পালন।'
+        : 'Driving operational excellence and executing strategic growth initiatives.'
     },
     { 
       name: language === 'bn' ? 'মোঃ আসফিয়ার রহমান মারজান' : 'Md Asfier Rahman Marjan', 
@@ -151,7 +168,7 @@ function ExpertiseContent() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, idx) => (
               <MotionDiv 
                 key={idx} 

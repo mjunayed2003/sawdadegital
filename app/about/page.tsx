@@ -25,7 +25,7 @@ function AboutContent() {
       name: language === 'bn' ? 'মোঃ খাইরুল বাশার' : 'Md Khairul Bashar', 
       role: language === 'bn' ? 'প্রতিষ্ঠাতা ও সিইও' : 'Founder & CEO', 
       initials: 'KB',
-      image: '/team-member/MdKhairulBashar1.jpge',
+      image: '/team-member/MdKhairulBashar1.jpeg',
       objectPosition: '',
       tag: language === 'bn' ? 'এক্সিকিউটিভ লিড' : 'Executive Lead',
       accentColor: 'from-amber-500 to-orange-600',
@@ -71,6 +71,23 @@ function AboutContent() {
         : 'Developing data-driven market strategies and business optimization models.'
     },
     { 
+      name: language === 'bn' ? 'মেজবাউল হক সরদার' : 'Mezbaul Haque Sarder', 
+      role: language === 'bn' ? 'নির্বাহী সদস্য' : 'Executive Member', 
+      initials: 'MS',
+      image: '/team-member/Mezbaul Haque Sarder.jpeg',
+      objectPosition: 'object-[center_15%] scale-[1]',
+      tag: language === 'bn' ? 'এক্সিকিউটিভ মেম্বার' : 'Executive Member',
+      accentColor: 'from-cyan-500 to-blue-600',
+      lightBg: 'bg-cyan-500/10 dark:bg-cyan-500/15',
+      tagColor: 'text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-950/50 border-cyan-200 dark:border-cyan-800/40',
+      glowColor: 'group-hover:border-cyan-500/40 group-hover:shadow-cyan-500/10',
+      badgeIcon: <FaBullseye className="w-3.5 h-3.5 text-cyan-500" />,
+      avatarGradient: 'from-cyan-400 via-blue-500 to-indigo-600',
+      description: language === 'bn'
+        ? 'সাংগঠনিক কার্যক্রম পরিচালনা এবং ব্যবসায়িক প্রবৃদ্ধি নিশ্চিতকরণে কৌশলগত ভূমিকা পালন।'
+        : 'Driving operational excellence and executing strategic growth initiatives.'
+    },
+    { 
       name: language === 'bn' ? 'মোঃ আসফিয়ার রহমান মারজান' : 'Md Asfier Rahman Marjan', 
       role: language === 'bn' ? 'উইক্স, ওয়ার্ডপ্রেস ও শপিফাই বিশেষজ্ঞ' : 'Wix, WordPress & Shopify Specialist', 
       initials: 'AM',
@@ -86,6 +103,23 @@ function AboutContent() {
         ? 'শপিফাই স্টোরফ্রন্ট, কাস্টম ওয়ার্ডপ্রেস এবং উইক্স প্ল্যাটফর্মে হাই-পারফর্মিং ওয়েবসাইট তৈরি।'
         : 'Specializing in high-converting Shopify stores, custom WordPress websites, and modern Wix solutions.'
     },
+    { 
+      name: language === 'bn' ? 'আশিক মোস্তফা তন্ময়' : 'Ashik Mostofa Tonmoy', 
+      role: language === 'bn' ? 'মার্কেটিং অ্যান্ড ব্র্যান্ডিং এক্সিকিউটিভ' : 'Marketing & Branding Executive', 
+      initials: 'AT',
+      image: '/team-member/AshikMostofaTonmoy.jpeg',
+      objectPosition: 'object-[center_5%] scale-[1.3]',
+      tag: language === 'bn' ? 'মার্কেটিং ও ব্র্যান্ডিং' : 'Marketing & Branding',
+      accentColor: 'from-violet-500 to-purple-600',
+      lightBg: 'bg-violet-500/10 dark:bg-violet-500/15',
+      tagColor: 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50 border-violet-200 dark:border-violet-800/40',
+      glowColor: 'group-hover:border-violet-500/40 group-hover:shadow-violet-500/10',
+      badgeIcon: <FaBullhorn className="w-3.5 h-3.5 text-violet-500" />,
+      avatarGradient: 'from-violet-400 via-purple-500 to-fuchsia-600',
+      description: language === 'bn'
+        ? 'উদ্ভাবনী ব্র্যান্ডিংয়ের মাধ্যমে ব্র্যান্ড কৌশল, বিপণন প্রচারাভিযান এবং ব্যবসায়িক প্রবৃদ্ধি পরিচালনা।'
+        : 'Driving brand strategy, marketing campaigns, and business growth through innovative branding.'
+    }
   ];
 
   const services = [
@@ -130,7 +164,7 @@ function AboutContent() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, idx) => (
               <MotionDiv 
                 key={idx} 
