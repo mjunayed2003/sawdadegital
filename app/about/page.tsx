@@ -25,7 +25,7 @@ function AboutContent() {
       name: language === 'bn' ? 'মোঃ খাইরুল বাশার' : 'Md Khairul Bashar', 
       role: language === 'bn' ? 'প্রতিষ্ঠাতা ও সিইও' : 'Founder & CEO', 
       initials: 'KB',
-      image: '/team-member/MdKhairulBashar.jpge',
+      image: '/team-member/MdKhairulBashar1.jpge',
       objectPosition: '',
       tag: language === 'bn' ? 'এক্সিকিউটিভ লিড' : 'Executive Lead',
       accentColor: 'from-amber-500 to-orange-600',

@@ -15,7 +15,7 @@ const teamMembers = [
     name: 'Md Khairul Bashar',
     roleKey: 'roleFounder',
     initials: 'KB',
-    image: '/team-member/MdKhairulBashar.jpeg',
+    image: '/team-member/MdKhairulBashar1.jpeg',
     objectPosition: '',
     tag: 'Executive Lead',
     accentColor: 'from-amber-500 to-orange-600',
