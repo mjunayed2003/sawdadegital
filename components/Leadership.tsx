@@ -16,7 +16,7 @@ const teamMembers = [
     roleKey: 'roleFounder',
     initials: 'KB',
     image: '/team-member/MdKhairulBashar1.jpeg',
-    objectPosition: '',
+    objectPosition: 'object-[center_15%] scale-[1.25]',
     tag: 'Executive Lead',
     accentColor: 'from-amber-500 to-orange-600',
     tagColor: 'text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 border-amber-200 dark:border-amber-800/40',

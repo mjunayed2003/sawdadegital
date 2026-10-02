@@ -26,7 +26,7 @@ function AboutContent() {
       role: language === 'bn' ? 'প্রতিষ্ঠাতা ও সিইও' : 'Founder & CEO', 
       initials: 'KB',
       image: '/team-member/MdKhairulBashar1.jpeg',
-      objectPosition: '',
+      objectPosition: 'object-[center_15%] scale-[1.25]',
       tag: language === 'bn' ? 'এক্সিকিউটিভ লিড' : 'Executive Lead',
       accentColor: 'from-amber-500 to-orange-600',
       lightBg: 'bg-amber-500/10 dark:bg-amber-500/15',
